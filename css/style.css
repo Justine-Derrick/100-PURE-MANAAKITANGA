@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+@font-face {
+  font-family: "National";
+  src: url("../font/national-regular (1).otf"); }
+@font-face {
+  font-family: "National Medium";
+  src: url("../font/national-medium (1).otf"); }
+@font-face {
+  font-family: "National Light";
+  src: url("../font/national-light (1).otf"); }
+@font-face {
+  font-family: "Pure Pakati Regular";
+  src: url("../font/PurePakati-Regular.otf"); }
+.intro-screen__kia-ora {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5000; }
+  .intro-screen__kia-ora .kia-ora {
+    font-family: "Pure Pakati Regular", sans-serif;
+    font-size: 8rem;
+    text-align: center; }
+
+.intro-screen__welcome {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 4900; }
+  .intro-screen__welcome .welcome {
+    font-family: "Pure Pakati Regular", sans-serif;
+    font-size: 8rem;
+    text-align: center; }
+
+.intro-screen__manaakitanga {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 4800; }
+  .intro-screen__manaakitanga .manaakitanga {
+    font-family: "Pure Pakati Regular", sans-serif;
+    font-size: 8rem;
+    text-align: center; }
+
+.search-results {
+  min-height: 100vh; }
+
+.header {
+  height: 13vh;
+  width: 100%;
+  position: relative;
+  z-index: 1000; }
+  .header__img {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    filter: drop-shadow(0 0.25rem 0.25rem black); }
+    .header__img--mobile {
+      display: none;
+      width: 100%;
+      position: absolute;
+      z-index: 5;
+      filter: drop-shadow(0.25 0.25rem 0rem black); }
+      @media (max-width: 600px) {
+        .header__img--mobile {
+          display: block; } }
+    @media (max-width: 600px) {
+      .header__img {
+        display: none; } }
+  .header .top-nav {
+    max-width: 100%;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    top: 0; }
+    .header .top-nav__logo {
+      height: 5rem; }
+      .header .top-nav__logo .logo {
+        height: inherit; }
+    .header .top-nav .top-nav__menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      .header .top-nav .top-nav__menu .menu {
+        height: 1.4rem;
+        list-style: none;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        align-items: center;
+        margin: 0; }
+        .header .top-nav .top-nav__menu .menu-item {
+          padding-left: 2rem;
+          font-family: "National Light", sans-serif;
+          font-size: 1.4rem;
+          line-height: 1.4rem; }
+          .header .top-nav .top-nav__menu .menu-item:hover {
+            color: #FBB011; }
+        .header .top-nav .top-nav__menu .menu .current {
+          color: #FBB011;
+          font-weight: 700;
+          font-family: "National", sans-serif; }
+      .header .top-nav .top-nav__menu .menu-button {
+        background: #00A896;
+        border: none;
+        color: white;
+        padding: 0.75rem 1.25rem;
+        line-height: 1.4rem;
+        text-align: center;
+        margin-left: 2rem; }
+        .header .top-nav .top-nav__menu .menu-button:hover {
+          color: #1a1a1a;
+          background: #FBB011; }
+    @media (max-width: 600px) {
+      .header .top-nav {
+        display: none; } }
+  .header .where-to {
+    position: relative;
+    z-index: 1000;
+    margin: 0rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header .where-to .location-search {
+      width: 100%;
+      height: 3rem;
+      padding: .5rem 1rem;
+      font-size: 1rem;
+      line-height: 1rem; }
+      @media (max-width: 600px) {
+        .header .where-to .location-search {
+          width: 100%;
+          height: 2.5rem; } }
+    .header .where-to .fa-question-circle {
+      padding-left: 1rem;
+      font-size: 2rem;
+      color: #FBB011; }
+      @media (max-width: 600px) {
+        .header .where-to .fa-question-circle {
+          display: none; } }
+    @media (max-width: 600px) {
+      .header .where-to {
+        margin: 0;
+        padding: 2rem; } }
+
+.content {
+  height: 78vh;
+  z-index: 2000;
+  position: relative;
+  margin-top: 10rem;
+  overflow: scroll; }
+  .content .top-stays {
+    background: white;
+    padding-top: .2rem;
+    position: relative;
+    z-index: 2500; }
+    .content .top-stays__container {
+      width: 100%;
+      overflow: auto; }
+    .content .top-stays__content {
+      margin-top: 1rem;
+      width: fit-content;
+      display: flex;
+      padding: 0rem .5rem; }
+      .content .top-stays__content .card {
+        height: fit-content;
+        margin: 1.5rem;
+        background-color: #1a1a1a;
+        color: white;
+        font-family: "National Light", sans-serif;
+        filter: drop-shadow(0 0.25rem 0.25rem black); }
+        .content .top-stays__content .card-img-top {
+          width: 100%;
+          height: 15rem;
+          overflow: hidden;
+          object-fit: cover; }
+        .content .top-stays__content .card-body {
+          padding: 1rem; }
+        .content .top-stays__content .card-title {
+          font-family: "National Regular", sans-serif;
+          font-size: 1.4rem;
+          padding-bottom: .75rem; }
+        .content .top-stays__content .card-location {
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem;
+          padding-bottom: 1.25rem; }
+        .content .top-stays__content .card-text {
+          font-family: "National Light", sans-serif;
+          font-size: 1rem;
+          line-height: 1.4rem;
+          padding-bottom: 1.25rem; }
+        .content .top-stays__content .card-link {
+          font-family: "National Regular", sans-serif;
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+          color: #FBB011;
+          border-bottom: solid 2px #FBB011; }
+        .content .top-stays__content .card .fa-angle-right {
+          font-size: 1rem; }
+    .content .top-stays__heading {
+      position: relative;
+      height: fit-content;
+      margin-left: 1rem;
+      margin-top: 2rem;
+      font-family: "Pure Pakati", sans-serif;
+      font-size: 2.5rem;
+      padding: 1rem;
+      padding-bottom: 0; }
+    @media (max-width: 600px) {
+      .content .top-stays {
+        margin: 1rem 2rem;
+        margin-top: 0; } }
+  @media (max-width: 600px) {
+    .content {
+      margin-top: 0; } }
+  .content .map-container {
+    width: 100vw;
+    height: 50vh;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .content .map {
+    width: 80%;
+    height: 80%;
+    background: black; }
+  .content .search-results {
+    position: relative;
+    z-index: 2500; }
+    .content .search-results__content {
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0rem .5rem; }
+      .content .search-results__content .card {
+        height: fit-content;
+        width: 32rem;
+        margin: 1.5rem;
+        background-color: #1a1a1a;
+        color: white;
+        font-family: "National Light", sans-serif;
+        filter: drop-shadow(0 0.25rem 0.25rem black); }
+        .content .search-results__content .card-img-top {
+          width: 100%;
+          height: 15rem;
+          overflow: hidden;
+          object-fit: cover; }
+
+.mobile-footer {
+  height: 9vh;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  display: none;
+  bottom: 100%; }
+  .mobile-footer .footer-img {
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    bottom: 0; }
+  .mobile-footer .footer-menu {
+    height: 9vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem 2.5rem;
+    padding-bottom: 1.5rem; }
+    .mobile-footer .footer-menu i {
+      color: #FBB011;
+      font-size: 1.5rem;
+      z-index: 50; }
+  @media (max-width: 600px) {
+    .mobile-footer {
+      display: block; } }
+
+/*# sourceMappingURL=style.css.map */
