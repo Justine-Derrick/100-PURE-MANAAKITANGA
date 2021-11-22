@@ -53,15 +53,118 @@
                 </div>
             </nav>
 
-            <div class="where-to">
+            <div id= "whereTo" class="where-to">          
 
-                    <input id="locationSearch" class="location-search" type="text" placeholder="Where are you going?">
+                <div class="search-bar-container">
+                    <div class="search-bar" id="locationSearch">
+                        <input class="location-search" type="text" placeholder="Where are you going?">
+                    </div>
+                    <div class="help-icon">
+                        <i class="far fa-question-circle"></i>
+                    </div>
+                </div>
 
-                <i class="far fa-question-circle"></i>
+                    <div class="search-filters" id="searchFilters">
+
+                        <div class="search-filters__options">
+                            <input type="date" name="CheckInDate" id="CheckInDate">
+                            <input type="date" name="CheckOutDate" id="CheckOutDate">
+                            <select id="guestsNumber">
+                                <option value="" selected disabled hidden><i class="fa-solid fa-bed"></i>Number of Guests</option>
+                                <option value="one guest">1</option>
+                                <option value="two guest">2</option>
+                                <option value="three guest">3</option>
+                                <option value="four guest">4</option>
+                            </select>
+                        </div>
+
+                        <div class="apply-filters">
+                            <button class="apply-filters-btn" id="applyFiltersBtn"><b>FIND MY STAY</b></button>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div id="searchSummary" class="search-summary">
+                <div class="search-summary__details-container">
+                    <input class="search-summary__details" type="text" placeholder="Where are you going?">
+                    <i class="far fa-question-circle"></i>
+                </div>
+            </div>
+
+            <div id="furtherFilters" class="further-filters">
+                <div class="further-filters__options">
+
+                    <select id="sortBy" class="sort-by">
+                        <option value="" selected disabled hidden>SORT BY</option>
+                        <option value="Lowest Price">Price Low - High</option>
+                        <option value="Highest Price">Price High - Low</option>
+                        <option value="Highest Rated">Ratings High - Low</option>
+                    </select>
+
+                    <select id="accommodationType" class="accommodationType">
+                        <option value="" selected disabled hidden>ACCOMMODATION TYPE</option>
+                        <option value="Hotel">Hotel</option>
+                        <option value="Motel">Motel</option>
+                        <option value="Hostel">Hostel</option>
+                        <option value="House">House</option>
+                    </select>
+                    
+                    <button id="ammenitiesDropDown" class="ammenities-drop-down">AMMENITIES</button>
+
+                    <div id="ammenities" class="ammenities">
+                        <div class="ammenities-list">
+                            
+                            <div class="ammenities-list__one">
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Free Wifi</label>
+                                </div>
+
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Free Parking</label>
+                                </div>
+        
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Late Check Out</label>
+                                </div>
+        
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Breakfast Included</label>
+                                </div>
+                            </div>
+
+                            <div class="ammenities-list__two">
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Gym facilities</label>
+                                </div>
+
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Spa / Pool</label>
+                                </div>
+
+                                <div class="ammenities-list__option">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Accessible</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="applyFilters" class="apply-filters">
+                    <button id="applyFiltersBtn" class="apply-filters-btn">APPLY FILTERS</button>
+                </div>
+            </div>
+               
             </div>
         </div>
-
-        <div id="map" class="mapContainer"></div>
         
         <div class="content" id="content">
 
@@ -91,12 +194,17 @@
 
 
 
-            <!-- <div id="homeLandscapes" class="home-landscapes"></div>
+            <div id="homeLandscapes" class="home-landscapes">
+                <h1 class="home-landscapes__heading">
+                   EXPLORE OUR LANDSCAPES
+                </h1>
+                
+            </div>
             <div id="homeRecommendations" class="home-recommendations"></div>
             <div id="homeTopStays" class="home-top-stays"></div>
-            <div id="homeCovidInfo" class="home-covid-info"></div> -->
+            <div id="homeCovidInfo" class="home-covid-info"></div>
         
-        </div>
+        <!-- </div> -->
 
     
         <footer class="mobile-footer">
@@ -120,12 +228,9 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- map key -->
-    <script src="./js/mapKey.js"></script>
+    <script src="./js/mapKeyCopy.js"></script>
 
     <!-- our script -->
     <script src="./js/script.js"></script>
 </body>
 </html>
-
-
-<!-- this file will be pushed to git hub :) -->

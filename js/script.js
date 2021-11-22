@@ -3,26 +3,36 @@ console.log("howdy");
 // define map key 
 let script = "<script src='https://maps.googleapis.com/maps/api/js?key=" + key + "&libraries=places&callback=initMap' async defer >";
 
+
+
 // append map key to body
 
 $(document).ready(function(){
     $('body').append(script);
 });
 
-// map variables
+
+// initialise map
+
 let map;
 let markers = [];
 
-
-// initialise map
 function initMap(){
-
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 6,
-        center: {lat: -36.7667, lng: 175.5000},
+        zoom: 11, 
+        center: {lat:-36.7667, lng:175.5000},
     });
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -78,7 +88,7 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
-        topStay: true,
+        topStay: false,
     },
 
     {
@@ -115,11 +125,6 @@ let accommodation = [
         topStay: false,
     },
 
-
-
-
-
-
     {
         id: "30",
         mainImage: "./img/SeaviewMain.jpg",
@@ -134,7 +139,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Pool", "Free Cancelation","Free Parking"],
-        topStay: true,
+        topStay: false,
 
     },
 
@@ -229,6 +234,37 @@ let accommodation = [
 ];
 
 console.log(accommodation);
+
+
+// click to show filters
+
+function showFilters(){
+    let show = document.getElementById("searchFilters");
+
+    show.style.display = "block";
+
+}
+
+$("#locationSearch").click(function(){
+    showFilters();
+});
+
+function hideFilters(){
+    let show = document.getElementById("whereTo");
+
+    show.style.display = "none";
+}
+
+function showSummary(){
+    let show = document.getElementById("searchSummary");
+
+    show.style.display = "block";
+}
+
+$("#applyFiltersBtn").click(function(){
+    hideFilters();
+    showSummary();
+});
 
 
 

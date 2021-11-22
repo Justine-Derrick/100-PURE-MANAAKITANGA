@@ -25,3 +25,13 @@
     line-height: 1.8rem;
     color: $yellow;
 }
+
+@mixin button-one {
+    height: 2.5rem;
+    color: $black;
+    background: $yellow;
+    border: none;
+    padding:0 2rem;
+    font-family: "National Regular", sans-serif;
+    font-size: 1rem;
+}

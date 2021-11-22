@@ -2,54 +2,56 @@
 @import "fonts";
 @import "var";
 @import "mixins";
+@import "home";
+@import "search";
 
-.intro-screen__kia-ora{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 5000;
+// .intro-screen__kia-ora{
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     z-index: 5000;
     
-    .kia-ora{
-        font-family: "Pure Pakati Regular", sans-serif;
-        font-size: 8rem;
-        text-align: center;
-    }
-}
+//     .kia-ora{
+//         font-family: "Pure Pakati Regular", sans-serif;
+//         font-size: 8rem;
+//         text-align: center;
+//     }
+// }
 
-.intro-screen__welcome{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 4900;
+// .intro-screen__welcome{
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     z-index: 4900;
     
-    .welcome{
-        font-family: "Pure Pakati Regular", sans-serif;
-        font-size: 8rem;
-        text-align: center;
-    }
-}
+//     .welcome{
+//         font-family: "Pure Pakati Regular", sans-serif;
+//         font-size: 8rem;
+//         text-align: center;
+//     }
+// }
 
-.intro-screen__manaakitanga{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 4800;
+// .intro-screen__manaakitanga{
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     z-index: 4800;
     
-    .manaakitanga{
-        font-family: "Pure Pakati Regular", sans-serif;
-        font-size: 8rem;
-        text-align: center;
-    }
-}
+//     .manaakitanga{
+//         font-family: "Pure Pakati Regular", sans-serif;
+//         font-size: 8rem;
+//         text-align: center;
+//     }
+// }
 
 
 .search-results{
@@ -57,10 +59,11 @@
 }
 
 .header{
-    height: 13vh;
+    height: fit-content;
     width: 100%;
     position: relative;
     z-index: 1000;
+    margin-bottom: 3rem;
 
     &__img{
         width: 100%;
@@ -165,42 +168,160 @@
         }
     }
 
+
+
+    // main filters
+
+
     .where-to{
+        position: relative;
+        z-index: 1000;
+        margin: 0rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-between;
+
+        .search-bar-container{
+            display: flex;
+            align-items: center;
+
+            .search-bar{
+                width: 100%;
+            }
+        
+            .location-search{
+                width: 100%;
+                height: 3rem;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                line-height: 1rem;
+
+                @media #{$mobile} {
+                    width: 100%;
+                    height: 2.5rem;
+                }
+            }
+
+
+            .fa-question-circle{
+                padding-left: 1rem;
+                font-size: 2rem;
+                color: $yellow;
+
+                @media #{$mobile} {
+                    display: none;
+                }
+            }
+
+            @media #{$mobile} {
+                margin: 0;
+                padding: 2rem;
+
+            }
+
+        }
+
+        .search-filters{
+
+            display: none;
+        
+            &__options{
+                padding: 1rem 0;
+                width: 80%;
+
+                input{
+                    width: 25%;
+                    height: 2.5rem;
+                    margin-right: 1rem;
+                    padding: 1rem;
+                }
+
+                select{
+                    width: 45%;
+                    height: 2.5rem;
+                }
+            }
+
+            .apply-filters{
+
+                &-btn{
+                    @include button-one;
+                }
+            }
+
+        }
+    }
+
+
+
+    // more filters
+
+    .search-summary{
         position: relative;
         z-index: 1000;
         margin: 0rem 4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        display: none;
 
-        .location-search{
+        &__details-container{
             width: 100%;
-            height: 3rem;
-            padding: .5rem 1rem;
-            font-size: 1rem;
-            line-height: 1rem;
+            display: flex;
+            align-items: center;
+      
 
-            @media #{$mobile} {
+            .search-summary__details{
                 width: 100%;
-                height: 2.5rem;
+                height: 3rem;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                line-height: 1rem;
+
+                @media #{$mobile} {
+                    width: 100%;
+                    height: 2.5rem;
+                }
             }
+
+            .fa-question-circle{
+                padding-left: 1rem;
+                font-size: 2rem;
+                color: $yellow;
+
+                @media #{$mobile} {
+                    display: none;
+                }
+            }  
         }
+    }
 
+    .further-filters{
+        position: relative;
+        z-index: 2000;
+        margin: 0rem 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+   
+        .ammenities{
+            background: white;
+            
+            &-list{
+                display: flex;
+                width: 100%;
+            
+                &-one{
+                    width: 50%;
+                }
 
-        .fa-question-circle{
-            padding-left: 1rem;
-            font-size: 2rem;
-            color: $yellow;
-
-            @media #{$mobile} {
-                display: none;
+                &-two{
+                    width: 50%;
+                }
+    
             }
-        }
-
-        @media #{$mobile} {
-            margin: 0;
-            padding: 2rem;
-
         }
     }
 
@@ -212,7 +333,7 @@
     height: 78vh;
     z-index: 2000;
     position: relative;
-    margin-top: 10rem;
+    // margin-top: 10rem;
     overflow: scroll;
 
     .top-stays{
@@ -281,7 +402,7 @@
             }
         }
 
-        &__heading{
+        .top-stays__heading{
             position: relative;
             height: fit-content;
             margin-left: 1rem;
@@ -303,16 +424,16 @@
 
     .map-container{
         width: 100vw;
-        height: 50vh;
+        height: 60vh;
         background: cornflowerblue;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    .map{
-        width: 80%;
-        height: 80%;
+    #map{
+        width: 100%;
+        height: 100%;
         background: black;
     }
 
@@ -349,47 +470,58 @@
     }
 }
 
-// .home{
-//     height: 78vh;
-//     z-index: 2000;
-//     position: relative;
-//     margin-top: 10rem;
-//     overflow: scroll;
 
-//     &-landscapes, &-recommendations, &-covid-info{
-//         background: white;
-//         margin: 3rem 4rem;
-//         min-height: 50vh;
-//         position: relative;
-//         z-index: 2500;
-//         filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 1));
+// home styling
 
-//         @media #{$mobile} {
-//             margin: 1rem 2rem;
-//             margin-top: 0;
-//         }
-//     }
 
-//     &-top-stays{
-//         background: $black;
-//         margin: 1rem 0;
-//         height: 30vh;
-//         position: relative;
-//         box-shadow:  0 0.25rem 0.25rem black;
-//     }
+.home{
+   
+    &-landscapes, &-recommendations, &-covid-info{
+        background: white;
+        margin: 3rem 4rem;
+        min-height: 50vh;
+        position: relative;
+        z-index: 2500;
+        filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 1));
 
-//     &-landscapes{
-//         margin-top: 0; 
-//     }
+        @media #{$mobile} {
+            margin: 1rem 2rem;
+            margin-top: 0;
+        }
+    }
 
-//     &-covid-info{
-//         margin-bottom: 0.5rem;
-//     }
+    &-top-stays{
+        background: $black;
+        margin: 1rem 0;
+        height: 30vh;
+        position: relative;
+        box-shadow:  0 0.25rem 0.25rem black;
+    }
 
-    // @media #{$mobile} {
-    //     margin-top: 0;
-    // }
-// }
+    &-covid-info{
+        margin-bottom: 0.5rem;
+    }
+
+    @media #{$mobile} {
+        margin-top: 0;
+    }
+
+    &-landscapes{
+        &__heading{
+            margin-left: 1rem;
+            margin-top: 2rem;
+            @include section-heading;
+            padding: 1rem;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+
 
 .mobile-footer{
     height: 9vh;
