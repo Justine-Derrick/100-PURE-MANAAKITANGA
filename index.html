@@ -64,24 +64,25 @@
                     </div>
                 </div>
 
-                    <div class="search-filters" id="searchFilters">
+                    <form class="search-filters" id="searchFilters">
 
                         <div class="search-filters__options">
-                            <input type="date" name="CheckInDate" id="CheckInDate">
-                            <input type="date" name="CheckOutDate" id="CheckOutDate">
+                            <input type="date" name="checkInDate" id="checkInDate">
+                            <input type="date" name="checkOutDate" id="checkOutDate">
+                            
                             <select id="guestsNumber">
                                 <option value="" selected disabled hidden><i class="fa-solid fa-bed"></i>Number of Guests</option>
-                                <option value="one guest">1</option>
-                                <option value="two guest">2</option>
-                                <option value="three guest">3</option>
-                                <option value="four guest">4</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
                             </select>
                         </div>
 
                         <div class="apply-filters">
                             <button class="apply-filters-btn" id="applyFiltersBtn"><b>FIND MY STAY</b></button>
                         </div>
-                    </div>
+                    </form>
 
             </div>
 
@@ -228,7 +229,7 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- map key -->
-    <script src="./js/mapKeyCopy.js"></script>
+    <script src="./js/mapKey.js"></script>
 
     <!-- our script -->
     <script src="./js/script.js"></script>

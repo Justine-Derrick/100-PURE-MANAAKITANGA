@@ -126,27 +126,26 @@
         .header .where-to .search-bar-container {
           margin: 0;
           padding: 2rem; } }
-    .header .where-to .search-filters {
-      display: none; }
-      .header .where-to .search-filters__options {
-        padding: 1rem 0;
-        width: 80%; }
-        .header .where-to .search-filters__options input {
-          width: 25%;
-          height: 2.5rem;
-          margin-right: 1rem;
-          padding: 1rem; }
-        .header .where-to .search-filters__options select {
-          width: 45%;
-          height: 2.5rem; }
-      .header .where-to .search-filters .apply-filters-btn {
+    .header .where-to .search-filters__options {
+      padding: 1rem 0;
+      width: 80%; }
+      .header .where-to .search-filters__options input {
+        width: 25%;
         height: 2.5rem;
-        color: #1a1a1a;
-        background: #FBB011;
-        border: none;
-        padding: 0 2rem;
-        font-family: "National Regular", sans-serif;
-        font-size: 1rem; }
+        margin-right: 1rem;
+        padding: 1rem; }
+      .header .where-to .search-filters__options select {
+        width: 45%;
+        height: 2.5rem; }
+    .header .where-to .search-filters .apply-filters-btn {
+      height: 2.5rem;
+      color: #1a1a1a;
+      background: #FBB011;
+      border: none;
+      padding: 0 2rem;
+      font-family: "National Regular", sans-serif;
+      font-size: 1rem;
+      cursor: pointer; }
   .header .search-summary {
     position: relative;
     z-index: 1000;
@@ -198,7 +197,8 @@
   height: 78vh;
   z-index: 2000;
   position: relative;
-  overflow: scroll; }
+  overflow: scroll;
+  background: white; }
   .content .top-stays {
     background: white;
     padding-top: .2rem;
@@ -285,18 +285,61 @@
       flex-wrap: wrap;
       padding: 0rem .5rem; }
       .content .search-results__content .card {
-        height: fit-content;
         width: 32rem;
         margin: 1.5rem;
-        background-color: #1a1a1a;
-        color: white;
+        background-color: white;
+        color: #1a1a1a;
         font-family: "National Light", sans-serif;
         filter: drop-shadow(0 0.25rem 0.25rem black); }
         .content .search-results__content .card-img-top {
           width: 100%;
-          height: 15rem;
+          height: 20rem;
           overflow: hidden;
           object-fit: cover; }
+        .content .search-results__content .card-body {
+          padding: 1rem; }
+        .content .search-results__content .card-title {
+          font-family: "National Regular", sans-serif;
+          font-size: 1.4rem;
+          padding-bottom: .25rem; }
+        .content .search-results__content .card-location {
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem;
+          font-size: 1rem;
+          padding-bottom: .75rem; }
+        .content .search-results__content .card .reviews {
+          display: flex;
+          align-items: center;
+          padding-bottom: .75rem; }
+        .content .search-results__content .card .rating-text {
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem;
+          font-family: "National Regular", sans-serif;
+          color: #00A896;
+          font-size: 1.2rem;
+          padding-right: .5rem; }
+        .content .search-results__content .card .review-number {
+          color: grey;
+          padding-top: .1rem; }
+        .content .search-results__content .card .price-text {
+          font-family: "National Regular", sans-serif;
+          font-weight: 900;
+          font-size: 1rem;
+          padding-bottom: .75rem; }
+        .content .search-results__content .card-text {
+          font-family: "National Light", sans-serif;
+          font-size: 1rem;
+          line-height: 1.4rem;
+          padding-bottom: 1.25rem; }
+        .content .search-results__content .card-link {
+          font-family: "National Regular", sans-serif;
+          font-size: 1.1rem;
+          line-height: 1.8rem;
+          color: #FBB011;
+          color: #00A896;
+          border-bottom: solid 2px #00A896; }
+        .content .search-results__content .card .fa-angle-right {
+          font-size: 1rem; }
 
 .home-landscapes, .home-recommendations, .home-covid-info {
   background: white;
@@ -304,7 +347,8 @@
   min-height: 50vh;
   position: relative;
   z-index: 2500;
-  filter: drop-shadow(0 0.25rem 0.25rem black); }
+  filter: drop-shadow(0 0.25rem 0.25rem black);
+  display: none; }
   @media (max-width: 600px) {
     .home-landscapes, .home-recommendations, .home-covid-info {
       margin: 1rem 2rem;
@@ -316,7 +360,8 @@
   position: relative;
   box-shadow: 0 0.25rem 0.25rem black; }
 .home-covid-info {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  display: none; }
 @media (max-width: 600px) {
   .home {
     margin-top: 0; } }
@@ -326,7 +371,8 @@
   font-family: "Pure Pakati", sans-serif;
   font-size: 2.5rem;
   padding: 1rem;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  display: none; }
 
 .mobile-footer {
   height: 9vh;

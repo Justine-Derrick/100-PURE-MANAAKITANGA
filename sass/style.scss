@@ -224,7 +224,7 @@
 
         .search-filters{
 
-            display: none;
+            // display: none;
         
             &__options{
                 padding: 1rem 0;
@@ -335,6 +335,8 @@
     position: relative;
     // margin-top: 10rem;
     overflow: scroll;
+    // display: none;
+    background: white;
 
     .top-stays{
         background: white;
@@ -344,6 +346,7 @@
         // padding: 2rem 3rem;
         position: relative;
         z-index: 2500;
+        // display: none;
    
 
         &__container{
@@ -430,18 +433,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        // display: none;
     }
     
     #map{
         width: 100%;
         height: 100%;
         background: black;
+        // display: none;
     }
 
 
     .search-results{
         position: relative;
         z-index: 2500;
+        // display: none;
 
         &__content{
             margin-top: 1rem;
@@ -452,19 +458,78 @@
             padding:  0rem .5rem;
 
             .card{
-                height: fit-content;
+                // height: fit-content;
                 width: 32rem;
                 margin: 1.5rem;
-                background-color: $black;
-                color: white;
+                background-color: white;
+                color: $black;
                 font-family: "National Light", sans-serif;
                 filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 1));
 
                 &-img-top{
                     width: 100%;
-                    height: 15rem;
+                    height: 20rem;
                     overflow: hidden;
                     object-fit: cover;
+                }
+
+                &-body{
+                    padding: 1rem;
+                }
+
+                &-title{
+                    // text-transform: uppercase;
+                    @include card-heading;
+                    padding-bottom: .25rem;
+                }
+
+                &-location{
+                    @include card-location;
+                    font-size: 1rem;
+                    padding-bottom: .75rem;
+                }
+
+                .reviews{
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: .75rem;
+                }
+
+                .rating-text{
+                    @include card-location;
+                    font-family: "National Regular", sans-serif;
+                    color: $blue;
+                    font-size: 1.2rem;
+                    padding-right: .5rem;
+                }
+
+                .review-number{
+                    color: grey;
+                    padding-top: .1rem;
+                }
+
+
+                .price-text{
+                    font-family: "National Regular", sans-serif;
+                    font-weight: 900;
+                    font-size: 1rem;
+                    padding-bottom: .75rem;
+                }
+
+
+                &-text{
+                    @include card-body;
+                    padding-bottom: 1.25rem;
+                }
+
+                &-link{
+                    @include card-link;
+                    color: $blue; 
+                    border-bottom: solid 2px $blue;
+                }
+
+                .fa-angle-right{
+                    font-size: 1rem;
                 }
             }
         }
@@ -476,6 +541,8 @@
 
 
 .home{
+
+
    
     &-landscapes, &-recommendations, &-covid-info{
         background: white;
@@ -484,6 +551,7 @@
         position: relative;
         z-index: 2500;
         filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 1));
+        display: none;
 
         @media #{$mobile} {
             margin: 1rem 2rem;
@@ -497,10 +565,12 @@
         height: 30vh;
         position: relative;
         box-shadow:  0 0.25rem 0.25rem black;
+        // display: none;
     }
 
     &-covid-info{
         margin-bottom: 0.5rem;
+        display: none;
     }
 
     @media #{$mobile} {
@@ -514,8 +584,11 @@
             @include section-heading;
             padding: 1rem;
             padding-bottom: 0;
+            display: none;
         }
     }
+
+    
 }
 
 
