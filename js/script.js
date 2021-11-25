@@ -47,7 +47,7 @@ let accommodation = [
     },
 
     {
-        id: "20",
+        id: 20,
         mainImage: "./img/MorlandMain.png",
         name: "Morland Hotel",
         type: "Hotel", 
@@ -67,7 +67,7 @@ let accommodation = [
     },
 
     {
-        id: "90",
+        id: 30,
         mainImage: "./img/PeninsulaMain.png",
         name: "The Peninsula Hotel",
         type: "Hotel", 
@@ -87,7 +87,7 @@ let accommodation = [
     },
 
     {
-        id: "100",
+        id: 40,
         mainImage: "./img/CathedralMain.jpg",
         name: "The Cathedral",
         type: "Hotel", 
@@ -107,8 +107,8 @@ let accommodation = [
     },
 
     {
-        id: "110",
-        mainImage: "",
+        id: 50,
+        mainImage: "./img/OptioMain.jpg",
         name: "The Ocean View Hotel",
         type: "Hotel", 
         location: "Whitianga, Coromandel, NZ",
@@ -127,7 +127,7 @@ let accommodation = [
     },
 
     {
-        id: "30",
+        id: 60,
         mainImage: "./img/SeaviewMain.jpg",
         name: "Seaview Motel",
         type: "Motel", 
@@ -147,7 +147,7 @@ let accommodation = [
     },
 
     {
-        id: "40",
+        id: 70,
         mainImage: "./img/CarltonMain.png",
         name: "Cook's Beach Motel",
         type: "Motel", 
@@ -167,7 +167,7 @@ let accommodation = [
     },
 
     {
-        id: "50",
+        id: 80,
         mainImage: "./img/YouthMain.png",
         name: "Coromandel Youth Hostel",
         type: "Hostel", 
@@ -187,7 +187,7 @@ let accommodation = [
     },
 
     {
-        id: "60",
+        id: 90,
         mainImage: "./img/OptioMain.jpg",
         name: "Optio Bay Backpackers",
         type: "Hostel", 
@@ -207,7 +207,7 @@ let accommodation = [
     },
 
     {
-        id: "70",
+        id: 100,
         mainImage: "./img/RelaxationCove.png",
         name: "Relaxation on the Cove",
         type: "House", 
@@ -227,7 +227,7 @@ let accommodation = [
     },
 
     {
-        id: "80",
+        id: 110,
         mainImage: "./img/SeasideMain.png",
         name: "Seaside Stay",
         type: "House", 
@@ -293,6 +293,36 @@ function filterOptions(event){
 }
 
 
+// --------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
+
+// detais div
+
+
+function accommodationDetails(){
+    $(".card-link").on("click", function(){
+        for (let i=0; i < accommodation.length; i++){
+            if (parseInt(this.id) === accommodation[i].id){
+                console.log(accommodation[i].name);
+
+                $("#accommodationDetails").empty().append(
+                    `
+                    
+                    `
+                )
+
+            }
+        } 
+    });
+}
+
+
+
+
+// --------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------
+
+
 // dsiplaying options
 
 function displayOptions(nights, guests){
@@ -326,7 +356,12 @@ function displayOptions(nights, guests){
             generateTopCard(i);
         } 
     }
+
+    accommodationDetails();
+    
 }
+
+
 
 console.log(markers);
 
@@ -341,7 +376,8 @@ function reloadMarkers() {
 }
 
 
-// -------------------------
+
+
 
 // card generators
 
@@ -354,7 +390,7 @@ function generateTopCard(x){
                 <h5 class="card-title">${accommodation[x].name}</h5>
                 <h6 class="card-location"><i>${accommodation[x].location}</i></h5>
                 <p class="card-text">${accommodation[x].descriptionShort}</p>
-                <a href="#" class="card-link"><u>More Info</u>  <i class="fas fa-angle-right"></i></a>
+                <a id="${accommodation[x].id}" class="card-link"><u>More Info</u>  <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
         `
@@ -377,11 +413,12 @@ function generateResultCard(x){
                 </div>
                 <p class="price-text">$${accommodation[x].costPerNight}/night</p>
                 <p class="card-text">${accommodation[x].descriptionShort}</p>
-                <a href="#" class="card-link"><u>More Info</u>  <i class="fas fa-angle-right"></i></a>
+                <a class="card-link" id="${accommodation[x].id}"><u>More Info</u>  <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
         `
     );
+
 }
 
 

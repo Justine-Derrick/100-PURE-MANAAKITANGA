@@ -1,9 +1,13 @@
+@import "../bootstrap-4.5.3/scss/bootstrap.scss";
+
 @import "resets";
 @import "fonts";
 @import "var";
 @import "mixins";
 @import "home";
 @import "search";
+@import "accommodationDetails";
+
 
 // .intro-screen__kia-ora{
 //     width: 100%;
@@ -251,6 +255,10 @@
             }
 
         }
+
+        @media #{$mobile} {
+            display: none;
+        }
     }
 
 
@@ -295,6 +303,10 @@
                 }
             }  
         }
+
+        @media #{$mobile} {
+            display: none;
+        }
     }
 
     .further-filters{
@@ -323,8 +335,16 @@
     
             }
         }
+
+        @media #{$mobile} {
+            display: none;
+        }
     }
 
+     
+    @media #{$mobile} {
+        display: none;
+    }
    
 
 }
@@ -404,6 +424,11 @@
                     font-size: 1rem;
                 }
             }
+
+             
+            @media #{$mobile} {
+                display: none;
+            }
         }
 
         .top-stays__heading{
@@ -420,8 +445,14 @@
             margin: 1rem 2rem;
             margin-top: 0;
         }
+
+        @media #{$mobile} {
+            display: none;
+        }
+       
     }
 
+    
     @media #{$mobile} {
         margin-top: 0;
     }
@@ -434,6 +465,10 @@
         justify-content: center;
         align-items: center;
         // display: none;
+
+        @media #{$mobile} {
+            display: none;
+        }
     }
     
     #map{
@@ -441,6 +476,10 @@
         height: 100%;
         background: black;
         // display: none;
+
+        @media #{$mobile} {
+            display: none;
+        }
     }
 
 
@@ -533,7 +572,22 @@
                 }
             }
         }
+
+        @media #{$mobile} {
+            display: none;
+        }
     }
+
+
+    
+
+    @media #{$mobile} {
+        height: 100vh;
+    }
+    @media #{$mobile} {
+        display: none;
+    }
+
 }
 
 
@@ -566,6 +620,11 @@
         position: relative;
         box-shadow:  0 0.25rem 0.25rem black;
         // display: none;
+
+         
+        @media #{$mobile} {
+            display: none;
+        }
     }
 
     &-covid-info{
@@ -631,6 +690,6 @@
     }
 
     @media #{$mobile} {
-        display: block;
+        display: none;
     }
 }
