@@ -10,6 +10,7 @@ let script = "<script src='https://maps.googleapis.com/maps/api/js?key=" + key +
 //query selectors
 
 const initialSearch = document.querySelector("#initialSearch");
+// const displayFilters = document.querySelector("#displayFilters");
 // const filteredSearch = document.querySelector("#filteredSearch")
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
@@ -35,9 +36,10 @@ let accommodation = [
         id: 101,
         name: "The Carlton Hotel",
         type: "Hotel", 
-        location: "Whitianga, Coromandel, NZ",
+        location: "Whitianga",
+        reigon: "Coromandel",
 
-        mainImage: "./img/hotels/carlton-main-img.png",
+        mainImage: "/img/hotels/carlton-main-img.png",
         img1: "./img/hotels/carlton-img-1.png",
         img2: "./img/hotels/carlton-img-2.png",
         img3: "./img/hotels/carlton-img-3.png",
@@ -102,6 +104,7 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Gym Facilities", "Late Check Out", "Free Parking"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.83898421622976, 
         longitude: 175.69179517137826,
@@ -112,7 +115,8 @@ let accommodation = [
         id: 102,
         name: "Morland Hotel",
         type: "Hotel", 
-        location: "Opito Bay, Coromandel, NZ",
+        location: "Opito Bay",
+        reigon: "Coromandel",
 
         mainImage: "./img/hotels/morland-main-img.png",
         img1: "./img/hotels/morland-img-1.png",
@@ -179,6 +183,7 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.71498397906826,
         longitude: 175.7945025259624,
@@ -189,14 +194,15 @@ let accommodation = [
         id: 103,
         name: "The Peninsula Hotel",
         type: "Hotel", 
-        location: "Matarangi, Coromandel, NZ",
+        location: "Matarangi",
+        reigon: "Coromandel",
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/hotels/peninsula-main-img.png",
+        img1: "./img/hotels/peninsula-img-1.png",
+        img2: "./img/hotels/peninsula-img-2.png",
+        img3: "./img/hotels/peninsula-img-3.png",
+        img4: "./img/hotels/peninsula-img-4.png",
+        img5: "./img/hotels/peninsula-img-5.png",
 
         rating: 4.2,
         reviewsNo: 72,
@@ -256,6 +262,7 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.73275387156286,
         longitude:  175.6446552829269, 
@@ -266,14 +273,15 @@ let accommodation = [
         id: 104,
         name: "The Cathedral",
         type: "Hotel", 
-        location: "Hahei, Coromandel, NZ",
+        location: "Hahei",
+        reigon: "Coromandel",
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/hotels/cathedral-main-img.png",
+        img1: "./img/hotels/cathedral-img-1.png",
+        img2: "./img/hotels/cathedral-img-2.png",
+        img3: "./img/hotels/cathedral-img-3.png",
+        img4: "./img/hotels/cathedral-img-4.png",
+        img5: "./img/hotels/cathedral-img-5.png",
 
         rating: 4.9,
         reviewsNo: 200,
@@ -333,6 +341,7 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.84091593931837, 
         longitude: 175.80844929618638, 
@@ -343,7 +352,8 @@ let accommodation = [
         id: 105,
         name: "The Ocean View Hotel",
         type: "Hotel", 
-        location: "Whitianga, Coromandel, NZ",
+        location: "Whitianga",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -410,6 +420,7 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.82994337395195,
         longitude: 175.7049525979734, 
@@ -424,7 +435,8 @@ let accommodation = [
         id: 106,
         name: "Seaview Motel",
         type: "Motel", 
-        location: "Whitianga, Coromandel, NZ",
+        location: "Whitianga",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -488,6 +500,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Pool", "Free Cancelation","Free Parking"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.82515425566253, 
         longitude: 175.70227305787188,
@@ -499,7 +512,8 @@ let accommodation = [
         id: 107,
         name: "Cook's Beach Motel",
         type: "Motel", 
-        location: "Cook's Beach, Coromandel, NZ",
+        location: "Cook's Beach",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -563,6 +577,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Late Check Out"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.83763932778573, 
         longitude: 175.74035469061513,
@@ -573,6 +588,7 @@ let accommodation = [
         name: "",
         type: "Motel", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -636,6 +652,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: "", 
         longitude: "",
@@ -646,6 +663,7 @@ let accommodation = [
         name: "",
         type: "Motel", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -709,6 +727,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: "", 
         longitude: "",
@@ -719,6 +738,7 @@ let accommodation = [
         name: "",
         type: "Motel", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -782,6 +802,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: "", 
         longitude: "",
@@ -794,7 +815,8 @@ let accommodation = [
         id: 111,
         name: "Coromandel Youth Hostel",
         type: "Hostel", 
-        location: "Whitianga, Coromandel, NZ",
+        location: "Whitianga,",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -858,6 +880,8 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Free Cancelation"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
+
         latitude: -36.83949375865749,
         longitude: 175.69138491931892,        
     },
@@ -866,7 +890,8 @@ let accommodation = [
         id: 112,
         name: "Optio Bay Backpackers",
         type: "Hostel", 
-        location: "Opito Bay, Coromandel, NZ",
+        location: "Opito Bay",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -930,6 +955,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Free Cancelation"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
       
         latitude: -36.72296194864805, 
         longitude: 175.80564070167569,      
@@ -941,6 +967,7 @@ let accommodation = [
         name: "",
         type: "", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1004,6 +1031,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
       
         latitude: "", 
         longitude: "",      
@@ -1015,6 +1043,7 @@ let accommodation = [
         name: "",
         type: "", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1078,6 +1107,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
       
         latitude: "", 
         longitude: "",      
@@ -1088,6 +1118,7 @@ let accommodation = [
         name: "",
         type: "", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1151,6 +1182,7 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
       
         latitude: "", 
         longitude: "",      
@@ -1164,7 +1196,8 @@ let accommodation = [
         id: 116,
         name: "Relaxation on the Cove",
         type: "House", 
-        location: "Hahei, Coromandel, NZ",
+        location: "Hahei",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1228,6 +1261,7 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out", "Free Parking"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
       
         latitude: -36.8435427107329, 
         longitude: 175.8018675620926,  
@@ -1238,7 +1272,8 @@ let accommodation = [
         id: 117,
         name: "Seaside Stay",
         type: "House", 
-        location: "Matarangi, Coromandel, NZ",
+        location: "Matarangi",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1302,6 +1337,7 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out", "Free Parking", "Spa"],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.843780488706656, 
         longitude: 175.8148605326123,       
@@ -1312,6 +1348,7 @@ let accommodation = [
         name: "",
         type: "House", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1375,6 +1412,7 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: "", 
         longitude: "",       
@@ -1385,6 +1423,7 @@ let accommodation = [
         name: "",
         type: "House", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1448,6 +1487,7 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: "", 
         longitude: "",       
@@ -1458,6 +1498,7 @@ let accommodation = [
         name: "",
         type: "House", 
         location: "",
+        reigon: "Coromandel",
 
         mainImage: "",
         img1: "",
@@ -1469,7 +1510,7 @@ let accommodation = [
         rating: "",
         reviewsNo: "",
        
-               reviewImg1: "./img/reviews/review-img-1.png",
+        reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
         reviewDate1: "4 months",
         reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
@@ -1521,6 +1562,7 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: [],
+        cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: "", 
         longitude: "",       
@@ -1573,6 +1615,38 @@ function initialFilterOptions(event){
 
     let accommodationLocation = $("#searchBar").val();
 
+    $("#searchForm").empty().append(
+        `
+        <div id="searchSummary" class="search-summary">
+            <div class="search-summary__details-container">
+                <input class="search-summary__details" type="text" placeholder=${accommodationLocation}>
+                <i class="far fa-question-circle"></i>
+                <div class="search-summary__check-in-summary">${checkInDate}</div>
+                <div class="search-summary__check-out-summary">${checkOutDate}</div>
+                <button id="displayFilters" class="search-summary__filters">
+                    <i class="fas fa-filter"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="furtherFilterOptions" class="further-filter-options">
+        
+
+        </div>
+
+        `
+    )
+
+    $("#content").empty().append(
+
+        `
+        <div class="" id="cardContainerTopStay"></div>
+        <div class="" id="cardContainerSearchResults"></div>
+        
+        `
+
+    )
+
 
     displayInitialOptions(numberOfDays, numberOfPeople, accommodationLocation);
 }
@@ -1585,7 +1659,7 @@ function initialFilterOptions(event){
 
 function displayInitialOptions(nights, guests, city){
 
-    reloadMarkers();
+    // reloadMarkers();
 
     console.log(nights);
     console.log(guests);
@@ -1594,7 +1668,7 @@ function displayInitialOptions(nights, guests, city){
     $("#cardContainerTopStay").empty();
 
     for (let i=0; i < accommodation.length; i++){
-        if ((nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest)){
+        if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest)){
             generateResultCard(i);
 
             let location = {lat: accommodation[i].latitude, lng: accommodation[i].longitude};
@@ -1610,7 +1684,7 @@ function displayInitialOptions(nights, guests, city){
 
         } 
         
-        if ((nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
+        if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
             generateTopCard(i);
         } 
     }
@@ -1624,7 +1698,12 @@ function displayInitialOptions(nights, guests, city){
 
 // further filters
 
-function furtherFilters(){
+function furtherFilters(event){
+   
+    event.preventDefault();
+    console.log("clicked");
+
+  
 
 }
 
@@ -1635,6 +1714,11 @@ function furtherFilters(){
 // further filter options
 
 function displayFilteredOptions(){
+
+    // reloadMarkers();
+
+    $("#cardContainerSearchResults").empty();
+    $("#cardContainerTopStay").empty();
 
 }
 
@@ -1663,17 +1747,19 @@ function reloadMarkers() {
 function accommodationDetails(){
     $(".card-link").on("click", function(){
 
-        
+        $("#body").empty().append(
+            `
+            <section class="body">
+            <div class="accommodation-details" id="accommodationDetails">
+            </section>
+            `
+        )
 
         for (let i=0; i < accommodation.length; i++){
             if (parseInt(this.id) === accommodation[i].id){
                 console.log(accommodation[i].name);
 
-                $("#accommodationDetails").empty().append(
-                    `
-
-                    `
-                )
+                accommodationDetailsAppend(i);
 
             }
         } 
@@ -1714,6 +1800,123 @@ function accommodationDetails(){
 // -------------------------------------------------------------------------------------------------------------------------------------------
 
 
+function accommodationDetailsAppend(x){
+
+    $("#accommodationDetails").empty().append(
+        `
+        <div class="accommodation-details__img-container">
+
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src=${accommodation[x].mainImage} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src=${accommodation[x].img1} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src=${accommodation[x].img2} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src=${accommodation[x].img3} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src=${accommodation[x].img4} class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                  <img src=${accommodation[x].img5} class="d-block w-100" alt="...">
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="accommodation-details__info">
+            
+            <div class="accommodation-details__header">
+                <h1 class="accommodation-name"><b>${accommodation[x].name}</b></h1>
+                <i class="fa-solid fa-heart"></i>
+            </div>              
+            <h3 class="accommodation-location">${accommodation[x].location}, ${accommodation[x].reigon}, NZ</h3>
+            <div class="accommodation-reviews">
+                <p class="rating-text"><i class="fas fa-star"></i>${accommodation[x].rating}</p> <p class="review-number"><i>${accommodation[x].reviewsNo} reviews</i></p>
+            </div>
+            <div class="accommodation-description">
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt commodi inventore eligendi, laudantium tempora similique error! Asperiores quas aut ipsa!</p>
+                <a class="description-link" id="${accommodation[x].id}">More Info <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="accommodation-ammenities">
+            <h2 class="ammenities-heading"><b>AMMENITIES</b></h2>
+            <div class="ammenities-details"></div>
+            <a class="ammenities-link" id="${accommodation[x].id}"><u>Full list</u>  <i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <div class="accommodation-reviews-details">
+            <h2 class="reviews-heading"><b>REVIEWS</b></h2>
+            <div class="reviews-cards" id="reviewsCards"></div>
+            <a class="reviews-link" id="${accommodation[x].id}"><u>All reviews</u>  <i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <div class="accommodation-map"></div>
+        
+        <div class="accommodation-breakfast">
+            <h2 class="breakfast-heading"><b>BREAKFAST OPTIONS</b></h2>
+            <div class="breakfast-options" id="breakfastOptions"></div>
+        </div>
+
+        <div class="accommodation-dates">
+
+            <h2 class="dates-heading"><b>YOUR DATES</b></h2>
+            <div class="dates-container">
+                <div class="accommodation-dates__check-in">
+
+                </div>
+                <div class="accommodation-dates__check-out">
+
+                </div>
+            </div>
+            <a class="accommodation-dates-link" id="${accommodation[x].id}"><u>Edit dates</u>  <i class="fas fa-angle-right"></i></a>
+        </div>
+
+        <div class="accommodation-cancellation-policy">
+            <h2 class="cancellation-heading"><b>CANCELLATION POLICY</b></h2>
+            <p>Cancel before ??? and ${accommodation[x].cancellation}</p>
+        </div>
+
+
+            <div class="accommodation-details__footer">
+                <div class="cost-summary">
+                    <h4>append cost</h4>
+                    <div class="cost-breakdown">
+                        <p>append night</p>
+                        <i class="fa-solid fa-circle"></i>
+                        <p>append dates</p>
+                    </div>
+                </div>
+                <button class="book-now">Book Now</button>
+            </div>
+      
+        </div>          
+    </div>
+    `
+    )
+
+    generateMealCard(x);
+    generateReviewCard(x);
+}
+
+
+
 // card generators
 
 function generateTopCard(x){
@@ -1723,9 +1926,9 @@ function generateTopCard(x){
             <img class="card-img-top" src="${accommodation[x].mainImage}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">${accommodation[x].name}</h5>
-                <h6 class="card-location"><i>${accommodation[x].location}</i></h5>
+                <h6 class="card-location"><i>${accommodation[x].location}, ${accommodation[x].reigon}, NZ</i></h5>
                 <p class="card-text">${accommodation[x].descriptionShort}</p>
-                <a id="${accommodation[x].id}" class="card-link"><u>More Info</u>  <i class="fas fa-angle-right"></i></a>
+                <a class="card-link" id="${accommodation[x].id}" ><u>More Info</u>  <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
         `
@@ -1742,7 +1945,7 @@ function generateResultCard(x){
             <div class="card-top-line">
                 <h5 class="card-title">${accommodation[x].name}</h5>
             </div>
-                <h6 class="card-location">${accommodation[x].location}</h5>
+                <h6 class="card-location">${accommodation[x].location}, ${accommodation[x].reigon}, NZ</h5>
                 <div class="reviews">
                     <p class="rating-text"><i class="fas fa-star"></i>  ${accommodation[x].rating}</p> <p class="review-number"><i>(${accommodation[x].reviewsNo} reviews)</i></p>
                 </div>
@@ -1757,10 +1960,106 @@ function generateResultCard(x){
 }
 
 
+function generateReviewCard(y){
+    $("#reviewsCards").append(
+        `
+        <div class="card review-one">
+            <img class="card-img-top" src="${accommodation[y].reviewImg1}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].reviewName1}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].reviewRating1}</p>
+                <p class="card-text">${accommodation[y].reviewContent1}</p>
+            </div>
+        </div>
+
+        <div class="card review-two">
+            <img class="card-img-top" src="${accommodation[y].reviewImg2}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].reviewName2}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].reviewRating2}</p>
+                <p class="card-text">${accommodation[y].reviewContent2}</p>
+            </div>
+        </div>
+
+        <div class="card review-three">
+            <img class="card-img-top" src="${accommodation[y].reviewImg3}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].reviewName3}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].reviewRating3}</p>
+                <p class="card-text">${accommodation[y].reviewContent3}</p>
+            </div>
+        </div>
+
+        <div class="card review-one">
+            <img class="card-img-top" src="${accommodation[y].reviewImg4}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].reviewName4}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].reviewRating4}</p>
+                <p class="card-text">${accommodation[y].reviewContent4}</p>
+            </div>
+        </div>
+        `
+    )
+}
+
+
+function generateMealCard(y){
+    $("#breakfastOptions").append(
+        `
+        <div class="card meal-one">
+            <img class="card-img-top" src="${accommodation[y].breakfastImg1}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].breakfastOption1}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].breakfastPrice1}</p>
+                <p class="card-text">${accommodation[y].breakfastDescription1}</p>
+                <p class="card-text">${accommodation[y].breakfastRequirement1}</p>
+            </div>
+        </div>
+
+        <div class="card  meal-two">
+            <img class="card-img-top" src="${accommodation[y].breakfastImg2}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].breakfastOption2}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].breakfastPrice2}</p>
+                <p class="card-text">${accommodation[y].breakfastDescription2}</p>
+                <p class="card-text">${accommodation[y].breakfastRequirement2}</p>
+            </div>
+        </div>
+
+        <div class="card  meal-three">
+            <img class="card-img-top" src="${accommodation[y].breakfastImg3}" alt="Card image cap">
+            <div class="card-body">
+            <div class="card-top-line">
+                <h5 class="card-title">${accommodation[y].breakfastOption3}</h5>
+            </div>
+                <p class="price-text">$${accommodation[y].breakfastPrice3}</p>
+                <p class="card-text">${accommodation[y].breakfastDescription3}</p>
+                <p class="card-text">${accommodation[y].breakfastRequirement3}</p>
+            </div>
+        </div>
+        `
+    );
+
+}
+
+
 // -------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // event listeners
 
 initialSearch.addEventListener("click", initialFilterOptions);
+// displayFilters.addEventListener("click", furtherFilters);
 // filteredSearch.addEventListener("click", displayFilteredOptions);

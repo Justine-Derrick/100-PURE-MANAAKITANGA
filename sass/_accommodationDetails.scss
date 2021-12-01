@@ -41,7 +41,7 @@
             align-items: center;
 
             .accommodation-name{
-                @include card-heading;
+                // @include card-heading;
                 font-size: 1.4rem;    
                 margin: 0;
             }
@@ -55,7 +55,7 @@
         .accommodation-location{
             margin: 0rem 1rem;
             margin-bottom: .25rem;
-            @include card-location;
+            // @include card-location;
         }
 
         .accommodation-reviews{
@@ -83,10 +83,10 @@
             .description{
                 // margin: 1rem;
                 margin-bottom: 0.25rem;
-                @include card-body;
+                // @include card-body;
 
                 &-link{
-                    @include card-link;
+                    // @include card-link;
                     font-size: 1rem;
                     color: $blue; 
                     border-bottom: solid 2px $blue;
@@ -100,12 +100,12 @@
             border-bottom: solid 1px lightgray;
 
             .ammenities-heading{
-                @include card-heading;
+                // @include card-heading;
                 font-size: 1.2rem;
             }
 
             .ammenities-link{
-                @include card-link;
+                // @include card-link;
                 font-size: 1rem;
                 color: $blue; 
                 border-bottom: solid 2px $blue;
@@ -116,12 +116,12 @@
             margin: 1rem;
     
             .reviews-heading{
-                @include card-heading;
+                // @include card-heading;
                 font-size: 1.2rem;
             }
 
             .reviews-link{
-                @include card-link;
+                // @include card-link;
                 font-size: 1rem;
                 color: $blue; 
                 border-bottom: solid 2px $blue;
@@ -138,7 +138,7 @@
             margin: 1rem;
 
             .breakfast-heading{
-                @include card-heading;
+                // @include card-heading;
                 font-size: 1.2rem;
             }
         }
@@ -150,7 +150,7 @@
 
             .dates-heading{
                 color: white;
-                @include card-heading;
+                // @include card-heading;
                 font-size: 1.2rem;
             }
 
@@ -176,7 +176,7 @@
             }
 
             .accommodation-dates-link{
-                @include card-link;
+                // @include card-link;
                 font-size: 1rem;
                 color: $yellow; 
                 border-bottom: solid 2px $yellow;
@@ -190,7 +190,7 @@
             padding-bottom: 6rem;
     
             .cancellation-heading{
-                @include card-heading;
+                // @include card-heading;
                 font-size: 1.2rem;
             }
         }
@@ -211,7 +211,7 @@
             .cost-summary{
 
                 h4{
-                    @include card-link;
+                    // @include card-link;
                     line-height: 1rem;
                 }
             }

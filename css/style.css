@@ -7814,6 +7814,82 @@ a.text-dark:hover, a.text-dark:focus {
 @font-face {
   font-family: "Pure Pakati Regular";
   src: url("../font/PurePakati-Regular.otf"); }
+.header__img--desktop {
+  position: absolute;
+  z-index: 50; }
+
+.header__nav {
+  width: 100%;
+  min-height: 10vh;
+  position: relative;
+  padding: 3rem 3rem;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__nav-logo {
+    max-height: 4rem; }
+  .header__nav-steps {
+    display: flex; }
+    .header__nav-steps .step {
+      width: 2rem;
+      height: 2rem;
+      color: #fff;
+      border-radius: 50%;
+      border: solid 2px white;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6rem;
+      margin-left: 1rem; }
+    .header__nav-steps .active {
+      background: #FBB011;
+      border-radius: 50%;
+      color: #1a1a1a;
+      border: solid 2px #FBB011;
+      font-weight: 500; }
+
+.header__search {
+  padding: 3rem 3rem;
+  padding-top: 0;
+  position: relative;
+  z-index: 250; }
+  .header__search .search-form__location {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem; }
+    .header__search .search-form__location .search-bar {
+      width: 97%;
+      height: 2rem;
+      border: none;
+      padding: 0.25rem 0.5rem; }
+    .header__search .search-form__location .fa-question-circle {
+      width: 3%;
+      text-align: end;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: #FBB011; }
+  .header__search .search-form__filters {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: space-between; }
+    .header__search .search-form__filters #checkInDate, .header__search .search-form__filters #checkOutDate {
+      width: 25%;
+      height: 2rem; }
+    .header__search .search-form__filters #guestsNumber {
+      width: 47%;
+      height: 2rem; }
+  .header__search .search-form__submit .submit-btn {
+    height: 2.5rem;
+    color: #1a1a1a;
+    background: #FBB011;
+    border: none;
+    padding: 0 2rem;
+    font-family: "National Regular", sans-serif;
+    font-size: 1rem;
+    cursor: pointer; }
+
 @media (max-width: 600px) {
   .accommodation-details {
     width: 100%;
@@ -7833,8 +7909,6 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: .25rem;
       align-items: center; }
       .accommodation-details__header .accommodation-name {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.4rem;
         font-size: 1.4rem;
         margin: 0; }
       .accommodation-details__header .fa-heart {
@@ -7842,9 +7916,7 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 1.2rem; }
     .accommodation-details .accommodation-location {
       margin: 0rem 1rem;
-      margin-bottom: .25rem;
-      font-family: "National Light", sans-serif;
-      font-size: 1.2rem; }
+      margin-bottom: .25rem; }
     .accommodation-details .accommodation-reviews {
       margin: .25rem 1rem;
       display: flex;
@@ -7861,15 +7933,8 @@ a.text-dark:hover, a.text-dark:focus {
       padding-bottom: 1rem;
       border-bottom: solid 1px lightgray; }
       .accommodation-details .accommodation-description .description {
-        margin-bottom: 0.25rem;
-        font-family: "National Light", sans-serif;
-        font-size: 1rem;
-        line-height: 1.4rem; }
+        margin-bottom: 0.25rem; }
         .accommodation-details .accommodation-description .description-link {
-          font-family: "National Regular", sans-serif;
-          font-size: 1.1rem;
-          line-height: 1.8rem;
-          color: #FBB011;
           font-size: 1rem;
           color: #00A896;
           border-bottom: solid 2px #00A896; }
@@ -7878,28 +7943,16 @@ a.text-dark:hover, a.text-dark:focus {
       padding-bottom: 1rem;
       border-bottom: solid 1px lightgray; }
       .accommodation-details .accommodation-ammenities .ammenities-heading {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.4rem;
         font-size: 1.2rem; }
       .accommodation-details .accommodation-ammenities .ammenities-link {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-        color: #FBB011;
         font-size: 1rem;
         color: #00A896;
         border-bottom: solid 2px #00A896; }
     .accommodation-details .accommodation-reviews-details {
       margin: 1rem; }
       .accommodation-details .accommodation-reviews-details .reviews-heading {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.4rem;
         font-size: 1.2rem; }
       .accommodation-details .accommodation-reviews-details .reviews-link {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-        color: #FBB011;
         font-size: 1rem;
         color: #00A896;
         border-bottom: solid 2px #00A896; }
@@ -7910,16 +7963,12 @@ a.text-dark:hover, a.text-dark:focus {
     .accommodation-details .accommodation-breakfast {
       margin: 1rem; }
       .accommodation-details .accommodation-breakfast .breakfast-heading {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.4rem;
         font-size: 1.2rem; }
     .accommodation-details .accommodation-dates {
       background: #1a1a1a;
       padding: 1rem; }
       .accommodation-details .accommodation-dates .dates-heading {
         color: white;
-        font-family: "National Regular", sans-serif;
-        font-size: 1.4rem;
         font-size: 1.2rem; }
       .accommodation-details .accommodation-dates .dates-container {
         display: flex;
@@ -7936,10 +7985,6 @@ a.text-dark:hover, a.text-dark:focus {
           margin-left: .5rem;
           background: white; }
       .accommodation-details .accommodation-dates .accommodation-dates-link {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-        color: #FBB011;
         font-size: 1rem;
         color: #FBB011;
         border-bottom: solid 2px #FBB011; }
@@ -7947,8 +7992,6 @@ a.text-dark:hover, a.text-dark:focus {
       margin: 1rem;
       padding-bottom: 6rem; }
       .accommodation-details .accommodation-cancellation-policy .cancellation-heading {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.4rem;
         font-size: 1.2rem; }
     .accommodation-details .accommodation-details__footer {
       max-height: 6rem;
@@ -7962,10 +8005,6 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex;
       justify-content: space-between; }
       .accommodation-details .accommodation-details__footer .cost-summary h4 {
-        font-family: "National Regular", sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-        color: #FBB011;
         line-height: 1rem; }
       .accommodation-details .accommodation-details__footer .cost-breakdown {
         display: flex;
@@ -7986,427 +8025,5 @@ a.text-dark:hover, a.text-dark:focus {
         border: solid 2px #FBB011;
         font-size: 1rem;
         font-family: "National Regular", sans-serif; } }
-.search-results {
-  min-height: 100vh; }
-
-.header {
-  height: fit-content;
-  width: 100%;
-  position: relative;
-  z-index: 1000;
-  margin-bottom: 3rem; }
-  .header__img {
-    width: 100%;
-    position: absolute;
-    z-index: 5;
-    filter: drop-shadow(0 0.25rem 0.25rem black); }
-    .header__img--mobile {
-      display: none;
-      width: 100%;
-      position: absolute;
-      z-index: 5;
-      filter: drop-shadow(0.25 0.25rem 0rem black); }
-      @media (max-width: 600px) {
-        .header__img--mobile {
-          display: block; } }
-    @media (max-width: 600px) {
-      .header__img {
-        display: none; } }
-  .header .top-nav {
-    max-width: 100%;
-    padding: 3rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1000;
-    top: 0; }
-    .header .top-nav__logo {
-      height: 5rem; }
-      .header .top-nav__logo .logo {
-        height: inherit; }
-    .header .top-nav .top-nav__menu {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center; }
-      .header .top-nav .top-nav__menu .menu {
-        height: 1.4rem;
-        list-style: none;
-        cursor: pointer;
-        color: white;
-        display: flex;
-        align-items: center;
-        margin: 0; }
-        .header .top-nav .top-nav__menu .menu-item {
-          padding-left: 2rem;
-          font-family: "National Light", sans-serif;
-          font-size: 1.4rem;
-          line-height: 1.4rem; }
-          .header .top-nav .top-nav__menu .menu-item:hover {
-            color: #FBB011; }
-        .header .top-nav .top-nav__menu .menu .current {
-          color: #FBB011;
-          font-weight: 700;
-          font-family: "National", sans-serif; }
-      .header .top-nav .top-nav__menu .menu-button {
-        background: #00A896;
-        border: none;
-        color: white;
-        padding: 0.75rem 1.25rem;
-        line-height: 1.4rem;
-        text-align: center;
-        margin-left: 2rem; }
-        .header .top-nav .top-nav__menu .menu-button:hover {
-          color: #1a1a1a;
-          background: #FBB011; }
-    @media (max-width: 600px) {
-      .header .top-nav {
-        display: none; } }
-  .header .where-to {
-    position: relative;
-    z-index: 1000;
-    margin: 0rem 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-between; }
-    .header .where-to .search-bar-container {
-      display: flex;
-      align-items: center; }
-      .header .where-to .search-bar-container .search-bar {
-        width: 100%; }
-      .header .where-to .search-bar-container .location-search {
-        width: 100%;
-        height: 3rem;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        line-height: 1rem; }
-        @media (max-width: 600px) {
-          .header .where-to .search-bar-container .location-search {
-            width: 100%;
-            height: 2.5rem; } }
-      .header .where-to .search-bar-container .fa-question-circle {
-        padding-left: 1rem;
-        font-size: 2rem;
-        color: #FBB011; }
-        @media (max-width: 600px) {
-          .header .where-to .search-bar-container .fa-question-circle {
-            display: none; } }
-      @media (max-width: 600px) {
-        .header .where-to .search-bar-container {
-          margin: 0;
-          padding: 2rem; } }
-    .header .where-to .search-filters__options {
-      padding: 1rem 0;
-      width: 80%; }
-      .header .where-to .search-filters__options input {
-        width: 25%;
-        height: 2.5rem;
-        margin-right: 1rem;
-        padding: 1rem; }
-      .header .where-to .search-filters__options select {
-        width: 45%;
-        height: 2.5rem; }
-    .header .where-to .search-filters .apply-filters-btn {
-      height: 2.5rem;
-      color: #1a1a1a;
-      background: #FBB011;
-      border: none;
-      padding: 0 2rem;
-      font-family: "National Regular", sans-serif;
-      font-size: 1rem;
-      cursor: pointer; }
-    @media (max-width: 600px) {
-      .header .where-to {
-        display: none; } }
-  .header .search-summary {
-    position: relative;
-    z-index: 1000;
-    margin: 0rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    display: none; }
-    .header .search-summary__details-container {
-      width: 100%;
-      display: flex;
-      align-items: center; }
-      .header .search-summary__details-container .search-summary__details {
-        width: 100%;
-        height: 3rem;
-        padding: .5rem 1rem;
-        font-size: 1rem;
-        line-height: 1rem; }
-        @media (max-width: 600px) {
-          .header .search-summary__details-container .search-summary__details {
-            width: 100%;
-            height: 2.5rem; } }
-      .header .search-summary__details-container .fa-question-circle {
-        padding-left: 1rem;
-        font-size: 2rem;
-        color: #FBB011; }
-        @media (max-width: 600px) {
-          .header .search-summary__details-container .fa-question-circle {
-            display: none; } }
-    @media (max-width: 600px) {
-      .header .search-summary {
-        display: none; } }
-  .header .further-filters {
-    position: relative;
-    z-index: 2000;
-    margin: 0rem 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    display: none; }
-    .header .further-filters .ammenities {
-      background: white; }
-      .header .further-filters .ammenities-list {
-        display: flex;
-        width: 100%; }
-        .header .further-filters .ammenities-list-one {
-          width: 50%; }
-        .header .further-filters .ammenities-list-two {
-          width: 50%; }
-    @media (max-width: 600px) {
-      .header .further-filters {
-        display: none; } }
-  @media (max-width: 600px) {
-    .header {
-      display: none; } }
-
-.content {
-  height: 78vh;
-  z-index: 2000;
-  position: relative;
-  overflow: scroll;
-  background: white; }
-  .content .top-stays {
-    background: white;
-    padding-top: .2rem;
-    position: relative;
-    z-index: 2500; }
-    .content .top-stays__container {
-      width: 100%;
-      overflow: auto; }
-    .content .top-stays__content {
-      margin-top: 1rem;
-      width: fit-content;
-      display: flex;
-      padding: 0rem .5rem; }
-      .content .top-stays__content .card {
-        height: fit-content;
-        margin: 1.5rem;
-        background-color: #1a1a1a;
-        color: white;
-        font-family: "National Light", sans-serif;
-        filter: drop-shadow(0 0.25rem 0.25rem black); }
-        .content .top-stays__content .card-img-top {
-          width: 100%;
-          height: 15rem;
-          overflow: hidden;
-          object-fit: cover; }
-        .content .top-stays__content .card-body {
-          padding: 1rem; }
-        .content .top-stays__content .card-title {
-          font-family: "National Regular", sans-serif;
-          font-size: 1.4rem;
-          padding-bottom: .75rem; }
-        .content .top-stays__content .card-location {
-          font-family: "National Light", sans-serif;
-          font-size: 1.2rem;
-          padding-bottom: 1.25rem; }
-        .content .top-stays__content .card-text {
-          font-family: "National Light", sans-serif;
-          font-size: 1rem;
-          line-height: 1.4rem;
-          padding-bottom: 1.25rem; }
-        .content .top-stays__content .card-link {
-          font-family: "National Regular", sans-serif;
-          font-size: 1.1rem;
-          line-height: 1.8rem;
-          color: #FBB011;
-          border-bottom: solid 2px #FBB011; }
-        .content .top-stays__content .card .fa-angle-right {
-          font-size: 1rem; }
-      @media (max-width: 600px) {
-        .content .top-stays__content {
-          display: none; } }
-    .content .top-stays .top-stays__heading {
-      position: relative;
-      height: fit-content;
-      margin-left: 1rem;
-      margin-top: 2rem;
-      font-family: "Pure Pakati", sans-serif;
-      font-size: 2.5rem;
-      padding: 1rem;
-      padding-bottom: 0; }
-    @media (max-width: 600px) {
-      .content .top-stays {
-        margin: 1rem 2rem;
-        margin-top: 0; } }
-    @media (max-width: 600px) {
-      .content .top-stays {
-        display: none; } }
-  @media (max-width: 600px) {
-    .content {
-      margin-top: 0; } }
-  .content .map-container {
-    width: 100vw;
-    height: 60vh;
-    background: cornflowerblue;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    @media (max-width: 600px) {
-      .content .map-container {
-        display: none; } }
-  .content #map {
-    width: 100%;
-    height: 100%;
-    background: black; }
-    @media (max-width: 600px) {
-      .content #map {
-        display: none; } }
-  .content .search-results {
-    position: relative;
-    z-index: 2500; }
-    .content .search-results__content {
-      margin-top: 1rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 0rem .5rem; }
-      .content .search-results__content .card {
-        width: 32rem;
-        margin: 1.5rem;
-        background-color: white;
-        color: #1a1a1a;
-        font-family: "National Light", sans-serif;
-        filter: drop-shadow(0 0.25rem 0.25rem black); }
-        .content .search-results__content .card-img-top {
-          width: 100%;
-          height: 20rem;
-          overflow: hidden;
-          object-fit: cover; }
-        .content .search-results__content .card-body {
-          padding: 1rem; }
-        .content .search-results__content .card-title {
-          font-family: "National Regular", sans-serif;
-          font-size: 1.4rem;
-          padding-bottom: .25rem; }
-        .content .search-results__content .card-location {
-          font-family: "National Light", sans-serif;
-          font-size: 1.2rem;
-          font-size: 1rem;
-          padding-bottom: .75rem; }
-        .content .search-results__content .card .reviews {
-          display: flex;
-          align-items: center;
-          padding-bottom: .75rem; }
-        .content .search-results__content .card .rating-text {
-          font-family: "National Light", sans-serif;
-          font-size: 1.2rem;
-          font-family: "National Regular", sans-serif;
-          color: #00A896;
-          font-size: 1.2rem;
-          padding-right: .5rem; }
-        .content .search-results__content .card .review-number {
-          color: grey;
-          padding-top: .1rem; }
-        .content .search-results__content .card .price-text {
-          font-family: "National Regular", sans-serif;
-          font-weight: 900;
-          font-size: 1rem;
-          padding-bottom: .75rem; }
-        .content .search-results__content .card-text {
-          font-family: "National Light", sans-serif;
-          font-size: 1rem;
-          line-height: 1.4rem;
-          padding-bottom: 1.25rem; }
-        .content .search-results__content .card-link {
-          font-family: "National Regular", sans-serif;
-          font-size: 1.1rem;
-          line-height: 1.8rem;
-          color: #FBB011;
-          color: #00A896;
-          border-bottom: solid 2px #00A896; }
-        .content .search-results__content .card .fa-angle-right {
-          font-size: 1rem; }
-    @media (max-width: 600px) {
-      .content .search-results {
-        display: none; } }
-  @media (max-width: 600px) {
-    .content {
-      height: 100vh; } }
-  @media (max-width: 600px) {
-    .content {
-      display: none; } }
-
-.home-landscapes, .home-recommendations, .home-covid-info {
-  background: white;
-  margin: 3rem 4rem;
-  min-height: 50vh;
-  position: relative;
-  z-index: 2500;
-  filter: drop-shadow(0 0.25rem 0.25rem black);
-  display: none; }
-  @media (max-width: 600px) {
-    .home-landscapes, .home-recommendations, .home-covid-info {
-      margin: 1rem 2rem;
-      margin-top: 0; } }
-.home-top-stays {
-  background: #1a1a1a;
-  margin: 1rem 0;
-  height: 30vh;
-  position: relative;
-  box-shadow: 0 0.25rem 0.25rem black; }
-  @media (max-width: 600px) {
-    .home-top-stays {
-      display: none; } }
-.home-covid-info {
-  margin-bottom: 0.5rem;
-  display: none; }
-@media (max-width: 600px) {
-  .home {
-    margin-top: 0; } }
-.home-landscapes__heading {
-  margin-left: 1rem;
-  margin-top: 2rem;
-  font-family: "Pure Pakati", sans-serif;
-  font-size: 2.5rem;
-  padding: 1rem;
-  padding-bottom: 0;
-  display: none; }
-
-.mobile-footer {
-  height: 9vh;
-  width: 100%;
-  position: relative;
-  z-index: 1000;
-  display: none;
-  bottom: 100%; }
-  .mobile-footer .footer-img {
-    width: 100%;
-    position: absolute;
-    z-index: 5;
-    bottom: 0; }
-  .mobile-footer .footer-menu {
-    height: 9vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 2rem 2.5rem;
-    padding-bottom: 1.5rem; }
-    .mobile-footer .footer-menu i {
-      color: #FBB011;
-      font-size: 1.5rem;
-      z-index: 50; }
-  @media (max-width: 600px) {
-    .mobile-footer {
-      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
