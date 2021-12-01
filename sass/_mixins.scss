@@ -1,37 +1,9 @@
-@mixin section-heading{
-    font-family: "Pure Pakati", sans-serif;
-    font-size: 2.5rem;
-}
-
-@mixin card-heading {
-    font-family: "National Regular", sans-serif;
-    font-size: 1.4rem;
-}
-
-@mixin card-location{
-    font-family: "National Light", sans-serif;
-    font-size: 1.2rem;
-}
-
-@mixin card-body{
-    font-family: "National Light", sans-serif;
-    font-size: 1rem;
-    line-height: 1.4rem;
-}
-
-@mixin card-link{
-    font-family: "National Regular", sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-    color: $yellow;
-}
-
-@mixin button-one {
+@mixin button-one{
     height: 2.5rem;
     color: $black;
     background: $yellow;
     border: none;
-    padding:0 2rem;
+    padding: 0 2rem;
     font-family: "National Regular", sans-serif;
     font-size: 1rem;
     cursor: pointer;

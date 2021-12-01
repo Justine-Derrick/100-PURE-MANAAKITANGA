@@ -1,0 +1,99 @@
+.header__img--desktop{
+    position: absolute;
+    z-index: 50;
+}
+
+.header__nav{
+    width: 100%;
+    min-height: 10vh;
+    position: relative;
+    padding: 3rem 3rem;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo{
+        max-height: 4rem;
+    }
+
+    &-steps{
+        display: flex;
+
+        .step{
+            width: 2rem;
+            height: 2rem;
+            color: $white;
+            border-radius: 50%;
+            border: solid 2px white;
+            text-align: center;
+            font-size: 1rem;
+            line-height: 1.6rem;
+            margin-left: 1rem;
+        }
+
+        .active{
+            background: $yellow;
+            border-radius: 50%;
+            color: $black;
+            border: solid 2px $yellow;
+            font-weight: 500;
+        }
+    }
+}
+
+.header__search{
+    padding: 3rem 3rem;
+    padding-top: 0;
+    position: relative;
+    z-index: 250;
+
+    .search-form{
+
+        &__location{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            .search-bar{
+                width: 97%;
+                height: 2rem;
+                border: none;
+                padding: 0.25rem 0.5rem;
+            }
+
+            .fa-question-circle{
+                width: 3%;
+                text-align: end;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                color: $yellow;
+            }
+        }
+
+        &__filters{
+            margin-bottom: 1rem;
+            width: 100%;
+            padding-right: 3%;
+            display: flex;
+            justify-content: space-between;
+
+            #checkInDate, #checkOutDate{
+                width: 25%;
+                height: 2rem;
+            }
+
+            #guestsNumber{
+                width: 47%;
+                height: 2rem;
+                // margin-right: 2.5%;
+            }
+        }
+
+        &__submit{
+            .submit-btn{
+                @include button-one;
+            }
+        }
+    }
+}
