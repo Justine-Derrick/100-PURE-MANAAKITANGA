@@ -10,6 +10,7 @@ let script = "<script src='https://maps.googleapis.com/maps/api/js?key=" + key +
 //query selectors
 
 const initialSearch = document.querySelector("#initialSearch");
+const applyFilters = document.querySelector("#applyFilters");
 // const displayFilters = document.querySelector("#displayFilters");
 // const filteredSearch = document.querySelector("#filteredSearch")
 
@@ -103,7 +104,7 @@ let accommodation = [
         minNight: 1,
         maxNight: 5,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
-        ammenities: ["Free Wifi", "Gym Facilities", "Late Check Out", "Free Parking"],
+        ammenities: ["wifi", "gym", "Late Check Out", "Free Parking"],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.83898421622976, 
@@ -438,12 +439,12 @@ let accommodation = [
         location: "Whitianga",
         reigon: "Coromandel",
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/motels/seaview-main-img.png",
+        img1: "./img/motels/seaview-img-1.png",
+        img2: "./img/motels/seaview-img-2.png",
+        img3: "./img/motels/seaview-img-3.png",
+        img4: "./img/motels/seaview-img-4.png",
+        img5: "./img/motels/seaview-img-5.png",
 
         rating: 3.7,
         reviewsNo: 157,
@@ -478,20 +479,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1: "./img/food/cereal-selection.png",
+        breakfastOption1: "Selection of Cereals",
+        breakfastDescription1: "Cereal buffet with seasonal fresh fruit",
+        breakfastRequirement1: ["VG", "V"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/pastry-selection.png",
+        breakfastOption2: "Pastry of the Day",
+        breakfastDescription2: "Selection of pastries, made in house daily",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 6,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/fruit-salad.png",
+        breakfastOption3: "Fruit Salad",
+        breakfastDescription3: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 5,
 
         costPerNight: 90,
         minGuest: 2,
@@ -555,20 +559,24 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1:  "./img/food/fruit-salad.png",
+        breakfastOption1: "Fruit Salad",
+        breakfastDescription1: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement1:  ["VG", "V", "GF"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/cooked-breakfast.png",
+        breakfastOption2: "Cooked Breakfast Buffet",
+        breakfastDescription2: "Selection of cooked breakfast items",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 10,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/toast-selection.png",
+        breakfastOption3: "Toast Buffet",
+        breakfastDescription3: "Toast, sereved with a range of spreads",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 4,
+
 
         costPerNight: 90,
         minGuest: 2,
@@ -630,20 +638,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1:  "./img/food/cereal-selection.png",
+        breakfastOption1: "Selection of Cereals",
+        breakfastDescription1: "Cereal buffet with seasonal fresh fruit",
+        breakfastRequirement1: ["VG", "V"],
+        breakfastPrice1: 5,
+        
+        breakfastImg2: "./img/food/cooked-breakfast.png",
+        breakfastOption2: "Cooked Breakfast Buffet",
+        breakfastDescription2: "Selection of cooked breakfast items",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 10,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
-
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/pastry-selection.png",
+        breakfastOption3: "Pastry of the Day",
+        breakfastDescription3: "Selection of pastries, made in house daily",
+        breakfastRequirement3: ["V"],
+        breakfastPrice3: 6,
 
         costPerNight: 90,
         minGuest: 2,
@@ -675,7 +686,7 @@ let accommodation = [
         rating: "",
         reviewsNo: "",
 
-               reviewImg1: "./img/reviews/review-img-1.png",
+        reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
         reviewDate1: "4 months",
         reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
@@ -705,20 +716,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1: "./img/food/cereal-selection.png",
+        breakfastOption1: "Selection of Cereals",
+        breakfastDescription1: "Cereal buffet with seasonal fresh fruit",
+        breakfastRequirement1: ["VG", "V"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2:  "./img/food/fruit-salad.png",
+        breakfastOption2: "Fruit Salad",
+        breakfastDescription2: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement2:  ["VG", "V", "GF"],
+        breakfastPrice2: 5,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/toast-selection.png",
+        breakfastOption3: "Toast Buffet",
+        breakfastDescription3: "Toast, sereved with a range of spreads",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 4,
 
         costPerNight: 90,
         minGuest: 2,
@@ -1615,27 +1629,24 @@ function initialFilterOptions(event){
 
     let accommodationLocation = $("#searchBar").val();
 
-    $("#searchForm").empty().append(
-        `
-        <div id="searchSummary" class="search-summary">
-            <div class="search-summary__details-container">
-                <input class="search-summary__details" type="text" placeholder=${accommodationLocation}>
-                <i class="far fa-question-circle"></i>
-                <div class="search-summary__check-in-summary">${checkInDate}</div>
-                <div class="search-summary__check-out-summary">${checkOutDate}</div>
-                <button id="displayFilters" class="search-summary__filters">
-                    <i class="fas fa-filter"></i>
-                </button>
-            </div>
-        </div>
+    // $("#searchForm").empty().append(
+    //     `
+    //     <div id="searchSummary" class="search-summary">
+    //         <div class="search-summary__details-container">
+    //             <input class="search-summary__details" type="text" placeholder=${accommodationLocation}>
+    //             <i class="far fa-question-circle"></i>
+    //             <div class="search-summary__check-in-summary">${checkInDate}</div>
+    //             <div class="search-summary__check-out-summary">${checkOutDate}</div>
+    //             <button id="displayFilters" class="search-summary__filters">
+    //                 <i class="fas fa-filter"></i>
+    //             </button>
+    //         </div>
+    //     </div>
+    //     `
+    // )
 
-        <div id="furtherFilterOptions" class="further-filter-options">
-        
-
-        </div>
-
-        `
-    )
+    $(".header__search").css("display", "none");
+    $(".further-filters").css("display", "block");
 
     $("#content").empty().append(
 
@@ -1657,6 +1668,8 @@ function initialFilterOptions(event){
 
 // display initial results
 
+let results = [];
+
 function displayInitialOptions(nights, guests, city){
 
     // reloadMarkers();
@@ -1671,23 +1684,31 @@ function displayInitialOptions(nights, guests, city){
         if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest)){
             generateResultCard(i);
 
+            let accommodationResult = accommodation[i];
+            results.push(accommodationResult);
+
+
             let location = {lat: accommodation[i].latitude, lng: accommodation[i].longitude};
             console.log(location);
             
-            let marker = new google.maps.Marker({
-                position: location,
-                map:map,
-            });
+            // let marker = new google.maps.Marker({
+            //     position: location,
+            //     map:map,
+            // });
 
             // console.log(marker);
-            markers.push(marker);
+            // markers.push(marker);
+
 
         } 
         
         if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
             generateTopCard(i);
         } 
+
     }
+
+    console.log(results);
 
     accommodationDetails();
 }
@@ -1698,12 +1719,33 @@ function displayInitialOptions(nights, guests, city){
 
 // further filters
 
-function furtherFilters(event){
+function furtherFilterOptions(event){
    
     event.preventDefault();
     console.log("clicked");
 
-  
+    let selectedAmmenities = [];
+    
+
+    $('input[name="ammenity"]:checked').each(function(){
+
+        selectedAmmenities.push(this.value);
+      
+    });
+
+    // let filteredObjects = results.filter(function(v){
+    //     return selectedAmmenities.filter(function(q){
+    //         return q.id == v.id;
+    //     }).length == 0
+    // });
+
+
+    // let filteredObjects = results.filter(ammenities => !selectedAmmenities.includes(ammenities));
+
+    // console.log(filteredObjects)
+
+
+ 
 
 }
 
@@ -1713,12 +1755,14 @@ function furtherFilters(event){
 
 // further filter options
 
-function displayFilteredOptions(){
+function displayFurtherFilterOptions(){
 
     // reloadMarkers();
 
     $("#cardContainerSearchResults").empty();
     $("#cardContainerTopStay").empty();
+
+    console.log("success")
 
 }
 
@@ -1785,10 +1829,7 @@ function accommodationDetails(){
 // confirmation screen
 
 
-// -------------------------------------------------------------------------------------------------------------------------------------------
-
-
-// payment details
+// ----------------------------------------------------------
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
@@ -1807,7 +1848,10 @@ function accommodationDetailsAppend(x){
         <div class="accommodation-details__img-container">
 
 
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleControls" class="carous---------------------------------------------------------------------------------
+
+
+// payment detailsel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img src=${accommodation[x].mainImage} class="d-block w-100" alt="...">
@@ -2061,5 +2105,6 @@ function generateMealCard(y){
 // event listeners
 
 initialSearch.addEventListener("click", initialFilterOptions);
+applyFilters.addEventListener("click", furtherFilterOptions);
 // displayFilters.addEventListener("click", furtherFilters);
 // filteredSearch.addEventListener("click", displayFilteredOptions);

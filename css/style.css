@@ -8025,5 +8025,7 @@ a.text-dark:hover, a.text-dark:focus {
         border: solid 2px #FBB011;
         font-size: 1rem;
         font-family: "National Regular", sans-serif; } }
+.further-filters {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

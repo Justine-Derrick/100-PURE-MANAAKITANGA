@@ -24,7 +24,7 @@
     <!-- header - including search filters -->
 
     <header class="header">
-        <img class="header__img--desktop" src="./img/header-desktop.svg" alt="header image">
+        <!-- <img class="header__img--desktop" src="./img/header-desktop.svg" alt="header image"> -->
 
         <div class="header__nav">
             <img class="header__nav-logo" src="./img/logo.png" alt="100% pure manaakitanga logo">
@@ -61,6 +61,78 @@
                     <button class="initial-search" id="initialSearch"><b>FIND MY STAY</b></button>
                 </div>
             </form>
+        </div>
+
+
+        <div id="furtherFilters" class="further-filters">
+            <div class="further-filters__options">
+
+                <select id="sortBy" class="sort-by">
+                    <option value="" selected disabled hidden>SORT BY</option>
+                    <option value="Lowest Price">Price Low - High</option>
+                    <option value="Highest Price">Price High - Low</option>
+                    <option value="Highest Rated">Ratings High - Low</option>
+                </select>
+
+                <select id="accommodationType" class="accommodationType">
+                    <option value="" selected disabled hidden>ACCOMMODATION TYPE</option>
+                    <option value="Hotel">Hotel</option>
+                    <option value="Motel">Motel</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="House">House</option>
+                </select>
+                
+                <button id="ammenitiesDropDown" class="ammenities-drop-down">AMMENITIES</button>
+
+                <div id="ammenities" class="ammenities">
+                    <div class="ammenities-list">
+                        
+                        <div class="ammenities-list__one">
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="wifi">
+                            <label for="ammenity">Free Wifi</label>
+                            </div>
+
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="parking">
+                            <label for="ammenity">Free Parking</label>
+                            </div>
+    
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="late-check-out">
+                            <label for="ammenity">Late Check Out</label>
+                            </div>
+    
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="breakfast-included">
+                            <label for="ammenity">Breakfast Included</label>
+                            </div>
+                        </div>
+
+                        <div class="ammenities-list__two">
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="gym">
+                            <label for="ammenity">Gym facilities</label>
+                            </div>
+
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="spa">
+                            <label for="ammenity">Spa</label>
+                            </div>
+
+                            <div class="ammenities-list__option">
+                            <input type="checkbox" name="ammenity" value="accessible">
+                            <label for="ammenity">Accessible</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="applyFilters" class="apply-filters">
+                <button id="applyFiltersBtn" class="apply-filters-btn">APPLY FILTERS</button>
+            </div>
         </div>
     </header>
 
