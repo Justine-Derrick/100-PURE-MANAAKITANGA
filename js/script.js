@@ -1,15 +1,18 @@
 console.log("howdy");
 
-// define map key 
+// map key
 let script = "<script src='https://maps.googleapis.com/maps/api/js?key=" + key + "&libraries=places&callback=initMap' async defer >";
 
-// document query selectors
-const applyFiltersBtn = document.querySelector("#applyFiltersBtn");
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-// --------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------
+//query selectors
 
+const initialSearch = document.querySelector("#initialSearch");
+// const filteredSearch = document.querySelector("#filteredSearch")
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // append map key to body
@@ -19,43 +22,156 @@ $(document).ready(function(){
 });
 
 
-// --------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-// object array - accomodation details
+// object array  -  accommodation
+
 let accommodation = [
 
+    // hotels
+
     {
-        id: 10,
-        mainImage: "./img/CarltonMain.png",
+        id: 101,
         name: "The Carlton Hotel",
         type: "Hotel", 
         location: "Whitianga, Coromandel, NZ",
-        latitude: -36.83898421622976, 
-        longitude: 175.69179517137826,
+
+        mainImage: "./img/hotels/carlton-main-img.png",
+        img1: "./img/hotels/carlton-img-1.png",
+        img2: "./img/hotels/carlton-img-2.png",
+        img3: "./img/hotels/carlton-img-3.png",
+        img4: "./img/hotels/carlton-img-4.png",
+        img5: "./img/hotels/carlton-img-5.png",
+
         rating: 4.7,
         reviewsNo: 84,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "./img/food/avocado-toast.png",
+        breakfastOption1: "Avocado Toast",
+        breakfastDescription1: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement1: ["V", "VG*"],
+        breakfastPrice1: 18.50,
+
+        breakfastImg2: "./img/food/chia-seed-pudding.png",
+        breakfastOption2: "Chia Seed Pudding",
+        breakfastDescription2: "Coconut Chia Seed Pudding with seasonal fruit",
+        breakfastRequirement2: ["V", "VG", "GF"],
+        breakfastPrice2: 17.50,
+
+        breakfastImg3: "./img/food/full-english.png",
+        breakfastOption3: "Full English Style Breakfast",
+        breakfastDescription3: "Bacon, Roasted Tomatoes, Baked Beans, and Eggs your way. Served with sourdough toast.",
+        breakfastRequirement3: ["GF*"],
+        breakfastPrice3: 20.50,
+
         costPerNight: 157,
         minGuest: 1,
         maxGuest: 2,
         minNight: 1,
         maxNight: 5,
-        descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Gym Facilities", "Late Check Out", "Free Parking"],
+
+        latitude: -36.83898421622976, 
+        longitude: 175.69179517137826,
 
     },
 
     {
-        id: 20,
-        mainImage: "./img/MorlandMain.png",
+        id: 102,
         name: "Morland Hotel",
         type: "Hotel", 
         location: "Opito Bay, Coromandel, NZ",
-        latitude: -36.71498397906826,
-        longitude: 175.7945025259624,
+
+        mainImage: "./img/hotels/morland-main-img.png",
+        img1: "./img/hotels/morland-img-1.png",
+        img2: "./img/hotels/morland-img-2.png",
+        img3: "./img/hotels/morland-img-3.png",
+        img4: "./img/hotels/morland-img-4.png",
+        img5: "./img/hotels/morland-img-5.png",
+
         rating: 4.5,
         reviewsNo: 123,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "./img/food/spanish-eggs.png",
+        breakfastOption1: "Spanish Eggs",
+        breakfastDescription1: "Eggs poached in a tomato sauce. Servec with sourdough toast",
+        breakfastRequirement1: ["V", "GF*"],
+        breakfastPrice1: 20.50,
+
+        breakfastImg2: "./img/food/pancakes.png",
+        breakfastOption2: "American Pancakes",
+        breakfastDescription2: "American style pancakes, served with seasonal fruit and maple syrup",
+        breakfastRequirement2: ["V", "VG*"],
+        breakfastPrice2: 19.50,
+
+        breakfastImg3: "./img/food/porridge.png",
+        breakfastOption3: "Homemade Porridge",
+        breakfastDescription3: "Traditional homemade porridge with steel cut oats. Served with seasonal fruit.",
+        breakfastRequirement3: ["v", "VG*"],
+        breakfastPrice3: 17.50,
+
         costPerNight: 157,
         minGuest: 1,
         maxGuest: 2,
@@ -63,19 +179,76 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
-                
+
+        latitude: -36.71498397906826,
+        longitude: 175.7945025259624,
+               
     },
 
     {
-        id: 30,
-        mainImage: "./img/PeninsulaMain.png",
+        id: 103,
         name: "The Peninsula Hotel",
         type: "Hotel", 
         location: "Matarangi, Coromandel, NZ",
-        latitude: -36.73275387156286,
-        longitude:  175.6446552829269, 
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 4.2,
         reviewsNo: 72,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "./img/food/chia-seed-pudding.png",
+        breakfastOption1: "Chia Seed Pudding",
+        breakfastDescription1: "Coconut Chia Seed Pudding with seasonal fruit",
+        breakfastRequirement1: ["V", "VG", "GF"],
+        breakfastPrice1: 17.50,
+
+        breakfastImg2: "./img/food/full-english.png",
+        breakfastOption2: "Full English Style Breakfast",
+        breakfastDescription2: "Bacon, Roasted Tomatoes, Baked Beans, and Eggs your way. Served with sourdough toast.",
+        breakfastRequirement2: ["GF*"],
+        breakfastPrice2: 20.50,
+
+        breakfastImg3: "./img/food/spanish-eggs.png",
+        breakfastOption3: "Spanish Eggs",
+        breakfastDescription3: "Eggs poached in a tomato sauce. Servec with sourdough toast",
+        breakfastRequirement3: ["V", "GF*"],
+        breakfastPrice3: 19.50,
+
         costPerNight: 157,
         minGuest: 1,
         maxGuest: 2,
@@ -83,19 +256,76 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
-       
+
+        latitude: -36.73275387156286,
+        longitude:  175.6446552829269, 
+
     },
 
     {
-        id: 40,
-        mainImage: "./img/CathedralMain.jpg",
+        id: 104,
         name: "The Cathedral",
         type: "Hotel", 
         location: "Hahei, Coromandel, NZ",
-        latitude: -36.84091593931837, 
-        longitude: 175.80844929618638, 
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 4.9,
         reviewsNo: 200,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "./img/food/avocado-toast.png",
+        breakfastOption1: "Avocado Toast",
+        breakfastDescription1: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement1: ["V", "VG*"],
+        breakfastPrice1: 18.50,
+
+        breakfastImg1: "./img/food/spanish-eggs.png",
+        breakfastOption1: "Spanish Eggs",
+        breakfastDescription1: "Eggs poached in a tomato sauce. Servec with sourdough toast",
+        breakfastRequirement1: ["V", "GF*"],
+        breakfastPrice2: 19.50,
+
+        breakfastImg3: "./img/food/chia-seed-pudding.png",
+        breakfastOption3: "Chia Seed Pudding",
+        breakfastDescription3: "Coconut Chia Seed Pudding with seasonal fruit",
+        breakfastRequirement3: ["V", "VG", "GF"],
+        breakfastPrice3: 17.50,
+
         costPerNight: 157,
         minGuest: 1,
         maxGuest: 2,
@@ -103,19 +333,76 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
-       
+
+        latitude: -36.84091593931837, 
+        longitude: 175.80844929618638, 
+
     },
 
     {
-        id: 50,
-        mainImage: "./img/OptioMain.jpg",
+        id: 105,
         name: "The Ocean View Hotel",
         type: "Hotel", 
         location: "Whitianga, Coromandel, NZ",
-        latitude: -36.82994337395195,
-        longitude: 175.7049525979734, 
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 3.5,
         reviewsNo: 64,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "./img/food/full-english.png",
+        breakfastOption1: "Full English Style Breakfast",
+        breakfastDescription1: "Bacon, Roasted Tomatoes, Baked Beans, and Eggs your way. Served with sourdough toast.",
+        breakfastRequirement1: ["GF*"],
+        breakfastPrice1: 20.50,
+
+        breakfastImg2: "./img/food/avocado-toast.png",
+        breakfastOption2: "Avocado Toast",
+        breakfastDescription2: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement2: ["V", "VG*"],
+        breakfastPrice2: 18.50,
+
+        breakfastImg3: "./img/food/porridge.png",
+        breakfastOption3: "Homemade Porridge",
+        breakfastDescription3: "Traditional homemade porridge with steel cut oats. Served with seasonal fruit.",
+        breakfastRequirement3: ["v", "VG*"],
+        breakfastPrice3: 17.50,
+
         costPerNight: 157,
         minGuest: 1,
         maxGuest: 2,
@@ -123,19 +410,77 @@ let accommodation = [
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out"],
+
+        latitude: -36.82994337395195,
+        longitude: 175.7049525979734, 
         
     },
 
+
+
+    // Motels
+
     {
-        id: 60,
-        mainImage: "./img/SeaviewMain.jpg",
+        id: 106,
         name: "Seaview Motel",
         type: "Motel", 
         location: "Whitianga, Coromandel, NZ",
-        latitude: -36.82515425566253, 
-        longitude: 175.70227305787188,
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 3.7,
         reviewsNo: 157,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
         costPerNight: 90,
         minGuest: 2,
         maxGuest: 4,
@@ -143,19 +488,74 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Pool", "Free Cancelation","Free Parking"],
+
+        latitude: -36.82515425566253, 
+        longitude: 175.70227305787188,
        
     },
 
     {
-        id: 70,
-        mainImage: "./img/CarltonMain.png",
+
+        id: 107,
         name: "Cook's Beach Motel",
         type: "Motel", 
         location: "Cook's Beach, Coromandel, NZ",
-        latitude: -36.83763932778573, 
-        longitude: 175.74035469061513,
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 4.1,
         reviewsNo: 52,
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
         costPerNight: 90,
         minGuest: 2,
         maxGuest: 4,
@@ -163,19 +563,294 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Late Check Out"],
-        
+
+        latitude: -36.83763932778573, 
+        longitude: 175.74035469061513,
     },
 
     {
-        id: 80,
-        mainImage: "./img/YouthMain.png",
+        id: 108,
+        name: "",
+        type: "Motel", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
+        rating: "",
+        reviewsNo: "",
+
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 90,
+        minGuest: 2,
+        maxGuest: 4,
+        minNight: 3,
+        maxNight: 10,
+        descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+
+        latitude: "", 
+        longitude: "",
+    },
+
+    {
+        id: 109,
+        name: "",
+        type: "Motel", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
+        rating: "",
+        reviewsNo: "",
+
+               reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 90,
+        minGuest: 2,
+        maxGuest: 4,
+        minNight: 3,
+        maxNight: 10,
+        descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+
+        latitude: "", 
+        longitude: "",
+    },
+
+    {
+        id: 110,
+        name: "",
+        type: "Motel", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
+        rating: "",
+        reviewsNo: "",
+
+             reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 90,
+        minGuest: 2,
+        maxGuest: 4,
+        minNight: 3,
+        maxNight: 10,
+        descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+
+        latitude: "", 
+        longitude: "",
+    },
+
+
+    // Hostels
+
+    {
+        id: 111,
         name: "Coromandel Youth Hostel",
         type: "Hostel", 
         location: "Whitianga, Coromandel, NZ",
-        latitude: -36.83949375865749,
-        longitude: 175.69138491931892,
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 3.9,
         reviewsNo: 313,
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
         costPerNight: 30,
         minGuest: 1,
         maxGuest: 1,
@@ -183,19 +858,71 @@ let accommodation = [
         maxNight: 10,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Free Cancelation"],
-        
+        latitude: -36.83949375865749,
+        longitude: 175.69138491931892,        
     },
 
     {
-        id: 90,
-        mainImage: "./img/OptioMain.jpg",
+        id: 112,
         name: "Optio Bay Backpackers",
         type: "Hostel", 
         location: "Opito Bay, Coromandel, NZ",
-        latitude: -36.72296194864805, 
-        longitude: 175.80564070167569,
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
         rating: 4.3,
         reviewsNo: 202,
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
         costPerNight: 30,
         minGuest: 1,
         maxGuest: 1,
@@ -204,18 +931,296 @@ let accommodation = [
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Free Cancelation"],
       
+        latitude: -36.72296194864805, 
+        longitude: 175.80564070167569,      
+        
     },
 
     {
-        id: 100,
-        mainImage: "./img/RelaxationCove.png",
+        id: 113,
+        name: "",
+        type: "", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
+        rating: "",
+        reviewsNo: "",
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 30,
+        minGuest: 1,
+        maxGuest: 1,
+        minNight: 1,
+        maxNight: 10,
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+      
+        latitude: "", 
+        longitude: "",      
+        
+    },
+
+    {
+        id: 114,
+        name: "",
+        type: "", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
+        rating: "",
+        reviewsNo: "",
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 30,
+        minGuest: 1,
+        maxGuest: 1,
+        minNight: 1,
+        maxNight: 10,
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+      
+        latitude: "", 
+        longitude: "",      
+    },
+
+    {
+        id: 115,
+        name: "",
+        type: "", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+
+        rating: "",
+        reviewsNo: "",
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 30,
+        minGuest: 1,
+        maxGuest: 1,
+        minNight: 1,
+        maxNight: 10,
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+      
+        latitude: "", 
+        longitude: "",      
+    },
+
+
+
+    // Houses
+
+    {
+        id: 116,
         name: "Relaxation on the Cove",
         type: "House", 
         location: "Hahei, Coromandel, NZ",
-        latitude: -36.8435427107329, 
-        longitude: 175.8018675620926,
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+       
         rating: 4.6,
         reviewsNo: 322,
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
         costPerNight: 240,
         minGuest: 1,
         maxGuest: 4,
@@ -223,19 +1228,73 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out", "Free Parking"],
+      
+        latitude: -36.8435427107329, 
+        longitude: 175.8018675620926,  
        
     },
 
     {
-        id: 110,
-        mainImage: "./img/SeasideMain.png",
+        id: 117,
         name: "Seaside Stay",
         type: "House", 
         location: "Matarangi, Coromandel, NZ",
-        latitude: -36.843780488706656, 
-        longitude: 175.8148605326123,
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+       
         rating: 4.6,
         reviewsNo: 79,
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
         costPerNight: 240,
         minGuest: 1,
         maxGuest: 4,
@@ -243,16 +1302,237 @@ let accommodation = [
         maxNight: 15,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
         ammenities: ["Free Wifi", "Late Check Out", "Free Parking", "Spa"],
-       
+
+        latitude: -36.843780488706656, 
+        longitude: 175.8148605326123,       
     },
+
+    {
+        id: 118,
+        name: "",
+        type: "House", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+       
+        rating: "",
+        reviewsNo: "",
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 240,
+        minGuest: 1,
+        maxGuest: 4,
+        minNight: 2,
+        maxNight: 15,
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+
+        latitude: "", 
+        longitude: "",       
+    },
+
+    {
+        id: 119,
+        name: "",
+        type: "House", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+       
+        rating: "",
+        reviewsNo: "",
+       
+        reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 240,
+        minGuest: 1,
+        maxGuest: 4,
+        minNight: 2,
+        maxNight: 15,
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+
+        latitude: "", 
+        longitude: "",       
+    },
+
+    {
+        id: 120,
+        name: "",
+        type: "House", 
+        location: "",
+
+        mainImage: "",
+        img1: "",
+        img2: "",
+        img3: "",
+        img4: "",
+        img5: "",
+       
+        rating: "",
+        reviewsNo: "",
+       
+               reviewImg1: "./img/reviews/review-img-1.png",
+        reviewName1: "Steve S.",
+        reviewDate1: "4 months",
+        reviewContent1: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating1: "4.0",
+
+        reviewImg2: "./img/reviews/review-img-2.png",
+        reviewName2: "Marylin P.",
+        reviewDate2: "2 weeks",
+        reviewContent2: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating2: "4.5",
+        
+        reviewImg3: "./img/reviews/review-img-3.png",
+        reviewName3: "Martin L.",
+        reviewDate3: "5 days",
+        reviewContent3: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating3: "5.0",
+
+        reviewImg4: "./img/reviews/review-img-4.png",
+        reviewName4: "Aaron G.",
+        reviewDate4: "5 months",
+        reviewContent4: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating4: "4.0",
+
+        reviewImg5: "./img/reviews/review-img-5.png",
+        reviewName5: "Paul E.",
+        reviewDate5: "1 year",
+        reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
+        reviewRating5: "4.5",
+
+        breakfastImg1: "",
+        breakfastOption1: "",
+        breakfastDescription1: "",
+        breakfastRequirement1: "",
+
+        breakfastImg2: "",
+        breakfastOption2: "",
+        breakfastDescription2: "",
+        breakfastRequirement2: "",
+
+        breakfastImg3: "",
+        breakfastOption3: "",
+        breakfastDescription3: "",
+        breakfastRequirement3: "",
+
+        costPerNight: 240,
+        minGuest: 1,
+        maxGuest: 4,
+        minNight: 2,
+        maxNight: 15,
+        descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
+        ammenities: [],
+
+        latitude: "", 
+        longitude: "",       
+    },
+
 
 ];
 
 console.log(accommodation);
 
 
-// --------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // initialise map
@@ -268,9 +1548,12 @@ function initMap(){
 }
 
 
-// initial filtering options
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
-function filterOptions(event){
+
+// initial filters
+
+function initialFilterOptions(event){
     event.preventDefault();
     console.log("clicked");
 
@@ -288,44 +1571,19 @@ function filterOptions(event){
     let numberOfPeople = $("#guestsNumber").val();
     console.log(numberOfPeople);
 
-    displayOptions(numberOfDays, numberOfPeople);
+    let accommodationLocation = $("#searchBar").val();
 
+
+    displayInitialOptions(numberOfDays, numberOfPeople, accommodationLocation);
 }
 
 
-// --------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------
-
-// detais div
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-function accommodationDetails(){
-    $(".card-link").on("click", function(){
-        for (let i=0; i < accommodation.length; i++){
-            if (parseInt(this.id) === accommodation[i].id){
-                console.log(accommodation[i].name);
+// display initial results
 
-                $("#accommodationDetails").empty().append(
-                    `
-                    
-                    `
-                )
-
-            }
-        } 
-    });
-}
-
-
-
-
-// --------------------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------------------
-
-
-// dsiplaying options
-
-function displayOptions(nights, guests){
+function displayInitialOptions(nights, guests, city){
 
     reloadMarkers();
 
@@ -358,12 +1616,33 @@ function displayOptions(nights, guests){
     }
 
     accommodationDetails();
-    
 }
 
 
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
-console.log(markers);
+
+// further filters
+
+function furtherFilters(){
+
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// further filter options
+
+function displayFilteredOptions(){
+
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// refresh markers
 
 function reloadMarkers() {
 
@@ -376,7 +1655,63 @@ function reloadMarkers() {
 }
 
 
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
+
+// accommodation details
+
+function accommodationDetails(){
+    $(".card-link").on("click", function(){
+
+        
+
+        for (let i=0; i < accommodation.length; i++){
+            if (parseInt(this.id) === accommodation[i].id){
+                console.log(accommodation[i].name);
+
+                $("#accommodationDetails").empty().append(
+                    `
+
+                    `
+                )
+
+            }
+        } 
+    });
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// select meals
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// booking details modal
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// confirmation screen
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// payment details
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// thank you screen
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // card generators
@@ -422,65 +1757,10 @@ function generateResultCard(x){
 }
 
 
+// -------------------------------------------------------------------------------------------------------------------------------------------
+
+
 // event listeners
 
-applyFiltersBtn.addEventListener("click", filterOptions);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// click to show filters
-
-// function showFilters(){
-//     let show = document.getElementById("searchFilters");
-
-//     show.style.display = "block";
-
-// }
-
-// $("#locationSearch").click(function(){
-//     showFilters();
-// });
-
-// function hideFilters(){
-//     let show = document.getElementById("whereTo");
-
-//     show.style.display = "none";
-// }
-
-// function showSummary(){
-//     let show = document.getElementById("searchSummary");
-
-//     show.style.display = "block";
-// }
-
-// $("#applyFiltersBtn").click(function(){
-//     hideFilters();
-//     showSummary();
-// });
-
-
-// create top stay cards
-// function topStays(){
-//     for(let i = 0; i < accommodation.length; i++){
-//         if(accommodation[i].rating >= 4.5){
-//             generateTopCard(i);
-//         }
-//     }
-// }
-
-// topStays();
-
-
-
+initialSearch.addEventListener("click", initialFilterOptions);
+// filteredSearch.addEventListener("click", displayFilteredOptions);
