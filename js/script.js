@@ -104,7 +104,7 @@ let accommodation = [
         minNight: 1,
         maxNight: 5,
         descriptionShort: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
-        ammenities: ["wifi", "gym", "Late Check Out", "Free Parking"],
+        ammenities: ["wifi"],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.83898421622976, 
@@ -183,7 +183,7 @@ let accommodation = [
         minNight: 1,
         maxNight: 5,
         descriptionShort: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut a inventore nam, temporibus ab quasi voluptate dignissimos error qui nulla sequi?",
-        ammenities: ["Free Wifi", "Late Check Out"],
+        ammenities: ["late"],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
         latitude: -36.71498397906826,
@@ -1721,11 +1721,14 @@ function displayInitialOptions(nights, guests, city){
 
 function furtherFilterOptions(event){
    
+    
     event.preventDefault();
     console.log("clicked");
 
+    $("#cardContainerSearchResults").empty();
+
     let selectedAmmenities = [];
-    
+    console.log(selectedAmmenities)
 
     $('input[name="ammenity"]:checked').each(function(){
 
@@ -1733,21 +1736,66 @@ function furtherFilterOptions(event){
       
     });
 
-    // let filteredObjects = results.filter(function(v){
-    //     return selectedAmmenities.filter(function(q){
-    //         return q.id == v.id;
-    //     }).length == 0
-    // });
-
-
-    // let filteredObjects = results.filter(ammenities => !selectedAmmenities.includes(ammenities));
-
-    // console.log(filteredObjects)
-
-
- 
-
+    checkFilters(selectedAmmenities, results);
+    
 }
+
+function checkFilters(y, z){
+    
+    // let matchingAccom = [];
+
+    // matchingAccom.forEach((c) => {
+    //     if (!matchingAccomUnique.includes(c)) {
+    //         matchingAccomUnique.push(c);
+    //     }
+    // });
+    
+    // let zLength = z.length;
+    // let yLength = y.length
+    
+    //     if (zLength<=yLength){
+    //         for(let i = 0; i < z.length; i++){
+    //             if(!(y.indexOf(z[i])>=0)){
+    //                 console.log(z[i].name)
+    //             } else {
+           
+    //             console.log(z[i].id)
+    //         }
+    //     } 
+    // }
+
+    // for (let x=0; x < z.length; x++){
+    //     let arr1 = z[x].ammenities;
+    //     let arr2 = y[x];
+
+    //     for (let i=0; i<arr1.length; i++){
+    //         if($.inArray(arr1[i], arr2) > 0){
+    //             console.log("yes")
+    //         } else {
+    //             console.log(z[i].name)
+    //         }
+    //     }
+    // }
+}
+
+    
+
+
+    
+        
+
+
+    //     for (let h = 0; h < results.length; h++){
+    //         for (let j=0; j < z.length; j++){
+    //             if (results[i].ammenities[h] === z[j]){
+    //                 matchingAccom.push(results[i].name);
+    //             }
+    //         }
+    //     }
+
+   // output: true
+    
+    
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
