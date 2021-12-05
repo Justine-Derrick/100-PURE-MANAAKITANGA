@@ -23,8 +23,14 @@
     
     <!-- header - including search filters -->
 
+    <img class="header__img--desktop" src="./img/header-desktop.svg" alt="header image">
+
+    <div class="header__img-container--mobile">
+        <div class="img-padding--mobile">.</div>
+        <img class="header__img--mobile" src="./img/header-mobile.svg" alt="header image">
+    </div>
+
     <header class="header">
-        <!-- <img class="header__img--desktop" src="./img/header-desktop.svg" alt="header image"> -->
 
         <div class="header__nav">
             <img class="header__nav-logo" src="./img/logo.png" alt="100% pure manaakitanga logo">
@@ -45,9 +51,11 @@
                 </div>
 
                 <div class="search-form__filters" id="searchFormFilters">
-                    <input type="date" name="checkInDate" id="checkInDate">
-                    <input type="date" name="checkOutDate" id="checkOutDate">
-                    
+                    <div class="filters__dates">
+                        <input type="date" name="checkInDate" id="checkInDate">
+                        <input type="date" name="checkOutDate" id="checkOutDate">
+                    </div>
+                        
                     <select id="guestsNumber">
                         <option value="" selected disabled hidden><i class="fa-solid fa-bed"></i>Number of Guests</option>
                         <option value="1"><b>1</b></option>
@@ -144,27 +152,175 @@
 
 
     <!-- home / explore section -->
-    <section class="content" id="content">
+    <section class="content-container" id="contentContainer">
+        <div class="home-container">
+            <div class="home__explore-container">
+
+                <div class="explore">
+                    <h1 class="explore__heading">EXPLORE OUR LANDSCAPES</h1>
+                    <div class="explore__content-container">
+                        <div class="explore__img-container">
+                            <img class="explore__img" src="./img/cathedral-cove.jpg">
+                        </div>
+                        <div class="explore__content">
+                            <h2>Cathedral Cove</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eligendi temporibus incidunt omnis tempore deserunt, esse consequuntur laborum dolore nemo veritatis! Porro deserunt laboriosam, placeat odit alias dicta ratione hic rem, ipsa dolorum magni exercitationem beatae quidem eaque iure.
+                            <br>
+                            <br>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe sint, rerum natus a ipsa quae illo aperiam alias facere, labore quisquam error pariatur consectetur magni esse? Reiciendis ex, fugiat quia vero delectus laboriosam, ipsa eos deserunt in, sunt voluptatem error animi nobis veniam! Accusantium consequatur nihil aliquid, illum et eum deleniti unde quidem voluptatibus eveniet, expedita alias laudantium, ad laborum.
+                            <br>
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo porro consequuntur, voluptas maxime error qui et! Dolore delectus numquam aperiam, officiis hic voluptas nihil vitae eveniet, aliquam deleniti totam provident?
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
 
+            </div>
 
-    </section>
+            <div class="home__recommendations-container">
+
+                <div class="recommendations">
+                    <h1 class="recommendations__heading">OUR RECOMMENDATIONS</h1>
+                    <div class="recommendations__content-container">
+                            <div class="recommendations__img-container">
+                                <img class="recommendations__img" src="./img/bungy.jpg">
+                            </div>
+                    
+
+                            <div class="recommendations__content">
+                            <h2>Bungy Jump Taupo</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eligendi temporibus incidunt omnis tempore deserunt, esse consequuntur laborum dolore nemo veritatis! Porro deserunt laboriosam, placeat odit alias dicta ratione hic rem, ipsa dolorum magni exercitationem beatae quidem eaque iure.
+                                <br>
+                                <br>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe sint, rerum natus a ipsa quae illo aperiam alias facere, labore quisquam error pariatur consectetur magni esse? Reiciendis ex, fugiat quia vero delectus laboriosam, ipsa eos deserunt in, sunt voluptatem error animi nobis veniam! Accusantium consequatur nihil aliquid, illum et eum deleniti unde quidem voluptatibus eveniet, expedita alias laudantium, ad laborum.
+                                <br>
+                                <br>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo porro consequuntur, voluptas maxime error qui et! Dolore delectus numquam aperiam, officiis hic voluptas nihil vitae eveniet, aliquam deleniti totam provident?
+                                </p>
+                        </div>
+
+                    </div>
+                </div>
 
 
-    <section class="results">
+            </div>
 
-    </section>
+            <div class="home__top-stays-container">
+                <h1 class="home__top-stays-heading">POPULAR STAYS</h1>
+                <div class="home__top-stays" id="homeTopStays">
+
+        
+                </div>
+            </div>
+
+            <div class="home__covid-container">
+
+                <div class="covid">
+                    <h1 class="covid__heading">NEW ZEALAND'S COVID-19 HEALTH & SAFETY INFO</h1>
+                    <div class="covid__content-container">
+                          
+                            <div class="covid__content--one">
+                                <h2>NZ MANAGED ISOLATION POLICY</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eligendi temporibus incidunt omnis tempore deserunt, esse consequuntur laborum dolore nemo veritatis! Porro deserunt laboriosam, placeat odit alias dicta ratione hic rem, ipsa dolorum magni exercitationem beatae quidem eaque iure...
+                                
+                            </div>
+
+                            <div class="covid__content--two">
+                                <h2>OUR STAYS - CLEANING POLICY</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eligendi temporibus incidunt omnis tempore deserunt, esse consequuntur laborum dolore nemo veritatis! Porro deserunt laboriosam, placeat odit alias dicta ratione hic rem, ipsa dolorum magni exercitationem beatae quidem eaque iure...
+                                
+                            </div>
+
+                            <div class="covid__content--three">
+                                <h2>NZ COVID TRAFFIC LIGHT SYSTEM</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis eligendi temporibus incidunt omnis tempore deserunt, esse consequuntur laborum dolore nemo veritatis! Porro deserunt laboriosam, placeat odit alias dicta ratione hic rem, ipsa dolorum magni exercitationem beatae quidem eaque iure...
+                                
+                            </div>
+
+                    </div>
+                </div>
 
 
-    <section class="map">
-        <div id="map">
-            
+            </div>
         </div>
+
+
+
+        <div class="content" id="content">
+            <h1 class="top-stay-heading">TOP RATED STAYS</h1>
+            <div class="top-stay-container">
+                <div class="card-container-top-stay" id="cardContainerTopStay"></div>
+                </div>
+                <div class="map" id="map">
+
+                </div>
+                <div class="card-container-search-results" id="cardContainerSearchResults"></div>
+        </div>
+
+        <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+              
+                <div class="modal-body" id="modalBody">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
+
+ 
+
+<div class="accommodation-details">
+ 
+</div>
 
 
     
-    </section>
+<div class="thank-you">
+    <div class="thank-you__text">
+        <div>
+            <h3 class="thank-you__text--one">THANK YOU FOR BOOKING YOUR STAY</h3>
+            <br>
+            <h3 class="thank-you__text--two">WE’LL SEE YOU SOON!</h3>
+        </div>
+        <div>
+            <h1 class="hei-kona-mai">Hei konā mai</h1>
+        </div>
+        <div>
+            <h3 class="thank-you__text--three">A CONFIRMATION EMAIL HAS BEEN SENT.</h3>
+        </div>
+    </div>
+    <div class="thank-you__book-again">
+        <button class="book-again" id="bookAgain">BOOK ANOTHER STAY</button>
+    </div>
+</div>
+    
+</section>
+
+
+
+<!-- 
+    <section class="results">
+
+</section>
+
+<section class="map">
+        
+    </section> -->
+
+
+    
+    <!-- </section> --> 
 
 
 

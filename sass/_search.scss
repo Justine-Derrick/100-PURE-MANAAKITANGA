@@ -1,0 +1,298 @@
+.content{
+    position: relative;
+    z-index: 300;
+    background: white;
+    display: none;
+    // box-shadow: 2px 2px 5px grey;
+    // margin: 3rem;
+    // margin-top: 0;
+    // padding-top: 3rem;
+    margin-top: 10rem;
+    padding-top: 3rem;
+
+    @media #{$mobile} {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+}
+    
+.top-stay-heading{
+    margin-left: 3rem;
+    font-family: "Pure Pakati", sans-serif;
+    padding-bottom: 2rem;
+
+    @media #{$mobile} {
+        margin: 0 1.5rem;
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+        padding-right: 1.5rem;
+        margin-right: 1.5rem;
+
+    }
+}
+
+
+.top-stay-container{
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+    z-index: 350;
+
+
+    .card-container-top-stay{
+        display: flex;
+        overflow-y: scroll;
+        
+        .card{
+            min-width: 20rem;
+            margin-right: 2rem;
+            border-radius: 0;
+            border: none;
+            background: $black;
+            color: white;
+    
+            &-img-top{
+                height: 15rem;
+                object-fit: cover;
+                border-radius: 0;
+            }
+    
+            .card-title{
+                @include card-heading-one;
+                color: white;
+                font-size: 1.6rem;
+                padding: 0;
+                margin: 0;
+            }
+    
+            .card-location{
+                @include card-location-one;
+                color: white;
+                font-size: 1.2rem;
+            }
+           
+            .card-text{
+                @include card-location-one;
+                font-size: 1.2rem;
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+    
+            .card-link{
+                color: $yellow;
+                font-family: "National Regular", "sans serif";
+                font-size: 1.2rem;
+                border-bottom: solid 2px $yellow;
+                cursor: pointer;
+            }
+    
+            .fa-angle-right{
+                font-size: 1rem;
+            }
+
+
+            
+            @media #{$mobile} {
+                min-width: 15rem;
+                margin-right: 1rem;
+
+                &-img-top{
+                    height: 10rem;
+                }
+        
+                .card-title{
+                    font-size: 1.4rem;
+                }
+        
+                .card-location{
+                    font-size: 1rem;
+                }
+            
+                .card-text{
+                    font-size: 1rem;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+        
+                .card-link{
+                    color: $yellow;
+                    font-family: "National Regular", "sans serif";
+                    font-size: 1.2rem;
+                    border-bottom: solid 2px $yellow;
+                    cursor: pointer;
+                }
+        
+                .fa-angle-right{
+                    font-size: 1rem;
+                }
+            }
+        }
+    
+    }
+
+    .card:last-child{
+        margin-right: 3rem;
+
+        @media #{$mobile} {
+            margin-right: 1.5rem;
+        }
+    }
+
+    @media #{$mobile} {
+        margin: 1.5rem;
+        margin-top: 0;
+        margin-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+.card-container-search-results{
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 350;
+
+    .card{
+        position: relative;
+        z-index: 500;
+        background: white;
+        width: 48.5%;
+        margin-bottom: 3rem;
+        border-radius: 0;
+        border: none;
+        box-shadow: 2px 2px 5px grey;
+
+        .card-body{
+            padding: 2rem;
+        }
+            &-img-top{
+                height: 60vh;
+                border-radius: 0;
+                object-fit: cover;
+                border-radius: 0;
+
+                @media #{$mobile}{
+                    height: 15rem;
+                }
+            }
+
+            .card-top-line{
+                display: flex;
+                justify-content: space-between;
+
+                .card-title {
+                    @include card-heading-one;
+                    margin-bottom: 0;
+                }
+    
+                .fa-heart{
+                    font-size: 2rem;
+                    color: $yellow;
+
+                    @media #{$mobile}{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .card-location{
+                @include card-location-one;
+                margin-top: 0;
+            }
+
+            .reviews{
+                display: flex;
+                align-items: flex-end;
+                margin: 0;
+         
+                .rating-text{
+                    font-family: "National Medium", "sans serif";
+                    padding-right: .5rem;
+                    padding-bottom: .2rem;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                    color: $blue;
+                    margin: 0;
+                }
+
+                .review-number{
+                    font-family: "National Light", "sans serif";
+                    color: grey;
+                    font-size: 1rem;
+                    margin: 0;
+                    line-height: 1.4rem;
+                }
+            }
+
+            .price-info{
+                width: inherit;
+                display: flex;
+                line-height: 1.2rem;
+                height: 1.2rem;
+                margin: 0.5rem 0;
+
+                .price-text{
+                    font-family: "National Regular", sans-serif;
+                    font-size: 1.2rem;
+                    margin: 0;
+                    padding-right: .5rem;
+                    border-right: solid 1px $black ;
+                }
+
+                .price-per-night{
+                    font-family: "National Regular", sans-serif;
+                    font-size: 1.2rem;
+                    padding-left: .5rem;
+                    margin: 0;
+                }
+            }
+            
+            .card-text{
+                font-family: "National Light", "sans serif";
+                font-size: 1.1rem;
+
+                @media #{$mobile}{
+                    font-size: 1rem;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    padding-bottom: 0.5rem;
+                }
+            }
+
+            .card-link{
+                color: $blue;
+                font-family: "National Regular", "sans serif";
+                font-size: 1.2rem;
+                border-bottom: solid 2px $blue;
+                cursor: pointer;
+            }
+
+            @media #{$mobile}{
+                width: 100%;
+            }
+    }
+
+    @media #{$mobile} {
+        padding: 1.5rem;
+        flex-direction: column;
+    }
+}
+
+.map{
+    // display: none;
+    background: cornflowerblue;
+    width: 100%;
+    height: 70vh;
+    z-index: 350;
+
+}

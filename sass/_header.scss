@@ -1,12 +1,57 @@
+.header{
+    z-index: 100;
+    // display: none;
+
+    @media #{$mobile} {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .header__img--desktop{
+    // display: none;
     position: absolute;
     z-index: 50;
+
+    @media #{$mobile} {
+        display: none;
+    }
 }
+
+
+.header__img-container--mobile{
+    // display: none;
+    // position: absolute;
+    // height: fit-content;
+    // z-index: 50;
+
+    .img-padding--mobile{
+        width: 100%;
+        height: 7.1rem;
+        background: $black;
+        position: absolute;
+        top: 0;
+        z-index: 50;
+        border: 0;
+    }
+    
+    .header__img--mobile{
+        position: absolute;
+        top: 7rem;
+        border: 0;
+    }
+
+    @media #{$mobile} {
+        display: block;
+    }
+}
+
+
 
 .header__nav{
     width: 100%;
     min-height: 10vh;
-    position: relative;
+    position: absolute;
     padding: 3rem 3rem;
     z-index: 200;
     display: flex;
@@ -15,10 +60,13 @@
 
     &-logo{
         max-height: 4rem;
+
+       
     }
 
     &-steps{
         display: flex;
+
 
         .step{
             width: 2rem;
@@ -39,12 +87,19 @@
             border: solid 2px $yellow;
             font-weight: 500;
         }
+
+
+    }
+
+    @media #{$mobile} {
+        display: none;
     }
 }
 
 .header__search{
     padding: 3rem 3rem;
     padding-top: 0;
+    top: 10rem;
     position: relative;
     z-index: 250;
 
@@ -60,6 +115,11 @@
                 height: 2rem;
                 border: none;
                 padding: 0.25rem 0.5rem;
+
+                @media #{$mobile} {
+                    padding-top: 0;
+                    width: 100%;
+                }
             }
 
             .fa-question-circle{
@@ -68,7 +128,12 @@
                 font-size: 1.5rem;
                 line-height: 2rem;
                 color: $yellow;
+
+                @media #{$mobile} {
+                    display: none;
+                }
             }
+            
         }
 
         &__filters{
@@ -78,22 +143,58 @@
             display: flex;
             justify-content: space-between;
 
-            #checkInDate, #checkOutDate{
-                width: 25%;
-                height: 2rem;
+            .filters__dates{
+                display: flex;
+                width: 47%;
+                
+                #checkInDate, #checkOutDate{
+                    width: 50%;
+                    margin-right: .5rem;
+                    height: 2rem;
+
+                    @media #{$mobile} {
+                        margin-right: 4%;
+                    }
+                }
+
+                @media #{$mobile} {
+                    width: 96%;
+                    margin-bottom: 1rem;
+
+                    #checkOutDate{
+                        margin: 0;
+                    }
+                }
+
+                @media #{$mobile} {
+                    // width: 100%;
+                }
+            
             }
 
-            #guestsNumber{
-                width: 47%;
-                height: 2rem;
-                // margin-right: 2.5%;
+                #guestsNumber{
+                    width: 100%;
+                    height: 2rem;
+                    // margin-right: 2.5%;
+                }
+
+               
+
+            @media #{$mobile} {
+                flex-direction: column;
+                padding-right: 0;
             }
         }
 
         &__submit{
-            .submit-btn{
+            .initial-search{
                 @include button-one;
             }
         }
+    }
+
+    @media #{$mobile} {
+        padding: 1.5rem;
+        top: 1rem;
     }
 }

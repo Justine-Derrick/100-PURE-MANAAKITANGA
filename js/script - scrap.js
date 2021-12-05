@@ -350,7 +350,7 @@ function displayOptions(nights, guests){
             // console.log(marker);
             markers.push(marker);
 
-        } 
+        }
         
         if ((nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
             generateTopCard(i);

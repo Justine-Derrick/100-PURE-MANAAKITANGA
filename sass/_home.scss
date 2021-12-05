@@ -1,0 +1,426 @@
+
+.home-container{
+
+    // display: none;
+    position: relative;
+    margin-top: 10rem;
+
+    .home__explore-container{
+        position: relative;
+        z-index: 300;
+        background: white;
+        // display: none;
+        box-shadow: 2px 2px 5px grey;
+        margin: 3rem;
+        // margin-top: 0;
+        // padding-top: 3rem;
+
+        .explore{
+            max-width: 100%;
+        
+            &__heading{
+                @include home-heading;
+                padding: 1rem;
+                padding-left: 1.5rem;
+                padding-bottom: .5rem;
+
+                @media #{$mobile} {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__content-container{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                h2{
+                    font-family: "National Medium", sans-serif;
+                    font-size: 2rem;
+
+                    @media #{$mobile} {
+                        font-size: 1.4rem;
+                    }
+                }
+           
+                .explore__img-container{
+                    width: 40%;
+                    // height: 100%;
+                    padding: 1.5rem;
+                    // margin-bottom: 1.5rem;
+                    padding-top: 0;
+                    object-fit: cover;
+                                       
+                    @media #{$mobile} {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+
+                .explore__img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
+                  
+                }
+
+                .explore__content{
+                    width: 60%;
+                    padding-right: 1.5rem;
+                    font-family: "National Light", sans-serif;
+                    font-size: 1.2rem;
+
+                    @media #{$mobile} {
+                        width: 100%;
+                        padding: 1.5rem;
+                        font-size: 1rem;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-line-clamp: 9;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+
+                @media #{$mobile} {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        @media #{$mobile} {
+            margin: 1.5rem
+        }
+    }
+
+    .home__recommendations-container{
+            position: relative;
+            z-index: 300;
+            background: white;
+            // display: none;
+            box-shadow: 2px 2px 5px grey;
+            margin: 3rem;
+            margin-top: 0;
+            // padding-top: 3rem;
+
+        .recommendations{
+            max-width: 100%;
+
+            .recommendations__content-container{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                h2{
+                    font-family: "National Medium", sans-serif;
+                    font-size: 2rem;
+
+                    @media #{$mobile} {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .recommendations__img-container{
+                    width: 40%;
+                    height: 100%;
+                    padding: 1.5rem;
+                    padding-top: 0;
+                    object-position: center;
+                    object-fit: contain;
+                    overflow: hidden;      
+
+                    @media #{$mobile} {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+    
+                .recommendations__img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
+                        
+                }
+    
+                .recommendations__content{
+                    width: 60%;
+                    padding-right: 1.5rem;
+                    font-family: "National Light", sans-serif;
+                    font-size: 1.2rem;
+
+                    @media #{$mobile} {
+                        width: 100%;
+                        padding: 1.5rem;
+                        font-size: 1rem;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-line-clamp: 9;
+                        -webkit-box-orient: vertical;
+                    }
+                
+                }
+
+                
+                @media #{$mobile} {
+                    flex-direction: column;
+                }
+            }
+        
+            &__heading{
+                @include home-heading;
+                padding: 1rem;
+                padding-left: 1.5rem;
+                padding-bottom: .5rem;
+
+                @media #{$mobile} {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        @media #{$mobile} {
+            margin: 1.5rem
+        }
+    }
+
+    .home__top-stays-container{
+        background: $black;
+        position: relative;
+        width: 100%;
+        margin-bottom: 3rem;
+        padding: 3rem;
+        padding-right: 0;
+        padding-top: 0;
+        z-index: 350;
+
+        .home__top-stays{
+            display: flex;
+            overflow-x: scroll;
+
+            &-heading{
+                @include home-heading;
+                text-align: center;
+                color: white;
+                padding: 1rem;
+                padding-left: 1.5rem;
+                padding-bottom: .5rem;
+
+                @media #{$mobile} {
+                    font-size: 1.8rem;
+                    padding-right: 1.5rem;
+                }
+            }
+       
+
+            .card{
+                min-width: 20rem;
+                margin-right: 2rem;
+                border-radius: 0;
+                border: none;
+
+                &-img-top{
+                    height: 15rem;
+                    object-fit: cover;
+                    border-radius: 0;
+                }
+        
+                .card-title{
+                    @include card-heading-one;
+                    color: $black;
+                    font-size: 1.6rem;
+                    padding: 0;
+                    margin: 0;
+                }
+        
+                .card-location{
+                    @include card-location-one;
+                    color: $black;
+                    font-size: 1.2rem;
+                }
+            
+                .card-text{
+                    @include card-location-one;
+                    font-size: 1.2rem;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+        
+                .card-link{
+                    color: $yellow;
+                    font-family: "National Regular", "sans serif";
+                    font-size: 1.2rem;
+                    border-bottom: solid 2px $yellow;
+                    cursor: pointer;
+                }
+        
+                .fa-angle-right{
+                    font-size: 1rem;
+                }
+
+                @media #{$mobile} {
+                    min-width: 15rem;
+                    margin-right: 1rem;
+
+                    &-img-top{
+                        height: 10rem;
+                    }
+            
+                    .card-title{
+                        font-size: 1.4rem;
+                    }
+            
+                    .card-location{
+                        font-size: 1rem;
+                    }
+                
+                    .card-text{
+                        font-size: 1rem;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+            
+                    .card-link{
+                        color: $yellow;
+                        font-family: "National Regular", "sans serif";
+                        font-size: 1.2rem;
+                        border-bottom: solid 2px $yellow;
+                        cursor: pointer;
+                    }
+            
+                    .fa-angle-right{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .card:last-child{
+                padding-right: 3rem;
+            }
+        }
+
+        @media #{$mobile} {
+            padding: 1.5rem;
+            padding-right: 0;
+            margin-bottom: 1.5rem;
+        }
+       
+    }
+
+
+    .home__covid-container{
+        position: relative;
+        z-index: 300;
+        background: white;
+        // display: none;
+        box-shadow: 2px 2px 5px grey;
+        margin: 3rem;
+        margin-top: 0;
+        // padding-top: 3rem;
+
+        .covid{
+            max-width: 100%;
+
+            &__heading{
+                @include home-heading;
+                padding: 1rem;
+                padding-left: 1.5rem;
+                padding-bottom: .5rem;
+
+                @media #{$mobile} {
+                    font-size: 1.8rem;
+                }
+            }
+
+            
+            h2{
+                font-family: "National Medium", sans-serif;
+                font-size: 2rem;
+
+                @media #{$mobile} {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .covid__content-container{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 1.5rem;
+
+
+                h2{
+                    font-family: "National Medium", sans-serif;
+                    font-size: 2rem;
+
+                    @media #{$mobile} {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .covid__content--one{
+                    padding-bottom: .5rem;
+                    border-bottom: solid 1px lightgrey;
+                    font-family: "National Light", sans-serif;
+                    font-size: 1.2rem;
+
+                    @media #{$mobile} {
+                        font-size: 1rem;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-line-clamp: 8;
+                        -webkit-box-orient: vertical;
+                    }
+
+                }
+
+                .covid__content--two{
+                    padding-top: 1rem;
+                    padding-bottom: .5rem;
+                    border-bottom: solid 1px lightgrey;
+                    font-family: "National Light", sans-serif;
+                    font-size: 1.2rem;
+
+                   
+                    @media #{$mobile} {
+                        font-size: 1rem;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-line-clamp: 8;
+                        -webkit-box-orient: vertical;
+                    }
+
+                }
+
+                .covid__content--three{
+                    padding-top: 1rem;
+                    font-family: "National Light", sans-serif;
+                    font-size: 1.2rem;
+               
+
+                    @media #{$mobile} {
+                        font-size: 1rem;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-line-clamp: 7;
+                        -webkit-box-orient: vertical;
+                        padding-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        @media #{$mobile} {
+            margin: 1.5rem
+        }
+    }
+
+    @media #{$mobile} {
+        margin-top: 0rem;
+    }
+
+}

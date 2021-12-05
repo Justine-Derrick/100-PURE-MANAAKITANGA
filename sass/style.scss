@@ -5,8 +5,11 @@
 @import "var";
 @import "mixins";
 @import "header";
+@import "search";
+@import "home";
 @import "filtering";
 @import "accommodationDetails";
+@import "thankyou";
 
 .further-filters{
     display: none;

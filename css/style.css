@@ -7814,14 +7814,40 @@ a.text-dark:hover, a.text-dark:focus {
 @font-face {
   font-family: "Pure Pakati Regular";
   src: url("../font/PurePakati-Regular.otf"); }
+.header {
+  z-index: 100; }
+  @media (max-width: 600px) {
+    .header {
+      margin: 0;
+      padding: 0; } }
+
 .header__img--desktop {
   position: absolute;
   z-index: 50; }
+  @media (max-width: 600px) {
+    .header__img--desktop {
+      display: none; } }
+
+.header__img-container--mobile .img-padding--mobile {
+  width: 100%;
+  height: 7.1rem;
+  background: #1a1a1a;
+  position: absolute;
+  top: 0;
+  z-index: 50;
+  border: 0; }
+.header__img-container--mobile .header__img--mobile {
+  position: absolute;
+  top: 7rem;
+  border: 0; }
+@media (max-width: 600px) {
+  .header__img-container--mobile {
+    display: block; } }
 
 .header__nav {
   width: 100%;
   min-height: 10vh;
-  position: relative;
+  position: absolute;
   padding: 3rem 3rem;
   z-index: 200;
   display: flex;
@@ -7847,10 +7873,14 @@ a.text-dark:hover, a.text-dark:focus {
       color: #1a1a1a;
       border: solid 2px #FBB011;
       font-weight: 500; }
+  @media (max-width: 600px) {
+    .header__nav {
+      display: none; } }
 
 .header__search {
   padding: 3rem 3rem;
   padding-top: 0;
+  top: 10rem;
   position: relative;
   z-index: 250; }
   .header__search .search-form__location {
@@ -7862,25 +7892,49 @@ a.text-dark:hover, a.text-dark:focus {
       height: 2rem;
       border: none;
       padding: 0.25rem 0.5rem; }
+      @media (max-width: 600px) {
+        .header__search .search-form__location .search-bar {
+          padding-top: 0;
+          width: 100%; } }
     .header__search .search-form__location .fa-question-circle {
       width: 3%;
       text-align: end;
       font-size: 1.5rem;
       line-height: 2rem;
       color: #FBB011; }
+      @media (max-width: 600px) {
+        .header__search .search-form__location .fa-question-circle {
+          display: none; } }
   .header__search .search-form__filters {
     margin-bottom: 1rem;
     width: 100%;
     padding-right: 3%;
     display: flex;
     justify-content: space-between; }
-    .header__search .search-form__filters #checkInDate, .header__search .search-form__filters #checkOutDate {
-      width: 25%;
-      height: 2rem; }
+    .header__search .search-form__filters .filters__dates {
+      display: flex;
+      width: 47%; }
+      .header__search .search-form__filters .filters__dates #checkInDate, .header__search .search-form__filters .filters__dates #checkOutDate {
+        width: 50%;
+        margin-right: .5rem;
+        height: 2rem; }
+        @media (max-width: 600px) {
+          .header__search .search-form__filters .filters__dates #checkInDate, .header__search .search-form__filters .filters__dates #checkOutDate {
+            margin-right: 4%; } }
+      @media (max-width: 600px) {
+        .header__search .search-form__filters .filters__dates {
+          width: 96%;
+          margin-bottom: 1rem; }
+          .header__search .search-form__filters .filters__dates #checkOutDate {
+            margin: 0; } }
     .header__search .search-form__filters #guestsNumber {
-      width: 47%;
+      width: 100%;
       height: 2rem; }
-  .header__search .search-form__submit .submit-btn {
+    @media (max-width: 600px) {
+      .header__search .search-form__filters {
+        flex-direction: column;
+        padding-right: 0; } }
+  .header__search .search-form__submit .initial-search {
     height: 2.5rem;
     color: #1a1a1a;
     background: #FBB011;
@@ -7889,142 +7943,971 @@ a.text-dark:hover, a.text-dark:focus {
     font-family: "National Regular", sans-serif;
     font-size: 1rem;
     cursor: pointer; }
+  @media (max-width: 600px) {
+    .header__search {
+      padding: 1.5rem;
+      top: 1rem; } }
 
-@media (max-width: 600px) {
-  .accommodation-details {
-    width: 100%;
-    position: absolute;
-    z-index: 5000; }
-    .accommodation-details__img-container .carousel .d-block {
-      height: 100%;
-      object-fit: cover;
-      object-position: center; }
-    .accommodation-details__img-container .header-icons {
-      color: #FBB011;
-      font-size: 1.4rem; }
-    .accommodation-details__header {
-      display: flex;
-      justify-content: space-between;
-      margin: 1rem;
-      margin-bottom: .25rem;
-      align-items: center; }
-      .accommodation-details__header .accommodation-name {
-        font-size: 1.4rem;
-        margin: 0; }
-      .accommodation-details__header .fa-heart {
-        color: #FBB011;
-        font-size: 1.2rem; }
-    .accommodation-details .accommodation-location {
-      margin: 0rem 1rem;
-      margin-bottom: .25rem; }
-    .accommodation-details .accommodation-reviews {
-      margin: .25rem 1rem;
-      display: flex;
-      align-items: center;
-      border-bottom: solid 1px lightgray; }
-      .accommodation-details .accommodation-reviews .rating-text {
-        color: #00A896;
-        font-size: 1.1em;
-        padding-right: 0.25rem; }
-      .accommodation-details .accommodation-reviews .review-number {
-        font-size: .8rem; }
-    .accommodation-details .accommodation-description {
-      margin: 1rem;
+.content {
+  position: relative;
+  z-index: 300;
+  background: white;
+  display: none;
+  margin-top: 10rem;
+  padding-top: 3rem; }
+  @media (max-width: 600px) {
+    .content {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem; } }
+
+.top-stay-heading {
+  margin-left: 3rem;
+  font-family: "Pure Pakati", sans-serif;
+  padding-bottom: 2rem; }
+  @media (max-width: 600px) {
+    .top-stay-heading {
+      margin: 0 1.5rem;
       padding-bottom: 1rem;
-      border-bottom: solid 1px lightgray; }
-      .accommodation-details .accommodation-description .description {
-        margin-bottom: 0.25rem; }
-        .accommodation-details .accommodation-description .description-link {
-          font-size: 1rem;
-          color: #00A896;
-          border-bottom: solid 2px #00A896; }
-    .accommodation-details .accommodation-ammenities {
-      margin: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: solid 1px lightgray; }
-      .accommodation-details .accommodation-ammenities .ammenities-heading {
-        font-size: 1.2rem; }
-      .accommodation-details .accommodation-ammenities .ammenities-link {
-        font-size: 1rem;
-        color: #00A896;
-        border-bottom: solid 2px #00A896; }
-    .accommodation-details .accommodation-reviews-details {
-      margin: 1rem; }
-      .accommodation-details .accommodation-reviews-details .reviews-heading {
-        font-size: 1.2rem; }
-      .accommodation-details .accommodation-reviews-details .reviews-link {
-        font-size: 1rem;
-        color: #00A896;
-        border-bottom: solid 2px #00A896; }
-    .accommodation-details .accommodation-map {
-      height: 40vh;
-      background: #00A896;
-      margin-bottom: 1rem; }
-    .accommodation-details .accommodation-breakfast {
-      margin: 1rem; }
-      .accommodation-details .accommodation-breakfast .breakfast-heading {
-        font-size: 1.2rem; }
-    .accommodation-details .accommodation-dates {
+      font-size: 1.8rem;
+      padding-right: 1.5rem;
+      margin-right: 1.5rem; } }
+
+.top-stay-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+  z-index: 350; }
+  .top-stay-container .card-container-top-stay {
+    display: flex;
+    overflow-y: scroll; }
+    .top-stay-container .card-container-top-stay .card {
+      min-width: 20rem;
+      margin-right: 2rem;
+      border-radius: 0;
+      border: none;
       background: #1a1a1a;
-      padding: 1rem; }
-      .accommodation-details .accommodation-dates .dates-heading {
+      color: white; }
+      .top-stay-container .card-container-top-stay .card-img-top {
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 0; }
+      .top-stay-container .card-container-top-stay .card .card-title {
+        font-family: "National Regular", sans-serif;
+        font-size: 2rem;
+        color: white;
+        font-size: 1.6rem;
+        padding: 0;
+        margin: 0; }
+        @media (max-width: 600px) {
+          .top-stay-container .card-container-top-stay .card .card-title {
+            font-size: 1.6rem; } }
+      .top-stay-container .card-container-top-stay .card .card-location {
+        font-family: "National Light", "sans-serif";
+        font-size: 1.4rem;
         color: white;
         font-size: 1.2rem; }
-      .accommodation-details .accommodation-dates .dates-container {
-        display: flex;
-        justify-content: space-between;
-        margin: 1rem 0rem; }
-        .accommodation-details .accommodation-dates .dates-container .accommodation-dates__check-in {
-          width: 50%;
-          height: 6rem;
-          margin-right: .5rem;
-          background: white; }
-        .accommodation-details .accommodation-dates .dates-container .accommodation-dates__check-out {
-          width: 50%;
-          height: 6rem;
-          margin-left: .5rem;
-          background: white; }
-      .accommodation-details .accommodation-dates .accommodation-dates-link {
-        font-size: 1rem;
+        @media (max-width: 600px) {
+          .top-stay-container .card-container-top-stay .card .card-location {
+            font-size: 1.2rem; } }
+      .top-stay-container .card-container-top-stay .card .card-text {
+        font-family: "National Light", "sans-serif";
+        font-size: 1.4rem;
+        font-size: 1.2rem;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical; }
+        @media (max-width: 600px) {
+          .top-stay-container .card-container-top-stay .card .card-text {
+            font-size: 1.2rem; } }
+      .top-stay-container .card-container-top-stay .card .card-link {
         color: #FBB011;
-        border-bottom: solid 2px #FBB011; }
-    .accommodation-details .accommodation-cancellation-policy {
-      margin: 1rem;
-      padding-bottom: 6rem; }
-      .accommodation-details .accommodation-cancellation-policy .cancellation-heading {
-        font-size: 1.2rem; }
-    .accommodation-details .accommodation-details__footer {
-      max-height: 6rem;
-      background: #1a1a1a;
-      color: white;
-      overflow: hidden;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      padding: 1rem;
+        font-family: "National Regular", "sans serif";
+        font-size: 1.2rem;
+        border-bottom: solid 2px #FBB011;
+        cursor: pointer; }
+      .top-stay-container .card-container-top-stay .card .fa-angle-right {
+        font-size: 1rem; }
+      @media (max-width: 600px) {
+        .top-stay-container .card-container-top-stay .card {
+          min-width: 15rem;
+          margin-right: 1rem; }
+          .top-stay-container .card-container-top-stay .card-img-top {
+            height: 10rem; }
+          .top-stay-container .card-container-top-stay .card .card-title {
+            font-size: 1.4rem; }
+          .top-stay-container .card-container-top-stay .card .card-location {
+            font-size: 1rem; }
+          .top-stay-container .card-container-top-stay .card .card-text {
+            font-size: 1rem;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; }
+          .top-stay-container .card-container-top-stay .card .card-link {
+            color: #FBB011;
+            font-family: "National Regular", "sans serif";
+            font-size: 1.2rem;
+            border-bottom: solid 2px #FBB011;
+            cursor: pointer; }
+          .top-stay-container .card-container-top-stay .card .fa-angle-right {
+            font-size: 1rem; } }
+  .top-stay-container .card:last-child {
+    margin-right: 3rem; }
+    @media (max-width: 600px) {
+      .top-stay-container .card:last-child {
+        margin-right: 1.5rem; } }
+  @media (max-width: 600px) {
+    .top-stay-container {
+      margin: 1.5rem;
+      margin-top: 0;
+      margin-right: 0;
+      padding-left: 0; } }
+
+.card-container-search-results {
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 350; }
+  .card-container-search-results .card {
+    position: relative;
+    z-index: 500;
+    background: white;
+    width: 48.5%;
+    margin-bottom: 3rem;
+    border-radius: 0;
+    border: none;
+    box-shadow: 2px 2px 5px grey; }
+    .card-container-search-results .card .card-body {
+      padding: 2rem; }
+    .card-container-search-results .card-img-top {
+      height: 60vh;
+      border-radius: 0;
+      object-fit: cover;
+      border-radius: 0; }
+      @media (max-width: 600px) {
+        .card-container-search-results .card-img-top {
+          height: 15rem; } }
+    .card-container-search-results .card .card-top-line {
       display: flex;
       justify-content: space-between; }
-      .accommodation-details .accommodation-details__footer .cost-summary h4 {
-        line-height: 1rem; }
-      .accommodation-details .accommodation-details__footer .cost-breakdown {
-        display: flex;
-        justify-content: flex-start;
-        font-family: "National Light", sans-serif;
-        font-size: .9rem;
-        align-items: center;
+      .card-container-search-results .card .card-top-line .card-title {
+        font-family: "National Regular", sans-serif;
+        font-size: 2rem;
+        margin-bottom: 0; }
+        @media (max-width: 600px) {
+          .card-container-search-results .card .card-top-line .card-title {
+            font-size: 1.6rem; } }
+      .card-container-search-results .card .card-top-line .fa-heart {
+        font-size: 2rem;
+        color: #FBB011; }
+        @media (max-width: 600px) {
+          .card-container-search-results .card .card-top-line .fa-heart {
+            font-size: 1.6rem; } }
+    .card-container-search-results .card .card-location {
+      font-family: "National Light", "sans-serif";
+      font-size: 1.4rem;
+      margin-top: 0; }
+      @media (max-width: 600px) {
+        .card-container-search-results .card .card-location {
+          font-size: 1.2rem; } }
+    .card-container-search-results .card .reviews {
+      display: flex;
+      align-items: flex-end;
+      margin: 0; }
+      .card-container-search-results .card .reviews .rating-text {
+        font-family: "National Medium", "sans serif";
+        padding-right: .5rem;
+        padding-bottom: .2rem;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: #00A896;
         margin: 0; }
-        .accommodation-details .accommodation-details__footer .cost-breakdown p {
-          margin: 0; }
-        .accommodation-details .accommodation-details__footer .cost-breakdown .fa-circle {
-          font-size: .5rem;
-          padding: 0rem .5rem; }
-      .accommodation-details .accommodation-details__footer .book-now {
-        padding: 0.5rem 1rem;
-        color: #FBB011;
-        background-color: #1a1a1a;
-        border: solid 2px #FBB011;
+      .card-container-search-results .card .reviews .review-number {
+        font-family: "National Light", "sans serif";
+        color: grey;
         font-size: 1rem;
-        font-family: "National Regular", sans-serif; } }
+        margin: 0;
+        line-height: 1.4rem; }
+    .card-container-search-results .card .price-info {
+      width: inherit;
+      display: flex;
+      line-height: 1.2rem;
+      height: 1.2rem;
+      margin: 0.5rem 0; }
+      .card-container-search-results .card .price-info .price-text {
+        font-family: "National Regular", sans-serif;
+        font-size: 1.2rem;
+        margin: 0;
+        padding-right: .5rem;
+        border-right: solid 1px #1a1a1a; }
+      .card-container-search-results .card .price-info .price-per-night {
+        font-family: "National Regular", sans-serif;
+        font-size: 1.2rem;
+        padding-left: .5rem;
+        margin: 0; }
+    .card-container-search-results .card .card-text {
+      font-family: "National Light", "sans serif";
+      font-size: 1.1rem; }
+      @media (max-width: 600px) {
+        .card-container-search-results .card .card-text {
+          font-size: 1rem;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          padding-bottom: 0.5rem; } }
+    .card-container-search-results .card .card-link {
+      color: #00A896;
+      font-family: "National Regular", "sans serif";
+      font-size: 1.2rem;
+      border-bottom: solid 2px #00A896;
+      cursor: pointer; }
+    @media (max-width: 600px) {
+      .card-container-search-results .card {
+        width: 100%; } }
+  @media (max-width: 600px) {
+    .card-container-search-results {
+      padding: 1.5rem;
+      flex-direction: column; } }
+
+.map {
+  background: cornflowerblue;
+  width: 100%;
+  height: 70vh;
+  z-index: 350; }
+
+.home-container {
+  position: relative;
+  margin-top: 10rem; }
+  .home-container .home__explore-container {
+    position: relative;
+    z-index: 300;
+    background: white;
+    box-shadow: 2px 2px 5px grey;
+    margin: 3rem; }
+    .home-container .home__explore-container .explore {
+      max-width: 100%; }
+      .home-container .home__explore-container .explore__heading {
+        font-family: "Pure Pakati";
+        font-size: 3rem;
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: .5rem; }
+        @media (max-width: 600px) {
+          .home-container .home__explore-container .explore__heading {
+            font-size: 1.8rem; } }
+      .home-container .home__explore-container .explore__content-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; }
+        .home-container .home__explore-container .explore__content-container h2 {
+          font-family: "National Medium", sans-serif;
+          font-size: 2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__explore-container .explore__content-container h2 {
+              font-size: 1.4rem; } }
+        .home-container .home__explore-container .explore__content-container .explore__img-container {
+          width: 40%;
+          padding: 1.5rem;
+          padding-top: 0;
+          object-fit: cover; }
+          @media (max-width: 600px) {
+            .home-container .home__explore-container .explore__content-container .explore__img-container {
+              width: 100%;
+              padding: 0; } }
+        .home-container .home__explore-container .explore__content-container .explore__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          overflow: hidden; }
+        .home-container .home__explore-container .explore__content-container .explore__content {
+          width: 60%;
+          padding-right: 1.5rem;
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__explore-container .explore__content-container .explore__content {
+              width: 100%;
+              padding: 1.5rem;
+              font-size: 1rem;
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 9;
+              -webkit-box-orient: vertical; } }
+        @media (max-width: 600px) {
+          .home-container .home__explore-container .explore__content-container {
+            flex-direction: column; } }
+    @media (max-width: 600px) {
+      .home-container .home__explore-container {
+        margin: 1.5rem; } }
+  .home-container .home__recommendations-container {
+    position: relative;
+    z-index: 300;
+    background: white;
+    box-shadow: 2px 2px 5px grey;
+    margin: 3rem;
+    margin-top: 0; }
+    .home-container .home__recommendations-container .recommendations {
+      max-width: 100%; }
+      .home-container .home__recommendations-container .recommendations .recommendations__content-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%; }
+        .home-container .home__recommendations-container .recommendations .recommendations__content-container h2 {
+          font-family: "National Medium", sans-serif;
+          font-size: 2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__recommendations-container .recommendations .recommendations__content-container h2 {
+              font-size: 1.4rem; } }
+        .home-container .home__recommendations-container .recommendations .recommendations__content-container .recommendations__img-container {
+          width: 40%;
+          height: 100%;
+          padding: 1.5rem;
+          padding-top: 0;
+          object-position: center;
+          object-fit: contain;
+          overflow: hidden; }
+          @media (max-width: 600px) {
+            .home-container .home__recommendations-container .recommendations .recommendations__content-container .recommendations__img-container {
+              width: 100%;
+              padding: 0; } }
+        .home-container .home__recommendations-container .recommendations .recommendations__content-container .recommendations__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          overflow: hidden; }
+        .home-container .home__recommendations-container .recommendations .recommendations__content-container .recommendations__content {
+          width: 60%;
+          padding-right: 1.5rem;
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__recommendations-container .recommendations .recommendations__content-container .recommendations__content {
+              width: 100%;
+              padding: 1.5rem;
+              font-size: 1rem;
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 9;
+              -webkit-box-orient: vertical; } }
+        @media (max-width: 600px) {
+          .home-container .home__recommendations-container .recommendations .recommendations__content-container {
+            flex-direction: column; } }
+      .home-container .home__recommendations-container .recommendations__heading {
+        font-family: "Pure Pakati";
+        font-size: 3rem;
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: .5rem; }
+        @media (max-width: 600px) {
+          .home-container .home__recommendations-container .recommendations__heading {
+            font-size: 1.8rem; } }
+    @media (max-width: 600px) {
+      .home-container .home__recommendations-container {
+        margin: 1.5rem; } }
+  .home-container .home__top-stays-container {
+    background: #1a1a1a;
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    padding-right: 0;
+    padding-top: 0;
+    z-index: 350; }
+    .home-container .home__top-stays-container .home__top-stays {
+      display: flex;
+      overflow-x: scroll; }
+      .home-container .home__top-stays-container .home__top-stays-heading {
+        font-family: "Pure Pakati";
+        font-size: 3rem;
+        text-align: center;
+        color: white;
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: .5rem; }
+        @media (max-width: 600px) {
+          .home-container .home__top-stays-container .home__top-stays-heading {
+            font-size: 1.8rem;
+            padding-right: 1.5rem; } }
+      .home-container .home__top-stays-container .home__top-stays .card {
+        min-width: 20rem;
+        margin-right: 2rem;
+        border-radius: 0;
+        border: none; }
+        .home-container .home__top-stays-container .home__top-stays .card-img-top {
+          height: 15rem;
+          object-fit: cover;
+          border-radius: 0; }
+        .home-container .home__top-stays-container .home__top-stays .card .card-title {
+          font-family: "National Regular", sans-serif;
+          font-size: 2rem;
+          color: #1a1a1a;
+          font-size: 1.6rem;
+          padding: 0;
+          margin: 0; }
+          @media (max-width: 600px) {
+            .home-container .home__top-stays-container .home__top-stays .card .card-title {
+              font-size: 1.6rem; } }
+        .home-container .home__top-stays-container .home__top-stays .card .card-location {
+          font-family: "National Light", "sans-serif";
+          font-size: 1.4rem;
+          color: #1a1a1a;
+          font-size: 1.2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__top-stays-container .home__top-stays .card .card-location {
+              font-size: 1.2rem; } }
+        .home-container .home__top-stays-container .home__top-stays .card .card-text {
+          font-family: "National Light", "sans-serif";
+          font-size: 1.4rem;
+          font-size: 1.2rem;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical; }
+          @media (max-width: 600px) {
+            .home-container .home__top-stays-container .home__top-stays .card .card-text {
+              font-size: 1.2rem; } }
+        .home-container .home__top-stays-container .home__top-stays .card .card-link {
+          color: #FBB011;
+          font-family: "National Regular", "sans serif";
+          font-size: 1.2rem;
+          border-bottom: solid 2px #FBB011;
+          cursor: pointer; }
+        .home-container .home__top-stays-container .home__top-stays .card .fa-angle-right {
+          font-size: 1rem; }
+        @media (max-width: 600px) {
+          .home-container .home__top-stays-container .home__top-stays .card {
+            min-width: 15rem;
+            margin-right: 1rem; }
+            .home-container .home__top-stays-container .home__top-stays .card-img-top {
+              height: 10rem; }
+            .home-container .home__top-stays-container .home__top-stays .card .card-title {
+              font-size: 1.4rem; }
+            .home-container .home__top-stays-container .home__top-stays .card .card-location {
+              font-size: 1rem; }
+            .home-container .home__top-stays-container .home__top-stays .card .card-text {
+              font-size: 1rem;
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical; }
+            .home-container .home__top-stays-container .home__top-stays .card .card-link {
+              color: #FBB011;
+              font-family: "National Regular", "sans serif";
+              font-size: 1.2rem;
+              border-bottom: solid 2px #FBB011;
+              cursor: pointer; }
+            .home-container .home__top-stays-container .home__top-stays .card .fa-angle-right {
+              font-size: 1rem; } }
+      .home-container .home__top-stays-container .home__top-stays .card:last-child {
+        padding-right: 3rem; }
+    @media (max-width: 600px) {
+      .home-container .home__top-stays-container {
+        padding: 1.5rem;
+        padding-right: 0;
+        margin-bottom: 1.5rem; } }
+  .home-container .home__covid-container {
+    position: relative;
+    z-index: 300;
+    background: white;
+    box-shadow: 2px 2px 5px grey;
+    margin: 3rem;
+    margin-top: 0; }
+    .home-container .home__covid-container .covid {
+      max-width: 100%; }
+      .home-container .home__covid-container .covid__heading {
+        font-family: "Pure Pakati";
+        font-size: 3rem;
+        padding: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: .5rem; }
+        @media (max-width: 600px) {
+          .home-container .home__covid-container .covid__heading {
+            font-size: 1.8rem; } }
+      .home-container .home__covid-container .covid h2 {
+        font-family: "National Medium", sans-serif;
+        font-size: 2rem; }
+        @media (max-width: 600px) {
+          .home-container .home__covid-container .covid h2 {
+            font-size: 1.4rem; } }
+      .home-container .home__covid-container .covid .covid__content-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1.5rem; }
+        .home-container .home__covid-container .covid .covid__content-container h2 {
+          font-family: "National Medium", sans-serif;
+          font-size: 2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__covid-container .covid .covid__content-container h2 {
+              font-size: 1.4rem; } }
+        .home-container .home__covid-container .covid .covid__content-container .covid__content--one {
+          padding-bottom: .5rem;
+          border-bottom: solid 1px lightgrey;
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__covid-container .covid .covid__content-container .covid__content--one {
+              font-size: 1rem;
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 8;
+              -webkit-box-orient: vertical; } }
+        .home-container .home__covid-container .covid .covid__content-container .covid__content--two {
+          padding-top: 1rem;
+          padding-bottom: .5rem;
+          border-bottom: solid 1px lightgrey;
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__covid-container .covid .covid__content-container .covid__content--two {
+              font-size: 1rem;
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 8;
+              -webkit-box-orient: vertical; } }
+        .home-container .home__covid-container .covid .covid__content-container .covid__content--three {
+          padding-top: 1rem;
+          font-family: "National Light", sans-serif;
+          font-size: 1.2rem; }
+          @media (max-width: 600px) {
+            .home-container .home__covid-container .covid .covid__content-container .covid__content--three {
+              font-size: 1rem;
+              display: -webkit-box;
+              overflow: hidden;
+              -webkit-line-clamp: 7;
+              -webkit-box-orient: vertical;
+              padding-bottom: 0.5rem; } }
+    @media (max-width: 600px) {
+      .home-container .home__covid-container {
+        margin: 1.5rem; } }
+  @media (max-width: 600px) {
+    .home-container {
+      margin-top: 0rem; } }
+
+.d-block {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.accommodation-details__info {
+  margin: 3rem;
+  margin-bottom: 1.5rem; }
+  .accommodation-details__info .accommodation-details__header {
+    display: flex;
+    justify-content: space-between; }
+    .accommodation-details__info .accommodation-details__header .accommodation-name {
+      text-transform: uppercase;
+      font-family: "National Regular", sans-serif;
+      font-size: 2rem;
+      font-size: 2.5rem; }
+      @media (max-width: 600px) {
+        .accommodation-details__info .accommodation-details__header .accommodation-name {
+          font-size: 1.6rem; } }
+    .accommodation-details__info .accommodation-details__header .fa-heart {
+      font-size: 2rem;
+      color: #FBB011; }
+  .accommodation-details__info .accommodation-location {
+    font-family: "National Light", "sans-serif";
+    font-size: 1.4rem;
+    font-size: 1.6rem; }
+    @media (max-width: 600px) {
+      .accommodation-details__info .accommodation-location {
+        font-size: 1.2rem; } }
+  .accommodation-details__info .accommodation-reviews {
+    display: flex; }
+    .accommodation-details__info .accommodation-reviews .rating-text {
+      font-family: "National Medium", "sans serif";
+      padding-right: .5rem;
+      padding-bottom: .2rem;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: #00A896;
+      margin: 0; }
+    .accommodation-details__info .accommodation-reviews .review-number {
+      font-family: "National Light", "sans serif";
+      color: grey;
+      font-size: 1rem;
+      margin: 0;
+      line-height: 1.4rem; }
+  .accommodation-details__info .accommodation-description {
+    padding-top: 1.5rem; }
+    .accommodation-details__info .accommodation-description .description {
+      font-family: "National Light", "sans serif";
+      font-size: 1.2rem; }
+  @media (max-width: 600px) {
+    .accommodation-details__info {
+      margin: 1.5rem;
+      margin-bottom: .75rem; }
+      .accommodation-details__info .accommodation-details__header {
+        display: flex;
+        justify-content: space-between; }
+        .accommodation-details__info .accommodation-details__header .accommodation-name {
+          text-transform: uppercase;
+          font-family: "National Regular", sans-serif;
+          font-size: 2rem; } }
+      @media (max-width: 600px) and (max-width: 600px) {
+        .accommodation-details__info .accommodation-details__header .accommodation-name {
+          font-size: 1.6rem; } }
+  @media (max-width: 600px) {
+        .accommodation-details__info .accommodation-details__header .fa-heart {
+          font-size: 1.5rem;
+          color: #FBB011; }
+      .accommodation-details__info .accommodation-location {
+        font-family: "National Light", "sans-serif";
+        font-size: 1.4rem;
+        font-size: 1.6rem; } }
+    @media (max-width: 600px) and (max-width: 600px) {
+      .accommodation-details__info .accommodation-location {
+        font-size: 1.2rem; } }
+  @media (max-width: 600px) {
+      .accommodation-details__info .accommodation-reviews {
+        display: flex; }
+        .accommodation-details__info .accommodation-reviews .rating-text {
+          font-family: "National Medium", "sans serif";
+          padding-right: .5rem;
+          padding-bottom: .2rem;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          color: #00A896;
+          margin: 0; }
+        .accommodation-details__info .accommodation-reviews .review-number {
+          font-family: "National Light", "sans serif";
+          color: grey;
+          font-size: 1rem;
+          margin: 0;
+          line-height: 1.4rem; }
+      .accommodation-details__info .accommodation-description {
+        padding-top: 1.5rem; }
+        .accommodation-details__info .accommodation-description .description {
+          font-family: "National Light", "sans serif";
+          font-size: 1.2rem;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical; } }
+
+.accommodation-ammenities {
+  margin: 0 3rem;
+  margin-bottom: 1.5rem; }
+  .accommodation-ammenities .ammenities-heading {
+    text-transform: uppercase;
+    font-family: "National Regular", sans-serif;
+    font-size: 2rem;
+    font-size: 2.5rem; }
+    @media (max-width: 600px) {
+      .accommodation-ammenities .ammenities-heading {
+        font-size: 1.6rem; } }
+  @media (max-width: 600px) {
+    .accommodation-ammenities {
+      margin: 1.5rem;
+      margin-bottom: .75rem; } }
+
+.accommodation-reviews-details {
+  margin: 0 3rem;
+  margin-bottom: 1.5rem;
+  margin-right: 0; }
+  .accommodation-reviews-details .reviews-heading {
+    text-transform: uppercase;
+    font-family: "National Regular", sans-serif;
+    font-size: 2rem;
+    font-size: 2.5rem; }
+    @media (max-width: 600px) {
+      .accommodation-reviews-details .reviews-heading {
+        font-size: 1.6rem; } }
+  .accommodation-reviews-details .review-cards-container {
+    overflow-y: scroll; }
+    .accommodation-reviews-details .review-cards-container .review-cards {
+      width: fit-content;
+      display: flex; }
+      .accommodation-reviews-details .review-cards-container .review-cards .card {
+        width: 20rem;
+        padding: 1rem;
+        background: #1a1a1a;
+        color: white;
+        border-radius: 0;
+        margin-right: 2rem; }
+        .accommodation-reviews-details .review-cards-container .review-cards .card .card-top {
+          display: flex;
+          align-items: flex-end; }
+          .accommodation-reviews-details .review-cards-container .review-cards .card .card-top .card-img-top {
+            width: 5rem;
+            height: 5rem;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0;
+            margin-right: 1rem; }
+          .accommodation-reviews-details .review-cards-container .review-cards .card .card-top .card-top-line {
+            font-family: "National Regular", sans-serif;
+            font-size: 1rem; }
+            .accommodation-reviews-details .review-cards-container .review-cards .card .card-top .card-top-line .card-name {
+              padding: 0;
+              margin: 0; }
+            .accommodation-reviews-details .review-cards-container .review-cards .card .card-top .card-top-line .card-date {
+              font-family: "National Light", sans-serif;
+              padding: 0;
+              margin: 0; }
+        .accommodation-reviews-details .review-cards-container .review-cards .card .card-body {
+          margin: 0;
+          padding: 1rem 0; }
+        .accommodation-reviews-details .review-cards-container .review-cards .card .card-bottom {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          padding: 0;
+          margin: 0; }
+          .accommodation-reviews-details .review-cards-container .review-cards .card .card-bottom .card-rating {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            color: #FBB011;
+            padding: 0;
+            margin: 0; }
+        @media (max-width: 600px) {
+          .accommodation-reviews-details .review-cards-container .review-cards .card {
+            width: 15rem; } }
+  @media (max-width: 600px) {
+    .accommodation-reviews-details {
+      margin: 1.5rem;
+      margin-bottom: .75rem;
+      margin-right: 0; } }
+
+.accommodation-map {
+  height: 40rem;
+  background: cornflowerblue; }
+  @media (max-width: 600px) {
+    .accommodation-map {
+      height: 30rem; } }
+
+.accommodation-breakfast {
+  margin: 1.5rem 3rem;
+  margin-right: 0; }
+  .accommodation-breakfast .breakfast-heading {
+    text-transform: uppercase;
+    font-family: "National Regular", sans-serif;
+    font-size: 2rem;
+    font-size: 2.5rem; }
+    @media (max-width: 600px) {
+      .accommodation-breakfast .breakfast-heading {
+        font-size: 1.6rem; } }
+  .accommodation-breakfast .breakfast-options-container {
+    overflow-y: scroll; }
+    .accommodation-breakfast .breakfast-options-container .breakfast-options {
+      width: fit-content;
+      display: flex; }
+      .accommodation-breakfast .breakfast-options-container .breakfast-options .card {
+        width: 20rem;
+        background: #1a1a1a;
+        color: white;
+        border-radius: 0;
+        border: none;
+        margin-right: 2rem; }
+        .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-img-top {
+          width: 100%;
+          height: 12rem;
+          object-fit: cover;
+          object-position: bottom;
+          border-radius: 0;
+          border: none; }
+        .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-title {
+          font-family: "National Regular", sans-serif;
+          font-size: 1rem;
+          font-size: 1.6rem;
+          margin: 0; }
+        .accommodation-breakfast .breakfast-options-container .breakfast-options .card .price-text {
+          font-family: "National Regular", sans-serif;
+          font-size: 1.2rem;
+          margin: 0; }
+        .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-text {
+          font-family: "National Light", sans-serif;
+          font-size: 1rem;
+          margin: 0;
+          padding-top: 1rem; }
+        @media (max-width: 600px) {
+          .accommodation-breakfast .breakfast-options-container .breakfast-options .card {
+            width: 15rem;
+            margin-right: 1.5rem; } }
+    @media (max-width: 600px) {
+      .accommodation-breakfast .breakfast-options-container {
+        margin-left: 0; } }
+  @media (max-width: 600px) {
+    .accommodation-breakfast {
+      margin: 1.5rem;
+      margin-bottom: .75rem;
+      margin-right: 0; } }
+
+.accommodation-dates {
+  margin: 1rem 0;
+  padding: 1.5rem 3rem;
+  background: #1a1a1a; }
+  .accommodation-dates .dates-heading {
+    color: white;
+    text-transform: uppercase;
+    font-family: "National Regular", sans-serif;
+    font-size: 2rem;
+    font-size: 2.5rem; }
+    @media (max-width: 600px) {
+      .accommodation-dates .dates-heading {
+        font-size: 1.6rem; } }
+  .accommodation-dates .dates-container {
+    margin-top: 1rem;
+    display: flex; }
+    .accommodation-dates .dates-container .accommodation-dates__check-in {
+      width: 50%;
+      background: white;
+      height: 100%;
+      padding: 1.5rem;
+      margin-right: 1.5rem; }
+      .accommodation-dates .dates-container .accommodation-dates__check-in .check-in-details {
+        font-family: "National Regular", sans-serif;
+        font-size: 1rem;
+        font-size: 1.6rem;
+        margin: 0; }
+        .accommodation-dates .dates-container .accommodation-dates__check-in .check-in-details p {
+          margin: 0; }
+    .accommodation-dates .dates-container .accommodation-dates__check-out {
+      width: 50%;
+      background: white;
+      height: 100%;
+      padding: 1.5rem;
+      margin-left: 1.5rem; }
+      .accommodation-dates .dates-container .accommodation-dates__check-out p {
+        margin: 0; }
+  @media (max-width: 600px) {
+    .accommodation-dates {
+      margin: 1rem 0;
+      padding: 1.5rem; } }
+
+.accommodation-cancellation-policy {
+  margin: 1.5rem 3rem;
+  margin-right: 0;
+  margin-bottom: 6rem; }
+  .accommodation-cancellation-policy .cancellation-heading {
+    text-transform: uppercase;
+    font-family: "National Regular", sans-serif;
+    font-size: 2rem;
+    font-size: 2.5rem; }
+    @media (max-width: 600px) {
+      .accommodation-cancellation-policy .cancellation-heading {
+        font-size: 1.6rem; } }
+  .accommodation-cancellation-policy .cancellation-text {
+    font-family: "National Light", sans-serif;
+    font-size: 1.2rem;
+    margin: 0; }
+  @media (max-width: 600px) {
+    .accommodation-cancellation-policy {
+      margin: 1.5rem;
+      margin-bottom: 6rem;
+      margin-right: 0; } }
+
+.accommodation-details__footer {
+  max-height: 6rem;
+  background: #1a1a1a;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between; }
+  .accommodation-details__footer .cost-summary h4 {
+    line-height: 1rem; }
+  .accommodation-details__footer .cost-breakdown {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "National Light", sans-serif;
+    font-size: .9rem;
+    align-items: center;
+    margin: 0; }
+    .accommodation-details__footer .cost-breakdown p {
+      margin: 0; }
+    .accommodation-details__footer .cost-breakdown .fa-circle {
+      font-size: .5rem;
+      padding: 0rem .5rem; }
+  .accommodation-details__footer .book-now {
+    padding: 0.5rem 1rem;
+    color: #FBB011;
+    background-color: #1a1a1a;
+    border: solid 2px #FBB011;
+    font-size: 1rem;
+    font-family: "National Regular", sans-serif; }
+
+.thank-you {
+  width: 100%;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem;
+  display: none; }
+  .thank-you__text {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .thank-you__text--one, .thank-you__text--two, .thank-you__text--three {
+      color: white;
+      font-family: "National Medium", sans-serif;
+      font-size: 2rem;
+      text-align: center; }
+    .thank-you__text--two {
+      color: #FBB011; }
+    .thank-you__text .hei-kona-mai {
+      font-family: "Pure Pakati", sans-serif;
+      font-size: 10rem;
+      color: white; }
+  .thank-you .thank-you__book-again .book-again {
+    height: 2.5rem;
+    color: #1a1a1a;
+    background: #FBB011;
+    border: none;
+    padding: 0 2rem;
+    font-family: "National Regular", sans-serif;
+    font-size: 1rem;
+    cursor: pointer; }
+  @media (max-width: 600px) {
+    .thank-you {
+      padding: 1rem; }
+      .thank-you__text {
+        padding: 2rem;
+        padding-top: 3rem;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; }
+        .thank-you__text--one, .thank-you__text--two, .thank-you__text--three {
+          color: white;
+          font-family: "National Medium", sans-serif;
+          font-size: 1.2rem;
+          text-align: center; }
+        .thank-you__text--two {
+          color: #FBB011; }
+        .thank-you__text .hei-kona-mai {
+          font-family: "Pure Pakati", sans-serif;
+          font-size: 5rem;
+          color: white;
+          text-align: center; }
+      .thank-you .thank-you__book-again {
+        width: 100%; }
+        .thank-you .thank-you__book-again .book-again {
+          height: 2.5rem;
+          color: #1a1a1a;
+          background: #FBB011;
+          border: none;
+          padding: 0 2rem;
+          font-family: "National Regular", sans-serif;
+          font-size: 1rem;
+          cursor: pointer;
+          width: 100%; } }
+
 .further-filters {
   display: none; }
 
