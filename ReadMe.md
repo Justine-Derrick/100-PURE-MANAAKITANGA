@@ -1,3 +1,6 @@
-You will write information which is relevant to your project and the different steps that need to be taken for it to work.
+Hi! Thanks for checking out this project. Just a few things before we start:
 
-step one: re-name the file "mapKeyCopy.js" to "mapKey.js" step two: paste in your API key
+Step One: You will need to rename the file "mapKeyCopy.js" to "mapKey.js"
+Step Two: Into the new "mapKey.js" file, paste your API key into the "let key = "(paste api key here)""
+
+Currently this application only display's accommodation options in Coromandel, New Zealand.

@@ -1,5 +1,3 @@
-
-
 .d-block{
     width: 100%;
     height: 100%;
@@ -452,9 +450,9 @@
             padding: 0rem .5rem;
         }
 
-        @media #{$mobile} {
-            display: none;
-        }
+        // @media #{$mobile} {
+        //     display: none;
+        // }
     }
 
     .book-now{

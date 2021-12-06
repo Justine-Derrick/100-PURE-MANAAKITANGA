@@ -8847,9 +8847,6 @@ a.text-dark:hover, a.text-dark:focus {
     .accommodation-details__footer .cost-breakdown .fa-circle {
       font-size: .5rem;
       padding: 0rem .5rem; }
-    @media (max-width: 600px) {
-      .accommodation-details__footer .cost-breakdown {
-        display: none; } }
   .accommodation-details__footer .book-now {
     padding: 0.5rem 1rem;
     color: #FBB011;

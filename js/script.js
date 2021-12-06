@@ -807,20 +807,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1:  "./img/food/fruit-salad.jpg",
+        breakfastOption1: "Fruit Salad",
+        breakfastDescription1: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement1:  ["VG", "V", "GF"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/cooked-breakfast-buffet.jpg",
+        breakfastOption2: "Cooked Breakfast Buffet",
+        breakfastDescription2: "Selection of cooked breakfast items",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 10,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/toast-selection.jpg",
+        breakfastOption3: "Toast Buffet",
+        breakfastDescription3: "Toast, sereved with a range of spreads",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 4,
 
         costPerNight: 90,
         minGuest: 2,
@@ -887,20 +890,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1:  "./img/food/fruit-salad.jpg",
+        breakfastOption1: "Fruit Salad",
+        breakfastDescription1: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement1:  ["VG", "V", "GF"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/cooked-breakfast-buffet.jpg",
+        breakfastOption2: "Cooked Breakfast Buffet",
+        breakfastDescription2: "Selection of cooked breakfast items",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 10,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/toast-selection.jpg",
+        breakfastOption3: "Toast Buffet",
+        breakfastDescription3: "Toast, sereved with a range of spreads",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 4,
 
         costPerNight: 30,
         minGuest: 1,
@@ -964,20 +970,24 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        
+        breakfastImg1: "./img/food/cereal-selection.jpg",
+        breakfastOption1: "Selection of Cereals",
+        breakfastDescription1: "Cereal buffet with seasonal fresh fruit",
+        breakfastRequirement1: ["VG", "V"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/pastry-selection.jpg",
+        breakfastOption2: "Pastry of the Day",
+        breakfastDescription2: "Selection of pastries, made in house daily",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 6,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/fruit-salad.jpg",
+        breakfastOption3: "Fruit Salad",
+        breakfastDescription3: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 5,
 
         costPerNight: 30,
         minGuest: 1,
@@ -1040,20 +1050,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1:  "./img/food/fruit-salad.jpg",
+        breakfastOption1: "Fruit Salad",
+        breakfastDescription1: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement1:  ["VG", "V", "GF"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/cooked-breakfast-buffet.jpg",
+        breakfastOption2: "Cooked Breakfast Buffet",
+        breakfastDescription2: "Selection of cooked breakfast items",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 10,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/toast-selection.jpg",
+        breakfastOption3: "Toast Buffet",
+        breakfastDescription3: "Toast, sereved with a range of spreads",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 4,
 
         costPerNight: 30,
         minGuest: 1,
@@ -1116,20 +1129,24 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        
+        breakfastImg1: "./img/food/cereal-selection.jpg",
+        breakfastOption1: "Selection of Cereals",
+        breakfastDescription1: "Cereal buffet with seasonal fresh fruit",
+        breakfastRequirement1: ["VG", "V"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/pastry-selection.jpg",
+        breakfastOption2: "Pastry of the Day",
+        breakfastDescription2: "Selection of pastries, made in house daily",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 6,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/fruit-salad.jpg",
+        breakfastOption3: "Fruit Salad",
+        breakfastDescription3: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 5,
 
         costPerNight: 30,
         minGuest: 1,
@@ -1191,20 +1208,24 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+       
+        breakfastImg1: "./img/food/cereal-selection.jpg",
+        breakfastOption1: "Selection of Cereals",
+        breakfastDescription1: "Cereal buffet with seasonal fresh fruit",
+        breakfastRequirement1: ["VG", "V"],
+        breakfastPrice1: 5,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/pastry-selection.jpg",
+        breakfastOption2: "Pastry of the Day",
+        breakfastDescription2: "Selection of pastries, made in house daily",
+        breakfastRequirement2: ["V"],
+        breakfastPrice2: 6,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/fruit-salad.jpg",
+        breakfastOption3: "Fruit Salad",
+        breakfastDescription3: "Seasonal fruits, served with greek yoghurt",
+        breakfastRequirement3: ["VG", "V", "GF"],
+        breakfastPrice3: 5,
 
         costPerNight: 30,
         minGuest: 1,
@@ -1232,12 +1253,12 @@ let accommodation = [
         location: "Hahei, New Zealand",
         reigon: "Coromandel, New Zealand", 
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/houses/relaxation-main-img.jpg",
+        img1: "./img/houses/relaxation-img-1.jpg",
+        img2: "./img/houses/relaxation-img-2.jpg",
+        img3: "./img/houses/relaxation-img-3.jpg",
+        img4: "./img/houses/relaxation-img-4.jpg",
+        img5: "./img/houses/relaxation-img-5.jpg",
        
         rating: 4.6,
         reviewsNo: 322,
@@ -1272,20 +1293,24 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+       
+        breakfastImg1: "./img/food/avocado-toast.png",
+        breakfastOption1: "Avocado Toast",
+        breakfastDescription1: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement1: ["V", "VG*"],
+        breakfastPrice1: 18.50,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/spanish-eggs.png",
+        breakfastOption2: "Spanish Eggs",
+        breakfastDescription2: "Eggs poached in a tomato sauce. Servec with sourdough toast",
+        breakfastRequirement2: ["V", "GF*"],
+        breakfastPrice2: 19.50,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/chia-seed-pudding.png",
+        breakfastOption3: "Chia Seed Pudding",
+        breakfastDescription3: "Coconut Chia Seed Pudding with seasonal fruit",
+        breakfastRequirement3: ["V", "VG", "GF"],
+        breakfastPrice3: 17.50,
 
         costPerNight: 240,
         minGuest: 1,
@@ -1310,12 +1335,12 @@ let accommodation = [
         location: "Matarangi, New Zealand",
         reigon: "Coromandel, New Zealand", 
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/houses/seaside-main-img.jpg",
+        img1: "./img/houses/seaside-img-1.jpg",
+        img2: "./img/houses/seaside-img-2.jpg",
+        img3: "./img/houses/seaside-img-3.jpg",
+        img4: "./img/houses/seaside-img-4.jpg",
+        img5: "./img/houses/seaside-img-5.jpg",
        
         rating: 4.6,
         reviewsNo: 79,
@@ -1350,20 +1375,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1: "./img/food/full-english.png",
+        breakfastOption1: "Full English Style Breakfast",
+        breakfastDescription1: "Bacon, Roasted Tomatoes, Baked Beans, and Eggs your way. Served with sourdough toast.",
+        breakfastRequirement1: ["GF*"],
+        breakfastPrice1: 20.50,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/avocado-toast.png",
+        breakfastOption2: "Avocado Toast",
+        breakfastDescription2: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement2: ["V", "VG*"],
+        breakfastPrice2: 18.50,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/porridge.png",
+        breakfastOption3: "Homemade Porridge",
+        breakfastDescription3: "Traditional homemade porridge with steel cut oats. Served with seasonal fruit.",
+        breakfastRequirement3: ["v", "VG*"],
+        breakfastPrice3: 17.50,
 
         costPerNight: 240,
         minGuest: 1,
@@ -1374,26 +1402,29 @@ let accommodation = [
         ammenities: ["Free Wifi", "Late Check Out", "Free Parking", "Spa"],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: -36.843780488706656, 
-        longitude: 175.8148605326123,       
+        latitude: -36.728934370800474,
+        longitude:  175.6648067027582,    
     },
 
     {
         id: 118,
-        name: "",
+        name: "Paradise Retreat",
         type: "House", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Whitianga",
+        reigonName: "Coromandel",
+        location: "Whitianga, New Zealand",
+        reigon: "Coromandel, New Zealand", 
+        
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/houses/paradise-main-img.jpg",
+        img1: "./img/houses/paradise-img-1.jpg",
+        img2: "./img/houses/paradise-img-2.jpg",
+        img3: "./img/houses/paradise-img-3.jpg",
+        img4: "./img/houses/paradise-img-4.jpg",
+        img5: "./img/houses/paradise-img-5.jpg",
        
-        rating: "",
-        reviewsNo: "",
+        rating: "3.9",
+        reviewsNo: "200",
        
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -1425,20 +1456,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1: "./img/food/full-english.png",
+        breakfastOption1: "Full English Style Breakfast",
+        breakfastDescription1: "Bacon, Roasted Tomatoes, Baked Beans, and Eggs your way. Served with sourdough toast.",
+        breakfastRequirement1: ["GF*"],
+        breakfastPrice1: 20.50,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/avocado-toast.png",
+        breakfastOption2: "Avocado Toast",
+        breakfastDescription2: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement2: ["V", "VG*"],
+        breakfastPrice2: 18.50,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/porridge.png",
+        breakfastOption3: "Homemade Porridge",
+        breakfastDescription3: "Traditional homemade porridge with steel cut oats. Served with seasonal fruit.",
+        breakfastRequirement3: ["v", "VG*"],
+        breakfastPrice3: 17.50,
 
         costPerNight: 240,
         minGuest: 1,
@@ -1449,26 +1483,28 @@ let accommodation = [
         ammenities: [],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: "", 
-        longitude: "",       
+        latitude: -36.84292034290379, 
+        longitude: 175.68920835451485 ,       
     },
 
     {
         id: 119,
-        name: "",
+        name: "Cosy Cottage",
         type: "House", 
-        location: "",
-        reigon: "Coromandel",
-
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        locationName: "Hot Water Beach",
+        reigonName: "Coromandel",
+        location: "Hot Water Beach, New Zealand",
+        reigon: "Coromandel, New Zealand",
+        
+        mainImage: "./img/houses/cosy-main-img.jpg",
+        img1: "./img/houses/cosy-img-1.jpg",
+        img2: "./img/houses/cosy-img-2.jpg",
+        img3: "./img/houses/cosy-img-3.jpg",
+        img4: "./img/houses/cosy-img-4.jpg",
+        img5: "./img/houses/cosy-img-5.jpg",
        
-        rating: "",
-        reviewsNo: "",
+        rating: "4.2",
+        reviewsNo: "132",
        
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -1500,20 +1536,24 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+       
+        breakfastImg1: "./img/food/avocado-toast.png",
+        breakfastOption1: "Avocado Toast",
+        breakfastDescription1: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement1: ["V", "VG*"],
+        breakfastPrice1: 18.50,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/spanish-eggs.png",
+        breakfastOption2: "Spanish Eggs",
+        breakfastDescription2: "Eggs poached in a tomato sauce. Servec with sourdough toast",
+        breakfastRequirement2: ["V", "GF*"],
+        breakfastPrice2: 19.50,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/chia-seed-pudding.png",
+        breakfastOption3: "Chia Seed Pudding",
+        breakfastDescription3: "Coconut Chia Seed Pudding with seasonal fruit",
+        breakfastRequirement3: ["V", "VG", "GF"],
+        breakfastPrice3: 17.50,
 
         costPerNight: 240,
         minGuest: 1,
@@ -1524,26 +1564,28 @@ let accommodation = [
         ammenities: [],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: "", 
-        longitude: "",       
+        latitude: -36.88943101338873, 
+        longitude: 175.8268424102878,       
     },
 
     {
         id: 120,
-        name: "",
+        name: "Directors Stay",
         type: "House", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Opito Bay",
+        reigonName: "Coromandel",
+        location: "Opito Bay, New Zealand",
+        reigon: "Coromandel, New Zealand",
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/houses/directors-main-img.jpg",
+        img1: "./img/houses/directors-img-1.jpg",
+        img2: "./img/houses/directors-img-2.jpg",
+        img3: "./img/houses/directors-img-3.jpg",
+        img4: "./img/houses/directors-img-4.jpg",
+        img5: "./img/houses/directors-img-5.jpg",
        
-        rating: "",
-        reviewsNo: "",
+        rating: "4.9",
+        reviewsNo: "320",
        
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -1575,20 +1617,23 @@ let accommodation = [
         reviewContent5: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolore explicabo rem iste et perferendis itaque autem aut",
         reviewRating5: "4.5",
 
-        breakfastImg1: "",
-        breakfastOption1: "",
-        breakfastDescription1: "",
-        breakfastRequirement1: "",
+        breakfastImg1: "./img/food/full-english.png",
+        breakfastOption1: "Full English Style Breakfast",
+        breakfastDescription1: "Bacon, Roasted Tomatoes, Baked Beans, and Eggs your way. Served with sourdough toast.",
+        breakfastRequirement1: ["GF*"],
+        breakfastPrice1: 20.50,
 
-        breakfastImg2: "",
-        breakfastOption2: "",
-        breakfastDescription2: "",
-        breakfastRequirement2: "",
+        breakfastImg2: "./img/food/avocado-toast.png",
+        breakfastOption2: "Avocado Toast",
+        breakfastDescription2: "Smashed Avocado on Toast with Eggs your way",
+        breakfastRequirement2: ["V", "VG*"],
+        breakfastPrice2: 18.50,
 
-        breakfastImg3: "",
-        breakfastOption3: "",
-        breakfastDescription3: "",
-        breakfastRequirement3: "",
+        breakfastImg3: "./img/food/porridge.png",
+        breakfastOption3: "Homemade Porridge",
+        breakfastDescription3: "Traditional homemade porridge with steel cut oats. Served with seasonal fruit.",
+        breakfastRequirement3: ["v", "VG*"],
+        breakfastPrice3: 17.50,
 
         costPerNight: 240,
         minGuest: 1,
@@ -1599,8 +1644,8 @@ let accommodation = [
         ammenities: [],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: "", 
-        longitude: "",       
+        latitude: -36.721593830379874, 
+        longitude: 175.80539364463525,       
     },
 
 
@@ -1638,16 +1683,6 @@ function initMap(){
             types: ['(cities)']
         }
     );
-
-    // for(let i=0; i<accommodation.length; i++){
-    //     let location = {lat: accommodation[i].latitude,  lng: accommodation[i].longitude};
-
-    //     map = new google.maps.Map(document.getElementById("accommodationMap"), {
-    //         zoom: 10, 
-    //         center: location,
-    //     });
-    // }
-
 
     $("#checkInDate").datepicker({
         
@@ -1721,10 +1756,6 @@ function initialFilterOptions(event){
 
     let msDay = 100 * 36000 * 24;
 
-    
-
-    // let checkInDate = new Date($("#checkInDate").val());
-    // let checkOutDate = new Date($("#checkOutDate").val());
     let checkInDate = new Date($("#checkInDate").val());
     let checkOutDate = new Date($("#checkOutDate").val());
 
@@ -1742,8 +1773,19 @@ function initialFilterOptions(event){
     console.log(numberOfPeople);
 
     let accommodationLocation = $("#searchBar").val();
+    
+   if ((accommodationLocation === "") && ((checkInDate == "Invalid Date") || (checkOutDate == "Invalid Date")) && (numberOfPeople === null)){
+        alert("please make sure you have filled all search fields")
+    } else if (accommodationLocation === ""){
+        alert("please make sure you have entered a location")
+    } else if ((checkInDate == "Invalid Date") || (checkOutDate == "Invalid Date")) {
+        alert("please make sure you have entered a check in and check out date")
+    } else if (numberOfPeople === null) {
+        alert("please enter your number of guests")
+    } else {
+        displayInitialOptions(numberOfDays, numberOfPeople, accommodationLocation, checkInDateShort, checkOutDateShort);
+    }      
 
-    displayInitialOptions(numberOfDays, numberOfPeople, accommodationLocation, checkInDateShort, checkOutDateShort);
 }
 
 
@@ -1752,7 +1794,7 @@ function initialFilterOptions(event){
 
 // display initial results
 
-
+let costCalcArray = [];
 let results = [];
 
 function displayInitialOptions(nights, guests, city, first, last){
@@ -1761,156 +1803,64 @@ function displayInitialOptions(nights, guests, city, first, last){
 
     console.log(nights);
     console.log(guests);
+    console.log(city);
 
-    $(".home-container").css("display", "none");
-    $(".content").css("display", "block");
-
-    $("#cardContainerSearchResults").empty();
-    $("#cardContainerTopStay").empty();
-
-    for (let i=0; i < accommodation.length; i++){
-
-        let totalNightsCost = nights * accommodation[i].costPerNight;
-
-        if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest)){
-            generateResultCard(i, totalNightsCost);
-            console.log(totalNightsCost);
-
-            let accommodationResult = accommodation[i];
-            results.push(accommodationResult);
+    let totalNightsCost;
 
 
-            let location = {lat: accommodation[i].latitude, lng: accommodation[i].longitude};
-            // console.log(location);
-            console.log(location);
-            locations.push(location);
+    if (city === "Coromandel, New Zealand"){
+
+        $(".home-container").css("display", "none");
+        $(".content").css("display", "block");
+    
+        $("#cardContainerSearchResults").empty();
+        $("#cardContainerTopStay").empty();
+
+        for (let i=0; i < accommodation.length; i++){
+
+            totalNightsCost = nights * accommodation[i].costPerNight;
+           
+
+            if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest)){
+                generateResultCard(i, totalNightsCost);
+                console.log(totalNightsCost);
+
+                let accommodationResult = accommodation[i];
+                results.push(accommodationResult);
+
+
+                let location = {lat: accommodation[i].latitude, lng: accommodation[i].longitude};
+                console.log(location);
+                locations.push(location);
+                
+                let marker = new google.maps.Marker({
+                    position: location,
+                    map:map,
+                });
+
+                console.log(marker);
+                markers.push(marker);
+            } 
             
-            let marker = new google.maps.Marker({
-                position: location,
-                map:map,
-            });
-
-            console.log(marker);
-            markers.push(marker);
-        } 
-        
-        if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
-            generateTopCard(i);
-        } 
-
+            if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
+                generateTopCard(i);
+            } 
+        }
+    } else {
+        alert("no stays there sorry! try searching Coromandel, New Zealand instead")
     }
 
-    console.log(results);
+  
 
-    accommodationDetails(nights, first, last);
-   
+    console.log(results);
+    costCalcArray.push(totalNightsCost);
+    accommodationDetails(nights, first, last,totalNightsCost);
+
 }
 
 
-// -------------------------------------------------------------------------------------------------------------------------------------------
-
-
-// // further filters
-
-// function furtherFilterOptions(event){
-   
-    
-//     event.preventDefault();
-//     console.log("clicked");
-
-//     $("#cardContainerSearchResults").empty();
-
-//     let selectedAmmenities = [];
-//     console.log(selectedAmmenities)
-
-//     $('input[name="ammenity"]:checked').each(function(){
-
-//         selectedAmmenities.push(this.value);
-      
-//     });
-
-//     // checkFilters(selectedAmmenities, results);
-    
-// }
-
-// function checkFilters(y, z){
-    
-    // let matchingAccom = [];
-
-    // matchingAccom.forEach((c) => {
-    //     if (!matchingAccomUnique.includes(c)) {
-    //         matchingAccomUnique.push(c);
-    //     }
-    // });
-    
-    // let zLength = z.length;
-    // let yLength = y.length
-    
-    //     if (zLength<=yLength){
-    //         for(let i = 0; i < z.length; i++){
-    //             if(!(y.indexOf(z[i])>=0)){
-    //                 console.log(z[i].name)
-    //             } else {
-           
-    //             console.log(z[i].id)
-    //         }
-    //     } 
-    // }
-
-    // for (let x=0; x < z.length; x++){
-    //     let arr1 = z[x].ammenities;
-    //     let arr2 = y[x];
-
-    //     for (let i=0; i<arr1.length; i++){
-    //         if($.inArray(arr1[i], arr2) > 0){
-    //             console.log("yes")
-    //         } else {
-    //             console.log(z[i].name)
-    //         }
-    //     }
-    // }
-// }
-
-    
-
-
-    
-        
-
-
-    //     for (let h = 0; h < results.length; h++){
-    //         for (let j=0; j < z.length; j++){
-    //             if (results[i].ammenities[h] === z[j]){
-    //                 matchingAccom.push(results[i].name);
-    //             }
-    //         }
-    //     }
-
-   // output: true
-    
-    
-
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
-// further filter options
-
-// function displayFurtherFilterOptions(){
-
-//     reloadMarkers();
-
-//     $("#cardContainerSearchResults").empty();
-//     $("#cardContainerTopStay").empty();
-
-//     console.log("success")
-
-// }
-
-
-// -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 // refresh markers
 
 function reloadMarkers() {
@@ -1929,20 +1879,16 @@ function reloadMarkers() {
 
 // accommodation details
 
-function accommodationDetails(nightsTotal, checkIn, checkOut){
+function accommodationDetails(nightsTotal, checkIn, checkOut, total){
 
    
     let totalNights = nightsTotal;
     let firstNight = checkIn;
     let lastNight = checkOut;
- 
-    let totalBill;
 
-    console.log(totalNights);
+    let totalBill = total;
 
-    // reloadMarkers();
-    // function accommodationDetailsAppend(x, y, z, p, h){
-   
+    console.log(totalNights); 
 
 
     $(".card-link").on("click", function(){
@@ -1959,29 +1905,207 @@ function accommodationDetails(nightsTotal, checkIn, checkOut){
         for (let i=0; i < accommodation.length; i++){
 
             let centerMap = {lat: accommodation[i].latitude,  lng: accommodation[i].longitude};
+            priceOne = accommodation[i].breakfastPrice1;
+            priceTwo = accommodation[i].breakfastPrice2;
+            priceThree = accommodation[i].breakfastPrice3;
+        
+            mealNameOne = accommodation[i].breakfastOption1;
+            mealNameTwo = accommodation[i].breakfastOption2;
+            mealNameThree = accommodation[i].breakfastOption3;
+        
+
+      
+        
             
             if (parseInt(this.id) === accommodation[i].id){
                 console.log(accommodation[i].name);
 
-                accommodationDetailsAppend(i, totalBill, totalNights, firstNight, lastNight);
+                // function accommodationDetailsAppend(){
 
-                mapDetail = new google.maps.Map(document.getElementById("accommodationMap"), {
-                    zoom: 12, 
-                    center: centerMap,
-                });
+                    reloadMarkers();
+                
+                    $("#accommodationDetails").empty().append(
+                        `
+                    <div class="accommodation-details__img-container">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="${accommodation[i].mainImage}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="${accommodation[i].img1}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="${accommodation[i].img2}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="${accommodation[i].img3}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="${accommodation[i].img4}" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                              <img src="${accommodation[i].img1}" class="d-block w-100" alt="...">
+                            </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="accommodation-details__info">
+                        
+                        <div class="accommodation-details__header">
+                            <h1 class="accommodation-name"><b>${accommodation[i].name}</b></h1>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>              
+                        <h3 class="accommodation-location">${accommodation[i].locationName}, ${accommodation[i].reigonName}, NZ</h3>
+                        <div class="accommodation-reviews">
+                            <p class="rating-text"><i class="fas fa-star"></i>${accommodation[i].rating}</p> <p class="review-number"><i>(${accommodation[i].reviewsNo} reviews)</i></p>
+                        </div>
+                        <div class="accommodation-description">
+                            <p class="description">${accommodation[i].descriptionShort}</p>
+                        </div>
+                    </div>
+                
+                    <div class="accommodation-ammenities">
+                        <h2 class="ammenities-heading"><b>AMMENITIES</b></h2>
+                        <div class="ammenities-details"></div>
+                    </div>
+                
+                    <div class="accommodation-reviews-details">
+                        <h2 class="reviews-heading"><b>REVIEWS</b></h2>
+                        <div class="review-cards-container">
+                            <div class="review-cards" id="reviewsCards"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="accommodation-map" id="accommodationMap"></div>
+                    
+                    <div class="accommodation-breakfast">
+                        <h2 class="breakfast-heading"><b>BREAKFAST OPTIONS</b></h2>
+                
+                        <div class="breakfast-options-container">
+                            <div class="breakfast-options" id="breakfastOptions"></div>
+                            <div class="breakfast-order-summary" id="breakfastOrderSummary"></div>
+                        </div>
+                    </div>
+                
+                        <div class="accommodation-dates">
+                
+                        <h2 class="dates-heading"><b>YOUR DETAILS</b></h2>
+                        <div class="dates-container">
+                            <div class="accommodation-dates">
+                                <div class="check-in-date">
+                                    <p class="date">${firstNight}</p>
+                                    <p class="time">After 2pm</p>
+                                </div>
+                                <div class="check-out-date">
+                                    <p class="date">${lastNight}</p>
+                                    <p class="time">Before 10am</p>
+                                </div>
+                            </div>          
+                        </div>
+                        <div class="meals-container" id="mealsContainer">
+                           
+                        </div>
+                        <button class="add-to-booking" id="addToBooking">Add selection to booking</button>
+                    </div>
+                
+                        <div class="accommodation-cancellation-policy">
+                            <h2 class="cancellation-heading"><b>CANCELLATION POLICY</b></h2>
+                            <p class="cancellation-text">${accommodation[i].cancellation}</p>
+                        </div>
+                
+                
+                        <div class="accommodation-details__footer">
+                            <div class="cost-summary">
+                                <h4 id="totalCost">$${totalBill}</h4>
+                                <div class="cost-breakdown">
+                                    <p>${totalNights} nights</p>
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>${firstNight} - ${lastNight}</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn book-now btn-primary" id="${accommodation[i].id}" data-toggle="modal" data-target="#detailsModal">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                    `
+                    );
+                
+                    
+                    $("#breakfastOptions").append(
+                        `                       
+                        <div class="card meal-one">
+                            <input type="image" class="card-img-top" id="breakfastImage1" value="meal-one" src="${accommodation[i].breakfastImg1}" alt="Card image cap">
+                            <div class="card-body">
+                            <div class="card-top-line">
+                                <h5 class="card-title" id="breakfastName1">${accommodation[i].breakfastOption1}</h5>
+                            </div>
+                                <p class="price-text" id="breakfastPrice1">$${accommodation[i].breakfastPrice1}</p>
+                                <p class="card-text">${accommodation[i].breakfastDescription1}</p>
+                                <p class="card-text">${accommodation[i].breakfastRequirement1}</p>
+                            </div>
+                        </div>
+                
+                        <div class="card meal-one">
+                            <input type="image" class="card-img-top" id="breakfastImage2" value="meal-two" src="${accommodation[i].breakfastImg2}" alt="Card image cap">
+                            <div class="card-body">
+                            <div class="card-top-line">
+                                <h5 class="card-title" id="breakfastName2">${accommodation[i].breakfastOption2}</h5>
+                            </div>
+                                <p class="price-text"  id="breakfastPrice2">$${accommodation[i].breakfastPrice2}</p>
+                                <p class="card-text">${accommodation[i].breakfastDescription2}</p>
+                                <p class="card-text">${accommodation[i].breakfastRequirement2}</p>
+                            </div>
+                        </div>
+                
+                       <div class="card meal-one">
+                            <input type="image" class="card-img-top" id="breakfastImage3" value="meal-three" src="${accommodation[i].breakfastImg3}" alt="Card image cap">
+                            <div class="card-body">
+                            <div class="card-top-line">
+                                <h5 class="card-title" id="breakfastName3">${accommodation[i].breakfastOption3}</h5>
+                            </div>
+                                <p class="price-text" id="breakfastPrice3">$${accommodation[i].breakfastPrice3}</p>
+                                <p class="card-text">${accommodation[i].breakfastDescription3}</p>
+                                <p class="card-text">${accommodation[i].breakfastRequirement3}</p>
+                            </div>
+                        </div>
+                        `  
+                    );
 
-                let markerDetail = new google.maps.Marker({
-                    position: centerMap,
-                    map:mapDetail,
-                });
+                    selectMeals(i)
+                    generateReviewCard(i);
 
-                markers.push(markerDetail);
+                    mapDetail = new google.maps.Map(document.getElementById("accommodationMap"), {
+                        zoom: 12, 
+                        center: centerMap,
+                    });
+
+                    let markerDetail = new google.maps.Marker({
+                        position: centerMap,
+                        map:mapDetail,
+                    });
+
+                    markers.push(markerDetail);
+                }
 
             }
-        } 
-    });
-    
-}
+        });   
+
+        console.log(costCalcArray);
+    } 
+
+     
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
@@ -1989,72 +2113,89 @@ function accommodationDetails(nightsTotal, checkIn, checkOut){
 
 // select meals
 
-function selectMeals(price1, price2, price3, option1, option2, option3){
 
-    let breakfastInfo1 = [option1, price1];
-    let breakfastInfo2 = [option2, price2];
-    let breakfastInfo3 = [option3, price3];
-    
+function selectMeals(x){
 
+    let breakfastInfo1 = [accommodation[x].breakfastOption1, accommodation[x].breakfastPrice1];;
+    let breakfastInfo2 = [accommodation[x].breakfastOption2, accommodation[x].breakfastPrice2];
+    let breakfastInfo3 = [accommodation[x].breakfastOption3, accommodation[x].breakfastPrice3];
     let costArray = [];
 
-        $("#breakfastImage1").on("click", function(){
-            console.log(breakfastInfo1);       
-        
-            $("#mealsContainer").append(
-            `
-                <p class="meal-name">${breakfastInfo1[0]}</p>
-                <p class="meal-price" id="mealPrice">$${breakfastInfo1[1]}</p>
-            `
-            )              
-            
-            costArray.push(breakfastInfo1[1])
-        
-        });
-        
-        $("#breakfastImage2").on("click", function(){
-            console.log(breakfastInfo2);  
-
-            $("#mealsContainer").append(
-                `
-                    <p class="meal-name">${breakfastInfo2[0]}</p>
-                    <p class="meal-price" id="mealPrice">$${breakfastInfo2[1]}</p>
-                `
-                )        
-
-                costArray.push(breakfastInfo2[1])
-
-        });
-            
-        $("#breakfastImage3").on("click", function(){
-            console.log(breakfastInfo3); 
+    $("#breakfastImage1").on("click", function(){
+        console.log(breakfastInfo1);       
     
-            $("#mealsContainer").append(
-                `
-                    <p class="meal-name">${breakfastInfo3[0]}</p>
-                    <p class="meal-price" id="mealPrice">$${breakfastInfo3[1]}</p>
-                `
-                )        
+        $("#mealsContainer").append(
+        `
+            <p class="meal-name">${breakfastInfo1[0]}</p>
+            <p class="meal-price" id="mealPrice">$${breakfastInfo1[1]}</p>
+        `
+        )              
+        
+        costArray.push(breakfastInfo1[1])
+    
+    });
+    
+    $("#breakfastImage2").on("click", function(){
+        console.log(breakfastInfo2);  
 
-                costArray.push(breakfastInfo3[1])
-        });
+        $("#mealsContainer").append(
+            `
+                <p class="meal-name">${breakfastInfo2[0]}</p>
+                <p class="meal-price" id="mealPrice">$${breakfastInfo2[1]}</p>
+            `
+            )        
 
-        console.log(costArray)
+            costArray.push(breakfastInfo2[1])
+
+    });
+        
+    $("#breakfastImage3").on("click", function(){
+        console.log(breakfastInfo3); 
+
+        $("#mealsContainer").append(
+            `
+                <p class="meal-name">${breakfastInfo3[0]}</p>
+                <p class="meal-price" id="mealPrice">$${breakfastInfo3[1]}</p>
+            `
+            )        
+
+            costArray.push(breakfastInfo3[1])
+    });
+
+    $("#addToBooking").on("click", function(){
+        
+        let mealSum = costArray.reduce(function(pv, cv) { return pv + cv; }, 0);
+        console.log(mealSum)
+        costCalcArray.push(mealSum);
+
+        totalBillCalc();
+    });
+
+   
+   
+}
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+// total bill calculation
+
+
+function totalBillCalc(){
+
+    let finalCost = costCalcArray.reduce(function(pv, cv) { return pv + cv; }, 0);
+    let finalCostFormat = (Math.round(finalCost * 100) / 100).toFixed(2);
+
+    console.log(finalCost)
+
+    $("#totalCost").empty().append(
+        `
+            $${finalCostFormat}
+        `
+    );
 
 }
 
 
-
-// -------------------------------------------------------------------------------------------------------------------------------------------
-
-// total bill calculation
-
-
-
-// booking details modal
-
-
-// -------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // confirmation screen
@@ -2070,136 +2211,6 @@ function selectMeals(price1, price2, price3, option1, option2, option3){
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
-function accommodationDetailsAppend(x, y, z, p, h){
-
-    reloadMarkers();
-
-    $("#accommodationDetails").empty().append(
-        `
-    <div class="accommodation-details__img-container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="${accommodation[x].mainImage}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="${accommodation[x].img1}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="${accommodation[x].img2}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="${accommodation[x].img3}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="${accommodation[x].img4}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-              <img src="${accommodation[x].img1}" class="d-block w-100" alt="...">
-            </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-    <div class="accommodation-details__info">
-        
-        <div class="accommodation-details__header">
-            <h1 class="accommodation-name"><b>${accommodation[x].name}</b></h1>
-            <i class="fa-solid fa-heart"></i>
-        </div>              
-        <h3 class="accommodation-location">${accommodation[x].locationName}, ${accommodation[x].reigonName}, NZ</h3>
-        <div class="accommodation-reviews">
-            <p class="rating-text"><i class="fas fa-star"></i>${accommodation[x].rating}</p> <p class="review-number"><i>(${accommodation[x].reviewsNo} reviews)</i></p>
-        </div>
-        <div class="accommodation-description">
-            <p class="description">${accommodation[x].descriptionShort}</p>
-        </div>
-    </div>
-
-    <div class="accommodation-ammenities">
-        <h2 class="ammenities-heading"><b>AMMENITIES</b></h2>
-        <div class="ammenities-details"></div>
-    </div>
-
-    <div class="accommodation-reviews-details">
-        <h2 class="reviews-heading"><b>REVIEWS</b></h2>
-        <div class="review-cards-container">
-            <div class="review-cards" id="reviewsCards"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="accommodation-map" id="accommodationMap"></div>
-    
-    <div class="accommodation-breakfast">
-        <h2 class="breakfast-heading"><b>BREAKFAST OPTIONS</b></h2>
-
-        <div class="breakfast-options-container">
-            <div class="breakfast-options" id="breakfastOptions"></div>
-            <div class="breakfast-order-summary" id="breakfastOrderSummary"></div>
-        </div>
-    </div>
-
-        <div class="accommodation-dates">
-
-        <h2 class="dates-heading"><b>YOUR DETAILS</b></h2>
-        <div class="dates-container">
-            <div class="accommodation-dates">
-                <div class="check-in-date">
-                    <p class="date">${p}</p>
-                    <p class="time">After 2pm</p>
-                </div>
-                <div class="check-out-date">
-                    <p class="date">${h}</p>
-                    <p class="time">Before 10am</p>
-                </div>
-            </div>          
-        </div>
-        <div class="meals-container" id="mealsContainer">
-            
-        </div>
-    </div>
-
-        <div class="accommodation-cancellation-policy">
-            <h2 class="cancellation-heading"><b>CANCELLATION POLICY</b></h2>
-            <p class="cancellation-text">${accommodation[x].cancellation}</p>
-        </div>
-
-
-        <div class="accommodation-details__footer">
-            <div class="cost-summary">
-                <h4>${y}</h4>
-                <div class="cost-breakdown">
-                    <p>${z} nights</p>
-                    <i class="fa-solid fa-circle"></i>
-                    <p>${p} - ${h}</p>
-                </div>
-            </div>
-            <button type="button" class="btn book-now btn-primary" id="${accommodation[x].id}" data-toggle="modal" data-target="#detailsModal">
-                Book Now
-            </button>
-        </div>
-    </div>
-    `
-    );
-
-    generateMealCard(x);
-    generateReviewCard(x);
- 
-    
-}
-
-
 
 // card generators
 
@@ -2338,73 +2349,9 @@ function generateReviewCard(x){
 }
 
 
-function generateMealCard(y){
-
-    let priceOne = accommodation[y].breakfastPrice1;
-    let priceTwo = accommodation[y].breakfastPrice2;
-    let priceThree = accommodation[y].breakfastPrice3;
-
-    let mealNameOne = accommodation[y].breakfastOption1;
-    let mealNameTwo = accommodation[y].breakfastOption2;
-    let mealNameThree = accommodation[y].breakfastOption3;
-
-    let mealsTotal;
-
-    $("#breakfastOptions").append(
-        `
-
-        
-        <div class="card meal-one">
-            <input type="image" class="card-img-top" id="breakfastImage1" value="meal-one" src="${accommodation[y].breakfastImg1}" alt="Card image cap">
-            <div class="card-body">
-            <div class="card-top-line">
-                <h5 class="card-title" id="breakfastName1">${accommodation[y].breakfastOption1}</h5>
-            </div>
-                <p class="price-text" id="breakfastPrice1">$${accommodation[y].breakfastPrice1}</p>
-                <p class="card-text">${accommodation[y].breakfastDescription1}</p>
-                <p class="card-text">${accommodation[y].breakfastRequirement1}</p>
-            </div>
-        </div>
-
-        <div class="card meal-one">
-            <input type="image" class="card-img-top" id="breakfastImage2" value="meal-two" src="${accommodation[y].breakfastImg2}" alt="Card image cap">
-            <div class="card-body">
-            <div class="card-top-line">
-                <h5 class="card-title" id="breakfastName2">${accommodation[y].breakfastOption2}</h5>
-            </div>
-                <p class="price-text"  id="breakfastPrice2">$${accommodation[y].breakfastPrice2}</p>
-                <p class="card-text">${accommodation[y].breakfastDescription2}</p>
-                <p class="card-text">${accommodation[y].breakfastRequirement2}</p>
-            </div>
-        </div>
-
-       <div class="card meal-one">
-            <input type="image" class="card-img-top" id="breakfastImage3" value="meal-three" src="${accommodation[y].breakfastImg3}" alt="Card image cap">
-            <div class="card-body">
-            <div class="card-top-line">
-                <h5 class="card-title" id="breakfastName3">${accommodation[y].breakfastOption3}</h5>
-            </div>
-                <p class="price-text" id="breakfastPrice3">$${accommodation[y].breakfastPrice3}</p>
-                <p class="card-text">${accommodation[y].breakfastDescription3}</p>
-                <p class="card-text">${accommodation[y].breakfastRequirement3}</p>
-            </div>
-        </div>
-        `
-    );
-
-    selectMeals(priceOne, priceTwo, priceThree, mealNameOne, mealNameTwo, mealNameThree);
-}
-
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
 
 // event listeners
 
 initialSearch.addEventListener("click", initialFilterOptions);
-// applyFilters.addEventListener("click", furtherFilterOptions);
-// displayFilters.addEventListener("click", furtherFilters);
-// filteredSearch.addEventListener("click", displayFilteredOptions);
