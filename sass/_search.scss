@@ -34,7 +34,7 @@
 
 .top-stay-container{
     position: relative;
-    width: 100%;
+    // width: 100%;
     margin-bottom: 3rem;
     padding-left: 3rem;
     z-index: 350;
@@ -43,7 +43,8 @@
     .card-container-top-stay{
         display: flex;
         overflow-y: scroll;
-        
+
+
         .card{
             min-width: 20rem;
             margin-right: 2rem;

@@ -101,7 +101,8 @@
     padding-top: 0;
     top: 10rem;
     position: relative;
-    z-index: 250;
+    z-index: 1000;
+    overflow: visible;
 
     .search-form{
 
@@ -146,6 +147,8 @@
             .filters__dates{
                 display: flex;
                 width: 47%;
+
+                .date_field {position: relative; z-index:100;}
                 
                 #checkInDate, #checkOutDate{
                     width: 50%;
@@ -158,7 +161,7 @@
                 }
 
                 @media #{$mobile} {
-                    width: 96%;
+                    width: 100%;
                     margin-bottom: 1rem;
 
                     #checkOutDate{
@@ -197,4 +200,28 @@
         padding: 1.5rem;
         top: 1rem;
     }
+}
+
+.ui-datepicker{
+    background: white;
+    color: $black;
+    position: relative;
+    z-index: 10000;
+    overflow: visible;
+
+    .ui-datepicker table {
+        width: 100%;
+    }
+
+    .ui-datepicker-header {
+        background: $blue;
+        color: #ffffff;
+        font-family: "National", sans-serif;
+        border: none;
+        border-radius: 0;
+        // border-width: 1px 0 0 0;
+        // border-style: solid;
+        // border-color: #111;
+    }
+
 }
