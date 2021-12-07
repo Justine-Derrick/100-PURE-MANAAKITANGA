@@ -110,6 +110,7 @@ let accommodation = [
 
         latitude: -36.83898421622976, 
         longitude: 175.69179517137826,
+        marker: "./img/hotel.svg",
 
     },
 
@@ -191,7 +192,7 @@ let accommodation = [
 
         latitude: -36.71498397906826,
         longitude: 175.7945025259624,
-               
+        marker: "./img/hotel.svg",
     },
 
     {
@@ -272,6 +273,7 @@ let accommodation = [
 
         latitude: -36.73275387156286,
         longitude:  175.6446552829269, 
+        marker: "./img/hotel.svg",
 
     },
 
@@ -353,6 +355,7 @@ let accommodation = [
 
         latitude: -36.84091593931837, 
         longitude: 175.80844929618638, 
+        marker: "./img/hotel.svg",
 
     },
 
@@ -434,6 +437,7 @@ let accommodation = [
 
         latitude: -36.82994337395195,
         longitude: 175.7049525979734, 
+        marker: "./img/hotel.svg",
         
     },
 
@@ -519,6 +523,7 @@ let accommodation = [
 
         latitude: -36.82515425566253, 
         longitude: 175.70227305787188,
+        marker: "./img/motel.svg",
        
     },
 
@@ -532,12 +537,12 @@ let accommodation = [
         location: "Cook's Beach, New Zealand",
         reigon: "Coromandel, New Zealand", 
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/motels/cooks-main-img.jpg",
+        img1: "./img/motels/seaview-img-1.png",
+        img2: "./img/motels/seaview-img-2.png",
+        img3: "./img/motels/seaview-img-3.png",
+        img4: "./img/motels/seaview-img-4.png",
+        img5: "./img/motels/seaview-img-5.png",
 
         rating: 4.1,
         reviewsNo: 52,
@@ -602,24 +607,27 @@ let accommodation = [
 
         latitude: -36.83763932778573, 
         longitude: 175.74035469061513,
+        marker: "./img/motel.svg",
     },
 
     {
         id: 108,
-        name: "",
+        name: "Whitianga Motel",
         type: "Motel", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Whitianga",
+        reigonName: "Coromandel",
+        location: "Whitianga, New Zealand",
+        reigon: "Coromandel, New Zealand", 
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/motels/whitianga-main-img.jpg",
+        img1: "./img/motels/seaview-img-1.png",
+        img2: "./img/motels/seaview-img-2.png",
+        img3: "./img/motels/seaview-img-3.png",
+        img4: "./img/motels/seaview-img-4.png",
+        img5: "./img/motels/seaview-img-5.png",
 
-        rating: "",
-        reviewsNo: "",
+        rating: 3.9,
+        reviewsNo: 400,
 
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -678,26 +686,29 @@ let accommodation = [
         ammenities: [],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: "", 
-        longitude: "",
+        latitude: -36.83886835994253,
+        longitude: 175.7030567484165, 
+        marker: "./img/motel.svg",
     },
 
     {
         id: 109,
-        name: "",
+        name: "Beach Motel",
         type: "Motel", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Matarangi",
+        reigonName: "Coromandel",
+        location: "Matarangi, New Zealand",
+        reigon: "Coromandel, New Zealand", 
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/motels/whitianga-main-img.jpg",
+        img1: "./img/motels/seaview-img-1.png",
+        img2: "./img/motels/seaview-img-2.png",
+        img3: "./img/motels/seaview-img-3.png",
+        img4: "./img/motels/seaview-img-4.png",
+        img5: "./img/motels/seaview-img-5.png",
 
-        rating: "",
-        reviewsNo: "",
+        rating: 4.1,
+        reviewsNo: 80,
 
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -756,26 +767,29 @@ let accommodation = [
         ammenities: [],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: "", 
-        longitude: "",
+        latitude: -36.73126530092602, 
+        longitude: 175.67995474915972,
+        marker: "./img/motel.svg",
     },
 
     {
         id: 110,
-        name: "",
+        name: "Whangapoua Motel",
         type: "Motel", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Whangapoua",
+        reigonName: "Coromandel",
+        location: "Whangapoua, New Zealand",
+        reigon: "Coromandel, New Zealand", 
 
-        mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        mainImage: "./img/motels/whangapua-main-img.jpg",
+        img1: "./img/motels/seaview-img-1.png",
+        img2: "./img/motels/seaview-img-2.png",
+        img3: "./img/motels/seaview-img-3.png",
+        img4: "./img/motels/seaview-img-4.png",
+        img5: "./img/motels/seaview-img-5.png",
 
-        rating: "",
-        reviewsNo: "",
+        rating: 4.6,
+        reviewsNo: 20,
 
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -834,8 +848,9 @@ let accommodation = [
         ammenities: [],
         cancellation: "get a 50% refund, minus the first night and service fee",
 
-        latitude: "", 
-        longitude: "",
+        latitude: -36.71611409084271, 
+        longitude: 175.6195579361934 ,
+        marker: "./img/motel.svg",
     },
 
 
@@ -1000,6 +1015,7 @@ let accommodation = [
       
         latitude: -36.72296194864805, 
         longitude: 175.80564070167569,      
+        marker: "./img/backpackers.svg",
         
     },
 
@@ -1007,15 +1023,17 @@ let accommodation = [
         id: 113,
         name: "",
         type: "", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Optio Bay",
+        reigonName: "Coromandel",
+        location: "Opito Bay, New Zealand",
+        reigon: "Coromandel, New Zealand", 
 
         mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        img1: "./img/hostel/cya-img-1.jpg",
+        img2: "./img/hostel/cya-img-2.jpg",
+        img3: "./img/hostel/cya-img-3.jpg",
+        img4: "./img/hostel/cya-img-4.jpg",
+        img5: "./img/hostel/cya-img-5.jpg",
 
         rating: "",
         reviewsNo: "",
@@ -1078,7 +1096,8 @@ let accommodation = [
         cancellation: "get a 50% refund, minus the first night and service fee",
       
         latitude: "", 
-        longitude: "",      
+        longitude: "",     
+        marker: "./img/backpackers.svg", 
         
     },
 
@@ -1086,15 +1105,18 @@ let accommodation = [
         id: 114,
         name: "",
         type: "", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Optio Bay",
+        reigonName: "Coromandel",
+        location: "Opito Bay, New Zealand",
+        reigon: "Coromandel, New Zealand", 
+
 
         mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        img1: "./img/hostel/cya-img-1.jpg",
+        img2: "./img/hostel/cya-img-2.jpg",
+        img3: "./img/hostel/cya-img-3.jpg",
+        img4: "./img/hostel/cya-img-4.jpg",
+        img5: "./img/hostel/cya-img-5.jpg",
 
         rating: "",
         reviewsNo: "",
@@ -1159,21 +1181,25 @@ let accommodation = [
       
         latitude: "", 
         longitude: "",      
+        marker: "./img/backpackers.svg",
     },
 
     {
         id: 115,
         name: "",
         type: "", 
-        location: "",
-        reigon: "Coromandel",
+        locationName: "Optio Bay",
+        reigonName: "Coromandel",
+        location: "Opito Bay, New Zealand",
+        reigon: "Coromandel, New Zealand", 
+
 
         mainImage: "",
-        img1: "",
-        img2: "",
-        img3: "",
-        img4: "",
-        img5: "",
+        img1: "./img/hostel/cya-img-1.jpg",
+        img2: "./img/hostel/cya-img-2.jpg",
+        img3: "./img/hostel/cya-img-3.jpg",
+        img4: "./img/hostel/cya-img-4.jpg",
+        img5: "./img/hostel/cya-img-5.jpg",
 
         rating: "",
         reviewsNo: "",
@@ -1238,6 +1264,7 @@ let accommodation = [
       
         latitude: "", 
         longitude: "",      
+        marker: "./img/backpackers.svg",
     },
 
 
@@ -1323,7 +1350,7 @@ let accommodation = [
       
         latitude: -36.8435427107329, 
         longitude: 175.8018675620926,  
-       
+        marker: "./img/house.svg",
     },
 
     {
@@ -1404,6 +1431,7 @@ let accommodation = [
 
         latitude: -36.728934370800474,
         longitude:  175.6648067027582,    
+        marker: "./img/house.svg",
     },
 
     {
@@ -1423,8 +1451,8 @@ let accommodation = [
         img4: "./img/houses/paradise-img-4.jpg",
         img5: "./img/houses/paradise-img-5.jpg",
        
-        rating: "3.9",
-        reviewsNo: "200",
+        rating: 3.9,
+        reviewsNo: 200,
        
         reviewImg1: "./img/reviews/review-img-1.png",
         reviewName1: "Steve S.",
@@ -1485,6 +1513,7 @@ let accommodation = [
 
         latitude: -36.84292034290379, 
         longitude: 175.68920835451485 ,       
+        marker: "./img/house.svg",
     },
 
     {
@@ -1566,6 +1595,7 @@ let accommodation = [
 
         latitude: -36.88943101338873, 
         longitude: 175.8268424102878,       
+        marker: "./img/house.svg",
     },
 
     {
@@ -1646,6 +1676,7 @@ let accommodation = [
 
         latitude: -36.721593830379874, 
         longitude: 175.80539364463525,       
+        marker: "./img/house.svg",
     },
 
 
@@ -1775,13 +1806,13 @@ function initialFilterOptions(event){
     let accommodationLocation = $("#searchBar").val();
     
    if ((accommodationLocation === "") && ((checkInDate == "Invalid Date") || (checkOutDate == "Invalid Date")) && (numberOfPeople === null)){
-        alert("please make sure you have filled all search fields")
+        alert("Please make sure you have filled all search fields");
     } else if (accommodationLocation === ""){
-        alert("please make sure you have entered a location")
+        alert("Please make sure you have entered a location");
     } else if ((checkInDate == "Invalid Date") || (checkOutDate == "Invalid Date")) {
-        alert("please make sure you have entered a check in and check out date")
+        alert("Please make sure you have entered a check in and check out date");
     } else if (numberOfPeople === null) {
-        alert("please enter your number of guests")
+        alert("Please enter your number of guests");
     } else {
         displayInitialOptions(numberOfDays, numberOfPeople, accommodationLocation, checkInDateShort, checkOutDateShort);
     }      
@@ -1820,6 +1851,12 @@ function displayInitialOptions(nights, guests, city, first, last){
 
             totalNightsCost = nights * accommodation[i].costPerNight;
            
+            let markerImage = {
+                url: accommodation[i].marker,
+                scaledSize: new google.maps.Size(60, 60), // scaled size
+                origin: new google.maps.Point(0,0), // origin
+            };
+          
 
             if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest)){
                 generateResultCard(i, totalNightsCost);
@@ -1836,6 +1873,7 @@ function displayInitialOptions(nights, guests, city, first, last){
                 let marker = new google.maps.Marker({
                     position: location,
                     map:map,
+                    icon: markerImage,
                 });
 
                 console.log(marker);
@@ -1845,9 +1883,11 @@ function displayInitialOptions(nights, guests, city, first, last){
             if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
                 generateTopCard(i);
             } 
+
+            
         }
     } else {
-        alert("no stays there sorry! try searching Coromandel, New Zealand instead")
+        alert("No stays there sorry! Try searching Coromandel, New Zealand instead.");
     }
 
   
@@ -1895,9 +1935,8 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
 
         $("#body").empty().append(
             `
-            <section class="body">
             <div class="accommodation-details" id="accommodationDetails">
-            </section>
+
             `
         );
 
@@ -1905,6 +1944,12 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
         for (let i=0; i < accommodation.length; i++){
 
             let centerMap = {lat: accommodation[i].latitude,  lng: accommodation[i].longitude};
+            let markerImage = {
+                url: accommodation[i].marker,
+                scaledSize: new google.maps.Size(60, 60), // scaled size
+                origin: new google.maps.Point(0,0), // origin
+            };
+          
             priceOne = accommodation[i].breakfastPrice1;
             priceTwo = accommodation[i].breakfastPrice2;
             priceThree = accommodation[i].breakfastPrice3;
@@ -1945,7 +1990,7 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                                 <img src="${accommodation[i].img4}" class="d-block w-100" alt="...">
                               </div>
                               <div class="carousel-item">
-                              <img src="${accommodation[i].img1}" class="d-block w-100" alt="...">
+                              <img src="${accommodation[i].img5}" class="d-block w-100" alt="...">
                             </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -1973,12 +2018,7 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                             <p class="description">${accommodation[i].descriptionShort}</p>
                         </div>
                     </div>
-                
-                    <div class="accommodation-ammenities">
-                        <h2 class="ammenities-heading"><b>AMMENITIES</b></h2>
-                        <div class="ammenities-details"></div>
-                    </div>
-                
+                                
                     <div class="accommodation-reviews-details">
                         <h2 class="reviews-heading"><b>REVIEWS</b></h2>
                         <div class="review-cards-container">
@@ -1998,33 +2038,31 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                         </div>
                     </div>
                 
-                        <div class="accommodation-dates">
+                    <div class="accommodation-dates">
                 
                         <h2 class="dates-heading"><b>YOUR DETAILS</b></h2>
                         <div class="dates-container">
                             <div class="accommodation-dates">
                                 <div class="check-in-date">
-                                    <p class="date">${firstNight}</p>
-                                    <p class="time">After 2pm</p>
+                                    <p class="check-in-date__heading"><b>CHECK IN:</b></p>
+                                    <p class="date">${firstNight}</p> <br>
+                                    <p class="time"> After 2pm</p>
                                 </div>
                                 <div class="check-out-date">
-                                    <p class="date">${lastNight}</p>
-                                    <p class="time">Before 10am</p>
+                                    <p class="check-out-date__heading"><b>CHECK OUT:</b></p>
+                                    <p class="date">${lastNight}</p> <br>
+                                    <p class="time"> Before 10am</p>
                                 </div>
                             </div>          
                         </div>
-                        <div class="meals-container" id="mealsContainer">
-                           
+                        <div class="meals-container">
+                            <h2 class="dates-heading"><b>YOUR MEAL ORDER</b></h2>
+                            <div class="meal-summary" id="mealsContainer"></div> 
+                            <button class="add-to-booking" id="addToBooking">Add selection to booking</button>
                         </div>
-                        <button class="add-to-booking" id="addToBooking">Add selection to booking</button>
+                        
                     </div>
-                
-                        <div class="accommodation-cancellation-policy">
-                            <h2 class="cancellation-heading"><b>CANCELLATION POLICY</b></h2>
-                            <p class="cancellation-text">${accommodation[i].cancellation}</p>
-                        </div>
-                
-                
+                           
                         <div class="accommodation-details__footer">
                             <div class="cost-summary">
                                 <h4 id="totalCost">$${totalBill}</h4>
@@ -2034,7 +2072,7 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                                     <p>${firstNight} - ${lastNight}</p>
                                 </div>
                             </div>
-                            <button type="button" class="btn book-now btn-primary" id="${accommodation[i].id}" data-toggle="modal" data-target="#detailsModal">
+                            <button type="button" class="btn book-now btn-primary" id="thankYouLaunch">
                                 Book Now
                             </button>
                         </div>
@@ -2046,19 +2084,22 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                     $("#breakfastOptions").append(
                         `                       
                         <div class="card meal-one">
-                            <input type="image" class="card-img-top" id="breakfastImage1" value="meal-one" src="${accommodation[i].breakfastImg1}" alt="Card image cap">
+                            <input type="image" class="card-img-top"value="meal-one" src="${accommodation[i].breakfastImg1}" alt="Card image cap">
                             <div class="card-body">
                             <div class="card-top-line">
                                 <h5 class="card-title" id="breakfastName1">${accommodation[i].breakfastOption1}</h5>
                             </div>
-                                <p class="price-text" id="breakfastPrice1">$${accommodation[i].breakfastPrice1}</p>
+                                <p class="price-text" id="breakfastPrice1>$${accommodation[i].breakfastPrice1}</p>
                                 <p class="card-text">${accommodation[i].breakfastDescription1}</p>
                                 <p class="card-text">${accommodation[i].breakfastRequirement1}</p>
+                                <div class="card-button-container">
+                                <button class="card-add" id="breakfastImage1">ADD</button>
+                                </div>
                             </div>
                         </div>
                 
                         <div class="card meal-one">
-                            <input type="image" class="card-img-top" id="breakfastImage2" value="meal-two" src="${accommodation[i].breakfastImg2}" alt="Card image cap">
+                            <input type="image" class="card-img-top" value="meal-two" src="${accommodation[i].breakfastImg2}" alt="Card image cap">
                             <div class="card-body">
                             <div class="card-top-line">
                                 <h5 class="card-title" id="breakfastName2">${accommodation[i].breakfastOption2}</h5>
@@ -2066,11 +2107,14 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                                 <p class="price-text"  id="breakfastPrice2">$${accommodation[i].breakfastPrice2}</p>
                                 <p class="card-text">${accommodation[i].breakfastDescription2}</p>
                                 <p class="card-text">${accommodation[i].breakfastRequirement2}</p>
+                                <div class="card-button-container">
+                                <button class="card-add" id="breakfastImage2">ADD</button>
+                                </div>
                             </div>
                         </div>
                 
                        <div class="card meal-one">
-                            <input type="image" class="card-img-top" id="breakfastImage3" value="meal-three" src="${accommodation[i].breakfastImg3}" alt="Card image cap">
+                            <input type="image" class="card-img-top"  value="meal-three" src="${accommodation[i].breakfastImg3}" alt="Card image cap">
                             <div class="card-body">
                             <div class="card-top-line">
                                 <h5 class="card-title" id="breakfastName3">${accommodation[i].breakfastOption3}</h5>
@@ -2078,13 +2122,18 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                                 <p class="price-text" id="breakfastPrice3">$${accommodation[i].breakfastPrice3}</p>
                                 <p class="card-text">${accommodation[i].breakfastDescription3}</p>
                                 <p class="card-text">${accommodation[i].breakfastRequirement3}</p>
+                                <div class="card-button-container">
+                                <button class="card-add" id="breakfastImage3">ADD</button>
+                                </div>
                             </div>
                         </div>
                         `  
                     );
 
-                    selectMeals(i)
+                    selectMeals(i);
                     generateReviewCard(i);
+
+                  
 
                     mapDetail = new google.maps.Map(document.getElementById("accommodationMap"), {
                         zoom: 12, 
@@ -2094,6 +2143,7 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                     let markerDetail = new google.maps.Marker({
                         position: centerMap,
                         map:mapDetail,
+                        icon: markerImage,
                     });
 
                     markers.push(markerDetail);
@@ -2116,7 +2166,7 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
 
 function selectMeals(x){
 
-    let breakfastInfo1 = [accommodation[x].breakfastOption1, accommodation[x].breakfastPrice1];;
+    let breakfastInfo1 = [accommodation[x].breakfastOption1, accommodation[x].breakfastPrice1];
     let breakfastInfo2 = [accommodation[x].breakfastOption2, accommodation[x].breakfastPrice2];
     let breakfastInfo3 = [accommodation[x].breakfastOption3, accommodation[x].breakfastPrice3];
     let costArray = [];
@@ -2126,12 +2176,14 @@ function selectMeals(x){
     
         $("#mealsContainer").append(
         `
-            <p class="meal-name">${breakfastInfo1[0]}</p>
-            <p class="meal-price" id="mealPrice">$${breakfastInfo1[1]}</p>
+            <div class="meal-selection">
+                <p class="meal-name">${breakfastInfo1[0]}</p>
+                <p class="meal-price" id="mealPrice">$${breakfastInfo1[1]}</p>
+            </div>
         `
-        )              
+        );              
         
-        costArray.push(breakfastInfo1[1])
+        costArray.push(breakfastInfo1[1]);
     
     });
     
@@ -2140,12 +2192,14 @@ function selectMeals(x){
 
         $("#mealsContainer").append(
             `
-                <p class="meal-name">${breakfastInfo2[0]}</p>
-                <p class="meal-price" id="mealPrice">$${breakfastInfo2[1]}</p>
+                <div class="meal-selection">
+                    <p class="meal-name">${breakfastInfo2[0]}</p>
+                    <p class="meal-price" id="mealPrice">$${breakfastInfo2[1]}</p>
+                </div>
             `
-            )        
+            );       
 
-            costArray.push(breakfastInfo2[1])
+            costArray.push(breakfastInfo2[1]);
 
     });
         
@@ -2154,24 +2208,27 @@ function selectMeals(x){
 
         $("#mealsContainer").append(
             `
-                <p class="meal-name">${breakfastInfo3[0]}</p>
-                <p class="meal-price" id="mealPrice">$${breakfastInfo3[1]}</p>
+                <div class="meal-selection">
+                    <p class="meal-name">${breakfastInfo3[0]}</p>
+                    <p class="meal-price" id="mealPrice">$${breakfastInfo3[1]}</p>
+                </div>
             `
-            )        
+            );        
 
-            costArray.push(breakfastInfo3[1])
+            costArray.push(breakfastInfo3[1]);
     });
 
     $("#addToBooking").on("click", function(){
         
         let mealSum = costArray.reduce(function(pv, cv) { return pv + cv; }, 0);
-        console.log(mealSum)
+        console.log(mealSum);
         costCalcArray.push(mealSum);
 
+
+        $("#mealsContainer").empty();
         totalBillCalc();
     });
 
-   
    
 }
 
@@ -2185,7 +2242,7 @@ function totalBillCalc(){
     let finalCost = costCalcArray.reduce(function(pv, cv) { return pv + cv; }, 0);
     let finalCostFormat = (Math.round(finalCost * 100) / 100).toFixed(2);
 
-    console.log(finalCost)
+    console.log(finalCost);
 
     $("#totalCost").empty().append(
         `
@@ -2193,22 +2250,17 @@ function totalBillCalc(){
         `
     );
 
+    $("#thankYouLaunch").on("click", function(){
+        $(".accommodation-details").css("display", "none");
+        $(".thank-you-container").css("display", "block");
+    });
 }
 
+// $("#bookAgain").on("click", function(){
+//     $(".thank-you-container").css("display", "none");
 
 
-
-// confirmation screen
-
-
-// ----------------------------------------------------------
-
-
-// -------------------------------------------------------------------------------------------------------------------------------------------
-
-
-// thank you screen
-
+// })
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
 

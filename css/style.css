@@ -8713,9 +8713,11 @@ a.text-dark:hover, a.text-dark:focus {
     overflow-y: scroll; }
     .accommodation-breakfast .breakfast-options-container .breakfast-options {
       width: fit-content;
-      display: flex; }
+      display: flex;
+      height: 100%; }
       .accommodation-breakfast .breakfast-options-container .breakfast-options .card {
         width: 20rem;
+        height: 100%;
         background: #1a1a1a;
         color: white;
         border-radius: 0;
@@ -8728,6 +8730,8 @@ a.text-dark:hover, a.text-dark:focus {
           object-position: bottom;
           border-radius: 0;
           border: none; }
+        .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-body {
+          height: 100%; }
         .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-title {
           font-family: "National Regular", sans-serif;
           font-size: 1rem;
@@ -8742,6 +8746,21 @@ a.text-dark:hover, a.text-dark:focus {
           font-size: 1rem;
           margin: 0;
           padding-top: 1rem; }
+        .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-button-container {
+          width: 100%;
+          justify-content: flex-end;
+          padding-top: 1rem; }
+          .accommodation-breakfast .breakfast-options-container .breakfast-options .card .card-button-container .card-add {
+            height: 2.5rem;
+            color: #1a1a1a;
+            background: #FBB011;
+            border: none;
+            padding: 0 2rem;
+            font-family: "National Regular", sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            padding: 0.5rem; }
         @media (max-width: 600px) {
           .accommodation-breakfast .breakfast-options-container .breakfast-options .card {
             width: 15rem;
@@ -8757,9 +8776,10 @@ a.text-dark:hover, a.text-dark:focus {
       margin-right: 0; } }
 
 .accommodation-dates {
-  margin: 1rem 0;
+  margin-top: 1rem 0;
   padding: 1.5rem 3rem;
-  background: #1a1a1a; }
+  background: #1a1a1a;
+  height: fit-content; }
   .accommodation-dates .dates-heading {
     color: white;
     text-transform: uppercase;
@@ -8770,7 +8790,8 @@ a.text-dark:hover, a.text-dark:focus {
       .accommodation-dates .dates-heading {
         font-size: 1.6rem; } }
   .accommodation-dates .dates-container {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-bottom: 0rem; }
     .accommodation-dates .dates-container .accommodation-dates {
       width: 100%;
       background: white;
@@ -8778,63 +8799,64 @@ a.text-dark:hover, a.text-dark:focus {
       padding: 1.5rem;
       margin-right: 1.5rem; }
       .accommodation-dates .dates-container .accommodation-dates .check-in-date {
-        font-family: "National Regular", sans-serif;
-        font-size: 1rem;
-        font-size: 1.6rem;
+        font-family: "National Light", sans-serif;
+        font-size: 1.2rem;
         margin: 0;
         display: flex; }
+        .accommodation-dates .dates-container .accommodation-dates .check-in-date .check-in-date__heading {
+          padding-right: 0.75rem; }
+        .accommodation-dates .dates-container .accommodation-dates .check-in-date .date {
+          padding-right: .5rem; }
         .accommodation-dates .dates-container .accommodation-dates .check-in-date p {
           margin: 0; }
       .accommodation-dates .dates-container .accommodation-dates .check-out-date {
-        font-family: "National Regular", sans-serif;
-        font-size: 1rem;
-        font-size: 1.6rem;
+        font-family: "National Light", sans-serif;
+        font-size: 1.2rem;
         margin: 0;
         display: flex; }
+        .accommodation-dates .dates-container .accommodation-dates .check-out-date .check-out-date__heading {
+          padding-right: 0.75rem; }
+        .accommodation-dates .dates-container .accommodation-dates .check-out-date .date {
+          padding-right: .5rem; }
         .accommodation-dates .dates-container .accommodation-dates .check-out-date p {
           margin: 0; }
   .accommodation-dates .meals-container {
+    padding-top: 1rem;
     color: white; }
+    .accommodation-dates .meals-container .meal-selection {
+      display: flex;
+      justify-content: space-between; }
+    .accommodation-dates .meals-container .add-to-booking {
+      height: 2.5rem;
+      color: #1a1a1a;
+      background: #FBB011;
+      border: none;
+      padding: 0 2rem;
+      font-family: "National Regular", sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%; }
   @media (max-width: 600px) {
     .accommodation-dates {
-      margin: 1rem 0;
+      margin-top: 1rem 0;
       padding: 1.5rem; } }
 
-.accommodation-cancellation-policy {
-  margin: 1.5rem 3rem;
-  margin-right: 0;
-  margin-bottom: 6rem; }
-  .accommodation-cancellation-policy .cancellation-heading {
-    text-transform: uppercase;
-    font-family: "National Regular", sans-serif;
-    font-size: 2rem;
-    font-size: 2.5rem; }
-    @media (max-width: 600px) {
-      .accommodation-cancellation-policy .cancellation-heading {
-        font-size: 1.6rem; } }
-  .accommodation-cancellation-policy .cancellation-text {
-    font-family: "National Light", sans-serif;
-    font-size: 1.2rem;
-    margin: 0; }
-  @media (max-width: 600px) {
-    .accommodation-cancellation-policy {
-      margin: 1.5rem;
-      margin-bottom: 6rem;
-      margin-right: 0; } }
-
 .accommodation-details__footer {
-  max-height: 6rem;
+  height: 6rem;
   background: #1a1a1a;
   color: white;
   overflow: hidden;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between; }
-  .accommodation-details__footer .cost-summary h4 {
-    line-height: 1rem; }
+  .accommodation-details__footer .cost-summary {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .accommodation-details__footer .cost-summary h4 {
+      line-height: 1rem; }
   .accommodation-details__footer .cost-breakdown {
     display: flex;
     justify-content: flex-start;
@@ -8855,77 +8877,80 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 1rem;
     font-family: "National Regular", sans-serif; }
 
-.thank-you {
+.thank-you-container {
+  display: none;
   width: 100%;
-  height: 100vh;
-  background: #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem;
-  display: none; }
-  .thank-you__text {
-    height: 80%;
+  height: 100vh; }
+  .thank-you-container .thank-you {
+    width: 100%;
+    height: 100vh;
+    background: #1a1a1a;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; }
-    .thank-you__text--one, .thank-you__text--two, .thank-you__text--three {
-      color: white;
-      font-family: "National Medium", sans-serif;
-      font-size: 2rem;
-      text-align: center; }
-    .thank-you__text--two {
-      color: #FBB011; }
-    .thank-you__text .hei-kona-mai {
-      font-family: "Pure Pakati", sans-serif;
-      font-size: 10rem;
-      color: white; }
-  .thank-you .thank-you__book-again .book-again {
-    height: 2.5rem;
-    color: #1a1a1a;
-    background: #FBB011;
-    border: none;
-    padding: 0 2rem;
-    font-family: "National Regular", sans-serif;
-    font-size: 1rem;
-    cursor: pointer; }
-  @media (max-width: 600px) {
-    .thank-you {
-      padding: 1rem; }
-      .thank-you__text {
-        padding: 2rem;
-        padding-top: 3rem;
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between; }
-        .thank-you__text--one, .thank-you__text--two, .thank-you__text--three {
-          color: white;
-          font-family: "National Medium", sans-serif;
-          font-size: 1.2rem;
-          text-align: center; }
-        .thank-you__text--two {
-          color: #FBB011; }
-        .thank-you__text .hei-kona-mai {
-          font-family: "Pure Pakati", sans-serif;
-          font-size: 5rem;
-          color: white;
-          text-align: center; }
-      .thank-you .thank-you__book-again {
-        width: 100%; }
-        .thank-you .thank-you__book-again .book-again {
-          height: 2.5rem;
-          color: #1a1a1a;
-          background: #FBB011;
-          border: none;
-          padding: 0 2rem;
-          font-family: "National Regular", sans-serif;
-          font-size: 1rem;
-          cursor: pointer;
-          width: 100%; } }
+    justify-content: space-between;
+    padding: 5rem; }
+    .thank-you-container .thank-you__text {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; }
+      .thank-you-container .thank-you__text--one, .thank-you-container .thank-you__text--two, .thank-you-container .thank-you__text--three {
+        color: white;
+        font-family: "National Medium", sans-serif;
+        font-size: 2rem;
+        text-align: center; }
+      .thank-you-container .thank-you__text--two {
+        color: #FBB011; }
+      .thank-you-container .thank-you__text .hei-kona-mai {
+        font-family: "Pure Pakati", sans-serif;
+        font-size: 10rem;
+        color: white; }
+    .thank-you-container .thank-you .thank-you__book-again .book-again {
+      height: 2.5rem;
+      color: #1a1a1a;
+      background: #FBB011;
+      border: none;
+      padding: 0 2rem;
+      font-family: "National Regular", sans-serif;
+      font-size: 1rem;
+      cursor: pointer; }
+    @media (max-width: 600px) {
+      .thank-you-container .thank-you {
+        padding: 1rem; }
+        .thank-you-container .thank-you__text {
+          padding: 2rem;
+          padding-top: 3rem;
+          height: 90%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between; }
+          .thank-you-container .thank-you__text--one, .thank-you-container .thank-you__text--two, .thank-you-container .thank-you__text--three {
+            color: white;
+            font-family: "National Medium", sans-serif;
+            font-size: 1.2rem;
+            text-align: center; }
+          .thank-you-container .thank-you__text--two {
+            color: #FBB011; }
+          .thank-you-container .thank-you__text .hei-kona-mai {
+            font-family: "Pure Pakati", sans-serif;
+            font-size: 5rem;
+            color: white;
+            text-align: center; }
+        .thank-you-container .thank-you .thank-you__book-again {
+          width: 100%; }
+          .thank-you-container .thank-you .thank-you__book-again .book-again {
+            height: 2.5rem;
+            color: #1a1a1a;
+            background: #FBB011;
+            border: none;
+            padding: 0 2rem;
+            font-family: "National Regular", sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%; } }
 
 .further-filters {
   display: none; }

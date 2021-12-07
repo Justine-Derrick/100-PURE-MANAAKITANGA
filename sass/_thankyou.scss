@@ -1,88 +1,95 @@
-.thank-you{
+.thank-you-container{
+
+    display: none;
     width: 100%;
     height: 100vh;
-    background: $black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem;
-    display: none;
 
-    &__text{
-        height: 80%;
+    .thank-you{
+        width: 100%;
+        height: 100vh;
+        background: $black;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-      
-
-        &--one, &--two, &--three{
-            color: white;
-            font-family: "National Medium", sans-serif;
-            font-size: 2rem;
-            text-align: center;
-        }
-
-        &--two{
-            color: $yellow;
-        }
-
-        .hei-kona-mai{
-            font-family: "Pure Pakati", sans-serif;
-            font-size: 10rem;
-            color: white;
-        }
-    }
-
-    .thank-you__book-again{
-
-        .book-again{
-            @include button-one;
-        }
-    }
-   
-    @media #{$mobile} {
-        padding: 1rem;
-        
+        padding: 5rem;
+     
 
         &__text{
-            padding: 2rem;
-            padding-top: 3rem;
-            height: 90%;
+            height: 80%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-          
-    
+        
+
             &--one, &--two, &--three{
                 color: white;
                 font-family: "National Medium", sans-serif;
-                font-size: 1.2rem;
+                font-size: 2rem;
                 text-align: center;
             }
-    
+
             &--two{
                 color: $yellow;
             }
-    
+
             .hei-kona-mai{
                 font-family: "Pure Pakati", sans-serif;
-                font-size: 5rem;
+                font-size: 10rem;
                 color: white;
-                text-align: center;
             }
         }
-    
+
         .thank-you__book-again{
-            width: 100%;
 
             .book-again{
                 @include button-one;
+            }
+        }
+    
+        @media #{$mobile} {
+            padding: 1rem;
+            
+
+            &__text{
+                padding: 2rem;
+                padding-top: 3rem;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            
+        
+                &--one, &--two, &--three{
+                    color: white;
+                    font-family: "National Medium", sans-serif;
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+        
+                &--two{
+                    color: $yellow;
+                }
+        
+                .hei-kona-mai{
+                    font-family: "Pure Pakati", sans-serif;
+                    font-size: 5rem;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        
+            .thank-you__book-again{
                 width: 100%;
+
+                .book-again{
+                    @include button-one;
+                    width: 100%;
+                }
             }
         }
     }
-
 }
+

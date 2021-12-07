@@ -267,9 +267,11 @@
         .breakfast-options{
             width: fit-content;
             display: flex;
+            height: 100%;
 
             .card{
                 width: 20rem;
+                height: 100%;
                 // padding: 1rem;
                 background: $black;
                 color: white;
@@ -285,6 +287,10 @@
                     border-radius: 0;
                     border: none;
                     // margin-right: 1rem
+                }
+
+                .card-body{
+                    height: 100%;
                 }
 
                 .card-title{
@@ -304,6 +310,19 @@
                     font-size: 1rem;
                     margin: 0;
                     padding-top: 1rem;
+                }
+
+
+                .card-button-container{
+                    width: 100%;
+                    justify-content: flex-end;
+                    padding-top: 1rem;
+
+                    .card-add{
+                        @include button-one;
+                        width: 100%;
+                        padding: 0.5rem;
+                    }
                 }
 
                 @media #{$mobile} {
@@ -327,11 +346,11 @@
 }
 
 .accommodation-dates{
-    margin: 1rem 0;
+    margin-top: 1rem 0;
     padding: 1.5rem 3rem;
     background: $black;
+    height: fit-content;
 
-    
     .dates-heading{
         color: white;
         text-transform: uppercase;
@@ -341,6 +360,7 @@
 
     .dates-container{
         margin-top: 1rem;
+        margin-bottom: 0rem;
         // display: flex;
 
         .accommodation-dates{
@@ -351,10 +371,19 @@
             margin-right: 1.5rem;
     
             .check-in-date{
-                @include review-card-top;
-                font-size: 1.6rem;
+                font-family: "National Light", sans-serif;
+                font-size: 1.2rem;
                 margin: 0;
                 display: flex;
+
+
+                .check-in-date__heading{
+                    padding-right: 0.75rem;
+                }
+
+                .date{
+                    padding-right: .5rem;
+                }
 
                 p{
                     margin: 0;
@@ -362,10 +391,19 @@
             }
 
             .check-out-date{
-                @include review-card-top;
-                font-size: 1.6rem;
+                font-family: "National Light", sans-serif;
+                font-size: 1.2rem;
                 margin: 0;
                 display: flex;
+
+                .check-out-date__heading{
+                    padding-right: 0.75rem;
+                }
+
+                .date{
+                    padding-right: .5rem;
+                }
+                
 
                 p{
                     margin: 0;
@@ -374,58 +412,49 @@
 
    
         }    
+        
     }
 
     .meals-container{
+        padding-top: 1rem;
         color: white;
-    }
 
+
+        .meal-selection{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .add-to-booking{
+            @include button-one;
+            width: 100%
+        }
+    }
 
     @media #{$mobile} {
-        margin: 1rem 0;
+        margin-top: 1rem 0;
         padding: 1.5rem;
     }
- 
     
 }
 
-.accommodation-cancellation-policy{
-    margin: 1.5rem 3rem;
-    margin-right: 0;
-    margin-bottom: 6rem;
-
-    .cancellation-heading{
-        text-transform: uppercase;
-        @include card-heading-one;
-        font-size: 2.5rem;
-    }
-
-    .cancellation-text{
-        font-family: "National Light", sans-serif;
-        font-size: 1.2rem;
-        margin: 0;
-    }
-
-    @media #{$mobile} {
-        margin: 1.5rem;
-        margin-bottom: 6rem;
-        margin-right: 0
-    }
-}
-
 .accommodation-details__footer{
-    max-height: 6rem;
+    height: 6rem;
     background: $black;
     color: white;
     overflow: hidden;
-    position: fixed;
-    bottom: 0;
+    // position: fixed;
+    // bottom: 0;
     width: 100%;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     
     .cost-summary{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         h4{
             // @include card-link;
@@ -465,252 +494,3 @@
     }
 
 }
-
-
-//  @media #{$mobile} {
-//     .accommodation-details{
-//         width: 100%;
-//         position: absolute;
-//         z-index: 5000;
-//         // background: grey;
-
-
-//         &__img-container{
-
-//             // position: relative;
-            
-//             .carousel{
-
-//                 .d-block{
-//                     height: 100%;
-//                     object-fit: cover;
-//                     object-position: center;
-//                 }
-//             }
-
-//             .header-icons{
-//                 // position: absolute;
-//                 color: $yellow;
-//                 font-size: 1.4rem;
-//                 // z-index: 5000;
-//                 // width: 100%;
-//                 // display: flex;
-//                 // justify-content: space-between;
-//                 // padding: 1rem;
-//             }
-
-//         }
-
-//         &__header{
-//             display: flex;
-//             justify-content: space-between;
-//             margin: 1rem;
-//             margin-bottom: .25rem;
-//             align-items: center;
-
-//             .accommodation-name{
-//                 // @include card-heading;
-//                 font-size: 1.4rem;    
-//                 margin: 0;
-//             }
-
-//             .fa-heart{
-//                 color: $yellow;
-//                 font-size: 1.2rem;
-//             }
-//         }
-
-//         .accommodation-location{
-//             margin: 0rem 1rem;
-//             margin-bottom: .25rem;
-//             // @include card-location;
-//         }
-
-//         .accommodation-reviews{
-//             margin: .25rem 1rem;
-//             display: flex;
-//             align-items: center;
-//             border-bottom: solid 1px lightgray;
-
-//             .rating-text{
-//                 color: $blue;
-//                 font-size: 1.1em;
-//                 padding-right: 0.25rem
-//             }
-
-//             .review-number{
-//                 font-size: .8rem;
-//             }
-//         }
-
-//         .accommodation-description{
-//             margin: 1rem;
-//             padding-bottom: 1rem;
-//             border-bottom: solid 1px lightgray;
-
-//             .description{
-//                 // margin: 1rem;
-//                 margin-bottom: 0.25rem;
-//                 // @include card-body;
-
-//                 &-link{
-//                     // @include card-link;
-//                     font-size: 1rem;
-//                     color: $blue; 
-//                     border-bottom: solid 2px $blue;
-//                 }
-//             }
-//         }
-
-//         .accommodation-ammenities{
-//             margin: 1rem;
-//             padding-bottom: 1rem;
-//             border-bottom: solid 1px lightgray;
-
-//             .ammenities-heading{
-//                 // @include card-heading;
-//                 font-size: 1.2rem;
-//             }
-
-//             .ammenities-link{
-//                 // @include card-link;
-//                 font-size: 1rem;
-//                 color: $blue; 
-//                 border-bottom: solid 2px $blue;
-//             }
-//         }
-
-//         .accommodation-reviews-details{
-//             margin: 1rem;
-    
-//             .reviews-heading{
-//                 // @include card-heading;
-//                 font-size: 1.2rem;
-//             }
-
-//             .reviews-link{
-//                 // @include card-link;
-//                 font-size: 1rem;
-//                 color: $blue; 
-//                 border-bottom: solid 2px $blue;
-//             }
-//         }
-
-//         .accommodation-map{
-//             height: 40vh;
-//             background: $blue;
-//             margin-bottom: 1rem;
-//         }
-
-//         .accommodation-breakfast{
-//             margin: 1rem;
-
-//             .breakfast-heading{
-//                 // @include card-heading;
-//                 font-size: 1.2rem;
-//             }
-//         }
-
-//         .accommodation-dates{
-//             background: $black;
-//             padding: 1rem;
-
-
-//             .dates-heading{
-//                 color: white;
-//                 // @include card-heading;
-//                 font-size: 1.2rem;
-//             }
-
-//             .dates-container{
-//                 display: flex;
-//                 justify-content: space-between;
-//                 margin: 1rem 0rem;
-
-
-//                 .accommodation-dates__check-in{
-//                     width: 50%;
-//                     height: 6rem;
-//                     margin-right: .5rem;
-//                     background: white;
-//                 }
-        
-//                 .accommodation-dates__check-out{
-//                     width: 50%;
-//                     height: 6rem;
-//                     margin-left: .5rem;
-//                     background: white;
-//                 }
-//             }
-
-//             .accommodation-dates-link{
-//                 // @include card-link;
-//                 font-size: 1rem;
-//                 color: $yellow; 
-//                 border-bottom: solid 2px $yellow;
-//             }
-        
-//         }
-
-
-//         .accommodation-cancellation-policy{
-//             margin: 1rem;
-//             padding-bottom: 6rem;
-    
-//             .cancellation-heading{
-//                 // @include card-heading;
-//                 font-size: 1.2rem;
-//             }
-//         }
-
-
-//         .accommodation-details__footer{
-//             max-height: 6rem;
-//             background: $black;
-//             color: white;
-//             overflow: hidden;
-//             position: fixed;
-//             bottom: 0;
-//             width: 100%;
-//             padding: 1rem;
-//             display: flex;
-//             justify-content: space-between;
-
-//             .cost-summary{
-
-//                 h4{
-//                     // @include card-link;
-//                     line-height: 1rem;
-//                 }
-//             }
-
-//             .cost-breakdown{
-//                 display: flex;
-//                 justify-content: flex-start;
-//                 font-family: "National Light", sans-serif;
-//                 font-size: .9rem;
-//                 align-items: center;
-//                 margin: 0;
-
-//                 p{
-//                     margin: 0;
-//                 }
-
-//                 .fa-circle{
-//                     font-size: .5rem;
-//                     padding: 0rem .5rem;
-//                 }
-
-//             }
-
-//             .book-now{
-//                 padding: 0.5rem 1rem;
-//                 color: $yellow;
-//                 background-color: $black;
-//                 border: solid 2px $yellow;
-//                 font-size: 1rem;
-//                 font-family: "National Regular", sans-serif;
-//             }
-//         }
-//     }
-//  }
