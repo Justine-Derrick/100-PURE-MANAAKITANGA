@@ -5,18 +5,30 @@ let script = "<script src='https://maps.googleapis.com/maps/api/js?key=" + key +
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 //query selectors
 
+
 const initialSearch = document.querySelector("#initialSearch");
-//const applyFilters = document.querySelector("#applyFilters");
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
+// global variables
 
 
+let map;
+let mapDetail;
+let autoComp;
+let locations = [];
+let markers = [];
+
+let costCalcArray = [];
+let results = [];
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
 // append map key to body
+
+
 
 $(document).ready(function(){
     $('body').append(script);
@@ -24,8 +36,6 @@ $(document).ready(function(){
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 // object array  -  accommodation
 
 let accommodation = [
@@ -1686,16 +1696,8 @@ console.log(accommodation);
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 // initialise map
 
-let map;
-let mapDetail;
-let autoComp;
-let locations = [];
-let markers = [];
-let markersDetail = [];
 
 function initMap(){
 
@@ -1765,6 +1767,11 @@ function initMap(){
     }
 }
 
+
+// -------------------------------------------------------------------------------------------------------------------------------------------
+// initialise map
+
+
 function appendHomeCards(){
 
     for(let i=0; i<accommodation.length; i++){
@@ -1778,8 +1785,8 @@ appendHomeCards();
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
 // initial filters
+
 
 function initialFilterOptions(event){
     event.preventDefault();
@@ -1821,12 +1828,8 @@ function initialFilterOptions(event){
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 // display initial results
 
-let costCalcArray = [];
-let results = [];
 
 function displayInitialOptions(nights, guests, city, first, last){
 
@@ -1882,22 +1885,17 @@ function displayInitialOptions(nights, guests, city, first, last){
             
             if ((city === accommodation[i].location || city === accommodation[i].reigon) && (nights >= accommodation[i].minNight && nights <= accommodation[i].maxNight) && (guests >= accommodation[i].minGuest && guests <= accommodation[i].maxGuest) && (accommodation[i].rating >= 4)){
                 generateTopCard(i);
-            } 
-
-            
+            }  
         }
+
     } else {
         alert("No stays there sorry! Try searching Coromandel, New Zealand instead.");
     }
 
-  
-
     console.log(results);
     costCalcArray.push(totalNightsCost);
     accommodationDetails(nights, first, last,totalNightsCost);
-
 }
-
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
@@ -1915,9 +1913,8 @@ function reloadMarkers() {
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 // accommodation details
+
 
 function accommodationDetails(nightsTotal, checkIn, checkOut, total){
 
@@ -1959,9 +1956,6 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
             mealNameThree = accommodation[i].breakfastOption3;
         
 
-      
-        
-            
             if (parseInt(this.id) === accommodation[i].id){
                 console.log(accommodation[i].name);
 
@@ -1971,97 +1965,97 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                 
                     $("#accommodationDetails").empty().append(
                         `
-                    <div class="accommodation-details__img-container">
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="${accommodation[i].mainImage}" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="${accommodation[i].img1}" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="${accommodation[i].img2}" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="${accommodation[i].img3}" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="${accommodation[i].img4}" class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                              <img src="${accommodation[i].img5}" class="d-block w-100" alt="...">
-                            </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                
-                    <div class="accommodation-details__info">
-                        
-                        <div class="accommodation-details__header">
-                            <h1 class="accommodation-name"><b>${accommodation[i].name}</b></h1>
-                            <i class="fa-solid fa-heart"></i>
-                        </div>              
-                        <h3 class="accommodation-location">${accommodation[i].locationName}, ${accommodation[i].reigonName}, NZ</h3>
-                        <div class="accommodation-reviews">
-                            <p class="rating-text"><i class="fas fa-star"></i>${accommodation[i].rating}</p> <p class="review-number"><i>(${accommodation[i].reviewsNo} reviews)</i></p>
-                        </div>
-                        <div class="accommodation-description">
-                            <p class="description">${accommodation[i].descriptionShort}</p>
-                        </div>
-                    </div>
-                                
-                    <div class="accommodation-reviews-details">
-                        <h2 class="reviews-heading"><b>REVIEWS</b></h2>
-                        <div class="review-cards-container">
-                            <div class="review-cards" id="reviewsCards"></div>
+                        <div class="accommodation-details__img-container">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="${accommodation[i].mainImage}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="${accommodation[i].img1}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="${accommodation[i].img2}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="${accommodation[i].img3}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="${accommodation[i].img4}" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                <img src="${accommodation[i].img5}" class="d-block w-100" alt="...">
+                                </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                
-                    <div class="accommodation-map" id="accommodationMap"></div>
                     
-                    <div class="accommodation-breakfast">
-                        <h2 class="breakfast-heading"><b>BREAKFAST OPTIONS</b></h2>
-                
-                        <div class="breakfast-options-container">
-                            <div class="breakfast-options" id="breakfastOptions"></div>
-                            <div class="breakfast-order-summary" id="breakfastOrderSummary"></div>
+                        <div class="accommodation-details__info">
+                            
+                            <div class="accommodation-details__header">
+                                <h1 class="accommodation-name"><b>${accommodation[i].name}</b></h1>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>              
+                            <h3 class="accommodation-location">${accommodation[i].locationName}, ${accommodation[i].reigonName}, NZ</h3>
+                            <div class="accommodation-reviews">
+                                <p class="rating-text"><i class="fas fa-star"></i>${accommodation[i].rating}</p> <p class="review-number"><i>(${accommodation[i].reviewsNo} reviews)</i></p>
+                            </div>
+                            <div class="accommodation-description">
+                                <p class="description">${accommodation[i].descriptionShort}</p>
+                            </div>
                         </div>
-                    </div>
-                
-                    <div class="accommodation-dates">
-                
-                        <h2 class="dates-heading"><b>YOUR DETAILS</b></h2>
-                        <div class="dates-container">
-                            <div class="accommodation-dates">
-                                <div class="check-in-date">
-                                    <p class="check-in-date__heading"><b>CHECK IN:</b></p>
-                                    <p class="date">${firstNight}</p> <br>
-                                    <p class="time"> After 2pm</p>
+                                    
+                        <div class="accommodation-reviews-details">
+                            <h2 class="reviews-heading"><b>REVIEWS</b></h2>
+                            <div class="review-cards-container">
+                                <div class="review-cards" id="reviewsCards"></div>
                                 </div>
-                                <div class="check-out-date">
-                                    <p class="check-out-date__heading"><b>CHECK OUT:</b></p>
-                                    <p class="date">${lastNight}</p> <br>
-                                    <p class="time"> Before 10am</p>
-                                </div>
-                            </div>          
+                            </div>
                         </div>
-                        <div class="meals-container">
-                            <h2 class="dates-heading"><b>YOUR MEAL ORDER</b></h2>
-                            <div class="meal-summary" id="mealsContainer"></div> 
-                            <button class="add-to-booking" id="addToBooking">Add selection to booking</button>
-                        </div>
+                    
+                        <div class="accommodation-map" id="accommodationMap"></div>
                         
-                    </div>
+                        <div class="accommodation-breakfast">
+                            <h2 class="breakfast-heading"><b>BREAKFAST OPTIONS</b></h2>
+                    
+                            <div class="breakfast-options-container">
+                                <div class="breakfast-options" id="breakfastOptions"></div>
+                                <div class="breakfast-order-summary" id="breakfastOrderSummary"></div>
+                            </div>
+                        </div>
+                    
+                        <div class="accommodation-dates">
+                    
+                            <h2 class="dates-heading"><b>YOUR DETAILS</b></h2>
+                            <div class="dates-container">
+                                <div class="accommodation-dates">
+                                    <div class="check-in-date">
+                                        <p class="check-in-date__heading"><b>CHECK IN:</b></p>
+                                        <p class="date">${firstNight}</p> <br>
+                                        <p class="time"> After 2pm</p>
+                                    </div>
+                                    <div class="check-out-date">
+                                        <p class="check-out-date__heading"><b>CHECK OUT:</b></p>
+                                        <p class="date">${lastNight}</p> <br>
+                                        <p class="time"> Before 10am</p>
+                                    </div>
+                                </div>          
+                            </div>
+                            <div class="meals-container">
+                                <h2 class="dates-heading"><b>YOUR MEAL ORDER</b></h2>
+                                <div class="meal-summary" id="mealsContainer"></div> 
+                                <button class="add-to-booking" id="addToBooking">Add selection to booking</button>
+                            </div>
+                            
+                        </div>
                            
                         <div class="accommodation-details__footer">
                             <div class="cost-summary">
@@ -2133,7 +2127,6 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
                     selectMeals(i);
                     generateReviewCard(i);
 
-                  
 
                     mapDetail = new google.maps.Map(document.getElementById("accommodationMap"), {
                         zoom: 12, 
@@ -2156,11 +2149,7 @@ function accommodationDetails(nightsTotal, checkIn, checkOut, total){
     } 
 
      
-
-
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
-
 // select meals
 
 
@@ -2218,6 +2207,10 @@ function selectMeals(x){
             costArray.push(breakfastInfo3[1]);
     });
 
+    if (costArray.length > 0){
+        $("#addToBooking").css("display", "block");
+    }
+
     $("#addToBooking").on("click", function(){
         
         let mealSum = costArray.reduce(function(pv, cv) { return pv + cv; }, 0);
@@ -2228,8 +2221,6 @@ function selectMeals(x){
         $("#mealsContainer").empty();
         totalBillCalc();
     });
-
-   
 }
 
 
@@ -2256,15 +2247,14 @@ function totalBillCalc(){
     });
 }
 
-// $("#bookAgain").on("click", function(){
-//     $(".thank-you-container").css("display", "none");
+$("#bookAgain").on("click", function(){
+    window.location.reload();
+});
 
-
-// })
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
 // card generators
+
 
 function generateTopCard(x){
     $("#cardContainerTopStay").append(
@@ -2401,9 +2391,7 @@ function generateReviewCard(x){
 }
 
 
-
 // -------------------------------------------------------------------------------------------------------------------------------------------
-
 // event listeners
 
 initialSearch.addEventListener("click", initialFilterOptions);

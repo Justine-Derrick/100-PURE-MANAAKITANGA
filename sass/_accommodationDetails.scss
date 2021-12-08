@@ -426,8 +426,9 @@
         }
         
         .add-to-booking{
+            display: none;
             @include button-one;
-            width: 100%
+            width: 100%;
         }
     }
 
