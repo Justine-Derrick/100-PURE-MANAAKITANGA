@@ -2207,10 +2207,6 @@ function selectMeals(x){
             costArray.push(breakfastInfo3[1]);
     });
 
-    if (costArray.length > 0){
-        $("#addToBooking").css("display", "block");
-    }
-
     $("#addToBooking").on("click", function(){
         
         let mealSum = costArray.reduce(function(pv, cv) { return pv + cv; }, 0);

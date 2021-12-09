@@ -8827,7 +8827,6 @@ a.text-dark:hover, a.text-dark:focus {
       display: flex;
       justify-content: space-between; }
     .accommodation-dates .meals-container .add-to-booking {
-      display: none;
       height: 2.5rem;
       color: #1a1a1a;
       background: #FBB011;
